@@ -133,25 +133,25 @@
             
                                 
                             <div class="form-group">
-                                <label><h3>Cédula del Estudiante</h3>
+                                <label><h3>Cédula del Persona</h3>
                                 </label>
                                 <input type="text" class="form-control" name="idPersona">
                                 <p class="help-block">Ej: 1056373.</p>
                             </div>
                             <div class="form-group">
-                                <label><h3> Nombres del Estudiante</h3>
+                                <label><h3> Nombres de la Persona</h3>
                                 </label>
                                 <input type="text" class="form-control" name="nombrePersona">
                                 <p class="help-block">Ej: Nicolas</p>
                             </div>
                                <div class="form-group">
-                                <label><h3>Apellidos del Estudiante</h3>
+                                <label><h3>Apellidos del Persona</h3>
                                 </label>
                                 <input type="text" class="form-control" name="apellidoPersona">
                                 <p class="help-block">Ej: Infante</p>
                             </div>
                             <div class="form-group">
-                                <label><h3>Semestre en el cual se encuentra el Estudiante</h3>
+                                <label><h3>Semestre en el cual se encuentra el Persona</h3>
                                 </label>
                                 <input type="text" class="form-control" name="semestrePersona">
                                 <p class="help-block">Ej: 3</p>
@@ -163,10 +163,10 @@
                                 <p class="help-block">Ej: Ingeniería de Sistemas</p>
                             </div>
                               <div class="form-group">
-                                <label><h3>cargoPersona</h3>
+                                <label><h3>Cargo de la Persona</h3>
                                 </label>
                                 <input type="text" class="form-control" name="cargoPersona">
-                                <p class="help-block">Ej: Ingeniería de Sistemas</p>
+                                <p class="help-block">Tip: Si es estudiante escriba en el cargo... Estudiante</p>
                             </div>                      
                        
                        
