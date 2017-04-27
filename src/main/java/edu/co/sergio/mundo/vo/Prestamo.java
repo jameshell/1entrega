@@ -5,7 +5,9 @@
  */
 package edu.co.sergio.mundo.vo;
 
-import java.util.Date;
+import java.sql.Date;
+
+
 
 /**
  *
