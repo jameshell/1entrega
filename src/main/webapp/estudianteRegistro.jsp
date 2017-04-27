@@ -129,7 +129,7 @@
 
                 <div class="page-header">
                     
-                   <form action="estudianteControlador" method="POST"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
+                   <form action="personaControlador" method="POST"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
                                 
                             <div class="form-group">
@@ -170,6 +170,16 @@
                             </div>                      
                        
                        
+    <%
+       if( request.getAttribute("personas")!=null){
+          List<Departamento> departamentos  = (List<Departamento>)request.getAttribute("departamentos");
+           for (Departamento departamento : departamentos) {
+         %>      
+         <h1> <%=departamento.getNom_departamento()%> </h1><br/> 
+         <%      
+          }
+       }
+      
                             
                       <input type="submit" name="Registrar" value="Registrar" class="btn btn-primary btn-lg" role="button"  >
                          <input type="reset" name="reset" value="reset" class="btn btn-primary btn-lg" role="button"  >
