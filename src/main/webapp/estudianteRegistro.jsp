@@ -135,33 +135,40 @@
                             <div class="form-group">
                                 <label><h3>Cédula del Estudiante</h3>
                                 </label>
-                                <input type="text" class="form-control" name="cedulaEstudiante">
+                                <input type="text" class="form-control" name="idPersona">
                                 <p class="help-block">Ej: 1056373.</p>
                             </div>
                             <div class="form-group">
                                 <label><h3> Nombres del Estudiante</h3>
                                 </label>
-                                <input type="text" class="form-control" name="nombreEstudiante">
+                                <input type="text" class="form-control" name="nombrePersona">
                                 <p class="help-block">Ej: Nicolas</p>
                             </div>
                                <div class="form-group">
                                 <label><h3>Apellidos del Estudiante</h3>
                                 </label>
-                                <input type="text" class="form-control" name="apellidoEstudiante">
+                                <input type="text" class="form-control" name="apellidoPersona">
                                 <p class="help-block">Ej: Infante</p>
                             </div>
                             <div class="form-group">
                                 <label><h3>Semestre en el cual se encuentra el Estudiante</h3>
                                 </label>
-                                <input type="text" class="form-control" name="semestreEstudiante">
+                                <input type="text" class="form-control" name="semestrePersona">
                                 <p class="help-block">Ej: 3</p>
                             </div>
                               <div class="form-group">
                                 <label><h3>Carrera</h3>
                                 </label>
-                                <input type="text" class="form-control" name="carreraEstudiante">
+                                <input type="text" class="form-control" name="carreraPersona">
                                 <p class="help-block">Ej: Ingeniería de Sistemas</p>
                             </div>
+                              <div class="form-group">
+                                <label><h3>cargoPersona</h3>
+                                </label>
+                                <input type="text" class="form-control" name="cargoPersona">
+                                <p class="help-block">Ej: Ingeniería de Sistemas</p>
+                            </div>                      
+                       
                        
                             
                       <input type="submit" name="Registrar" value="Registrar" class="btn btn-primary btn-lg" role="button"  >
