@@ -10,21 +10,9 @@ package edu.co.sergio.mundo.vo;
  * @author Jaime Alonso
  */
 public class Inventario {
-    int idInventario;
-    String nombreInventario;
-    String descripcionInventario;
-    int Cant_Disponible;
-    int Cant_EnUso;
-    int Cant_Danados;
-
-    public Inventario(int idInventario, String nombreInventario, String descripcionInventario, int Cant_Disponible, int Cant_EnUso, int Cant_Danados) {
-        this.idInventario = idInventario;
-        this.nombreInventario = nombreInventario;
-        this.descripcionInventario = descripcionInventario;
-        this.Cant_Disponible = Cant_Disponible;
-        this.Cant_EnUso = Cant_EnUso;
-        this.Cant_Danados = Cant_Danados;
-    }
+ private int idInventario;
+ private String nombreInventario;
+ private int idHerramienta;
 
     public int getIdInventario() {
         return idInventario;
@@ -42,42 +30,13 @@ public class Inventario {
         this.nombreInventario = nombreInventario;
     }
 
-    public String getDescripcionInventario() {
-        return descripcionInventario;
+    public int getIdHerramienta() {
+        return idHerramienta;
     }
 
-    public void setDescripcionInventario(String descripcionInventario) {
-        this.descripcionInventario = descripcionInventario;
+    public void setIdHerramienta(int idHerramienta) {
+        this.idHerramienta = idHerramienta;
     }
 
-    public int getCant_Disponible() {
-        return Cant_Disponible;
-    }
-
-    public void setCant_Disponible(int Cant_Disponible) {
-        this.Cant_Disponible = Cant_Disponible;
-    }
-
-    public int getCant_EnUso() {
-        return Cant_EnUso;
-    }
-
-    public void setCant_EnUso(int Cant_EnUso) {
-        this.Cant_EnUso = Cant_EnUso;
-    }
-
-    public int getCant_Danados() {
-        return Cant_Danados;
-    }
-
-    public void setCant_Danados(int Cant_Danados) {
-        this.Cant_Danados = Cant_Danados;
-    }
-
-    @Override
-    public String toString() {
-        return "Inventario{" + "idInventario=" + idInventario + ", nombreInventario=" + String.valueOf(nombreInventario) + ", descripcionInventario=" + String.valueOf(descripcionInventario) + ", Cant_Disponible=" + Cant_Disponible + ", Cant_EnUso=" + Cant_EnUso + ", Cant_Danados=" + Cant_Danados + '}';
-    }
-    
-    
+ 
 }

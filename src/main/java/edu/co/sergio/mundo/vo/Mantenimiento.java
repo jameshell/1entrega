@@ -5,60 +5,105 @@
  */
 package edu.co.sergio.mundo.vo;
 
+import java.util.Date;
+
 /**
  *
  * @author Jaime Alonso
  */
 public class Mantenimiento {
     
-    int IdMantenimiento;
-    int IdDispositivo;
-    String tituloMantenimiento;
-    String descripcionMantenimiento;
-
-    public Mantenimiento(int IdMantenimiento, int IdDispositivo, String tituloMantenimiento, String descripcionMantenimiento) {
-        this.IdMantenimiento = IdMantenimiento;
-        this.IdDispositivo = IdDispositivo;
-        this.tituloMantenimiento = tituloMantenimiento;
-        this.descripcionMantenimiento = descripcionMantenimiento;
-    }
-
-    public int getIdMantenimiento() {
-        return IdMantenimiento;
-    }
-
-    public void setIdMantenimiento(int IdMantenimiento) {
-        this.IdMantenimiento = IdMantenimiento;
-    }
-
-    public int getIdDispositivo() {
-        return IdDispositivo;
-    }
-
-    public void setIdDispositivo(int IdDispositivo) {
-        this.IdDispositivo = IdDispositivo;
-    }
-
-    public String getTituloMantenimiento() {
-        return tituloMantenimiento;
-    }
-
-    public void setTituloMantenimiento(String tituloMantenimiento) {
-        this.tituloMantenimiento = tituloMantenimiento;
-    }
-
-    public String getDescripcionMantenimiento() {
-        return descripcionMantenimiento;
-    }
-
-    public void setDescripcionMantenimiento(String descripcionMantenimiento) {
-        this.descripcionMantenimiento = descripcionMantenimiento;
-    }
-
-    @Override
-    public String toString() {
-        return "Mantenimientos{" + "IdMantenimiento=" + IdMantenimiento + ", IdDispositivo=" + IdDispositivo + ", tituloMantenimiento=" + String.valueOf(tituloMantenimiento) + ", descripcionMantenimiento=" + String.valueOf(descripcionMantenimiento) + '}';
-    }
+    private int idMantenimiento;
+    private int idHerramienta;
+    private String refFabricante;
+    private String enServicio;
+    private int nivelImportancia;
+    private String tipoMantenimiento;
+    private String entidadCargo;
+    private String nombreTecnico;
+    private Date fechaInicio;
+    private Date fechaFinal;
     
+    
+    public int getIdMantenimiento() {
+        return idMantenimiento;
+    }
+
+    public void setIdMantenimiento(int idMantenimiento) {
+        this.idMantenimiento = idMantenimiento;
+    }
+
+    public int getIdHerramienta() {
+        return idHerramienta;
+    }
+
+    public void setIdHerramienta(int idHerramienta) {
+        this.idHerramienta = idHerramienta;
+    }
+
+    public String getRefFabricante() {
+        return refFabricante;
+    }
+
+    public void setRefFabricante(String refFabricante) {
+        this.refFabricante = refFabricante;
+    }
+
+    public String getEnServicio() {
+        return enServicio;
+    }
+
+    public void setEnServicio(String enServicio) {
+        this.enServicio = enServicio;
+    }
+
+    public int getNivelImportancia() {
+        return nivelImportancia;
+    }
+
+    public void setNivelImportancia(int nivelImportancia) {
+        this.nivelImportancia = nivelImportancia;
+    }
+
+    public String getTipoMantenimiento() {
+        return tipoMantenimiento;
+    }
+
+    public void setTipoMantenimiento(String tipoMantenimiento) {
+        this.tipoMantenimiento = tipoMantenimiento;
+    }
+
+    public String getEntidadCargo() {
+        return entidadCargo;
+    }
+
+    public void setEntidadCargo(String entidadCargo) {
+        this.entidadCargo = entidadCargo;
+    }
+
+    public String getNombreTecnico() {
+        return nombreTecnico;
+    }
+
+    public void setNombreTecnico(String nombreTecnico) {
+        this.nombreTecnico = nombreTecnico;
+    }
+
+    public Date getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public void setFechaInicio(Date fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public Date getFechaFinal() {
+        return fechaFinal;
+    }
+
+    public void setFechaFinal(Date fechaFinal) {
+        this.fechaFinal = fechaFinal;
+    }
+  
     
 }
