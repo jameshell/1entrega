@@ -7,14 +7,16 @@ package edu.co.sergio.mundo.vo;
 
 /**
  *
- * @author james
+ * @author Jaime Alonso
  */
 public class Herramienta {
     
   private int idHerramienta;
   private int idInventario;
+  private String nombreHerramienta;
   private int noSerial;
   private String descripcionHerramienta;
+  
 
   
     public int getIdHerramienta() {
@@ -23,14 +25,6 @@ public class Herramienta {
 
     public void setIdHerramienta(int idHerramienta) {
         this.idHerramienta = idHerramienta;
-    }
-
-    public int getIdInventario() {
-        return idInventario;
-    }
-
-    public void setIdInventario(int idInventario) {
-        this.idInventario = idInventario;
     }
 
     public int getNoSerial() {
@@ -47,6 +41,22 @@ public class Herramienta {
 
     public void setDescripcionHerramienta(String descripcionHerramienta) {
         this.descripcionHerramienta = descripcionHerramienta;
+    }
+
+    public String getNombreHerramienta() {
+        return nombreHerramienta;
+    }
+
+    public void setNombreHerramienta(String nombreHerramienta) {
+        this.nombreHerramienta = nombreHerramienta;
+    }
+
+    public int getIdInventario() {
+        return idInventario;
+    }
+
+    public void setIdInventario(int idInventario) {
+        this.idInventario = idInventario;
     }
     
 }
