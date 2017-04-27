@@ -169,17 +169,7 @@
                                 <p class="help-block">Tip: Si es estudiante escriba en el cargo... Estudiante</p>
                             </div>                      
                        
-                       
-    <%
-       if( request.getAttribute("departamentos")!=null){
-          List<Departamento> departamentos  = (List<Departamento>)request.getAttribute("departamentos");
-           for (Departamento departamento : departamentos) {
-         %>      
-         <h1> <%=departamento.getNom_departamento()%> </h1><br/> 
-         <%      
-          }
-       } %>
-      
+   
                             
                       <input type="submit" name="Registrar" value="Registrar" class="btn btn-primary btn-lg" role="button"  >
                          <input type="reset" name="reset" value="reset" class="btn btn-primary btn-lg" role="button"  >
