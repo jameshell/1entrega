@@ -57,7 +57,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                         <a href="estudiante.jsp"><i class="fa fa-fw fa-user" ></i> Estudiante</a>
+                         <a href="estudiante.jsp"><i class="fa fa-fw fa-user" ></i> Persona </a>
                     </li>
                      <li>
                         <a href="formularios.jsp"><i class="fa fa-fw fa-table"></i> Formularios</a>
@@ -76,7 +76,7 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Listas <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="crudEstudiantes.jsp">Listas de Estudiantes</a>
+                                <a href="crudEstudiantes.jsp">Listas de Personas</a>
                             </li>
                              <li>
                                 <a href="crudInscripciones.jsp">Lista de Formularios</a>
@@ -107,14 +107,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Estudiante
+                          Persona
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Registro de Estudiante
+                                <i class="fa fa-desktop"></i> Registro de Persona
                             </li>
                         </ol>
                     </div>
@@ -124,7 +124,7 @@
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Introduzca los datos del estudiante que desea registrar a la mmemoria.
+                    Introduzca los datos de la persona que desea registrar.
                 </p>
 
                 <div class="page-header">
