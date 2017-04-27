@@ -12,7 +12,8 @@ package edu.co.sergio.mundo.vo;
 public class Inventario {
  private int idInventario;
  private String nombreInventario;
- private int idHerramienta;
+ private String  descripcionInventario;
+
 
     public int getIdInventario() {
         return idInventario;
@@ -30,13 +31,12 @@ public class Inventario {
         this.nombreInventario = nombreInventario;
     }
 
-    public int getIdHerramienta() {
-        return idHerramienta;
+    public String getDescripcionInventario() {
+        return descripcionInventario;
     }
 
-    public void setIdHerramienta(int idHerramienta) {
-        this.idHerramienta = idHerramienta;
+    public void setDescripcionInventario(String descripcionInventario) {
+        this.descripcionInventario = descripcionInventario;
     }
 
- 
 }

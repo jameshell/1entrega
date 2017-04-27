@@ -98,7 +98,7 @@ public class personaDAO implements IBaseDatos<Persona> {
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(personaDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
 	    String query = " insert into Persona (idPersona,nombrePersona,apellidoPersona,semestrePersona,carreraPersona,cargoPersona)"  + " values (?,?,?,?,?,?)";
         PreparedStatement preparedStmt=null;
@@ -161,9 +161,9 @@ public class personaDAO implements IBaseDatos<Persona> {
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(personaDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	   String query = "DELETE from Persona WHERE idPersona = ?";
+	   String query = "DELETE * from Persona WHERE idPersona = ?";
 	   PreparedStatement preparedStmt=null;
 	   try {
 		     preparedStmt = connection.prepareStatement(query);

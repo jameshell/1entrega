@@ -5,9 +5,10 @@
  */
 package edu.co.sergio.mundo.dao;
 
-import edu.co.sergio.mundo.vo.Administrativo;
+import edu.co.sergio.mundo.vo.prestamoSalon;
 import java.net.URISyntaxException;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,60 +22,64 @@ import java.util.logging.Logger;
  *
  * @author Jaime Alonso
  */
-
-
-public class administrativoDAO implements IBaseDatos<Administrativo> {
+public class prestamoSalonDAO implements IBaseDatos<prestamoSalon> {
 
 	/**
 	 * Funcion que permite obtener una lista de los departamentos existentes en la base de datos
 	 * @return List<Departamento> Retorna la lista de Departamentos existentes en la base de datos
 	 */
-	public List<Administrativo> findAll() {
-		List<Administrativo> administrativos= null;
-	    String query = "SELECT * FROM Administrativo";
+	public List<prestamoSalon> findAll() {
+		List<prestamoSalon> prestamosSalones= null;
+	    String query = "SELECT * FROM prestamoSalon";
 	    Connection connection = null;
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(prestamoSalonDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
 	    try {
 	    Statement st = connection.createStatement();
 	    ResultSet rs = st.executeQuery(query);
             
-	    int id =0;
-            int idInv=0;
-	    String nombre = null;
-            int permiso = 0;
+            /*Atributos*/
+            
+	    int idprestamosalon =0;
+            int idsalon=0;
+            int idpersona=0;
+            Date entrada=null;
+	    Date salida=null;
 	
 	    while (rs.next()){
-	    	if(administrativos == null){
-	    		administrativos= new ArrayList<Administrativo>();
+	    	if(prestamosSalones == null){
+	    		prestamosSalones= new ArrayList<prestamoSalon>();
 	    	}
 	      
-	        Administrativo registro= new Administrativo();
-	        id = rs.getInt("idAdministrativo");
-	        registro.setIdAdministrativo(id);
+	        prestamoSalon registro= new prestamoSalon();
+	        idprestamosalon = rs.getInt("idPrestamoSalon");
+	        registro.setIdPrestamoSalon(idprestamosalon);
                 
-                idInv = rs.getInt("idInventario");
-	        registro.setIdInventario(idInv);
-	        
-	        nombre = rs.getString("nombreAdmin");
-	        registro.setNombreAdmin(nombre);
+                idsalon = rs.getInt("idSalon");
+	        registro.setIdSalon(idsalon);
                 
-                permiso = rs.getInt("tipoPermiso");
-	        registro.setTipoPermiso(permiso);
+                 idpersona = rs.getInt("idPersona");
+	        registro.setIdPersona(idpersona);
 	        
-	        administrativos.add(registro);
+	        entrada = rs.getDate("fechaEntrada");
+	        registro.setFechaEntrada(entrada);
+                
+                salida = rs.getDate("fechaSalida");
+	        registro.setFechaSalida(salida);
+	        
+	        prestamosSalones.add(registro);
 	    }
 	    st.close();
 	    
 	    } catch (SQLException e) {
-			System.out.println("Problemas al obtener la lista de admins");
+			System.out.println("Problemas al obtener la lista de prestamos de salon");
 			e.printStackTrace();
 		}
 	    
-	    return administrativos;
+	    return prestamosSalones;
 	}
 
 	
@@ -83,22 +88,23 @@ public class administrativoDAO implements IBaseDatos<Administrativo> {
 	 * @param Departamento recibe un objeto de tipo Departamento 
 	 * @return boolean retorna true si la operacion de insercion es exitosa.
 	 */
-	public boolean insert(Administrativo t) {
+	public boolean insert(prestamoSalon t) {
 		boolean result=false;
 		Connection connection=null;
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(administrativoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(prestamoSalonDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	    String query = " INSERT into Administrativo (idAdministrativo, idInventario, nombreAdmin, tipoPermiso)"  + " values (?,?,?,?)";
+	    String query = " INSERT INTO prestamoSalon (idPrestamoSalon, idSalon, idPersona, fechaEntrada, fechaSalida)"  + " values (?,?,?,?,?)";
         PreparedStatement preparedStmt=null;
 	    try {
 			preparedStmt = connection.prepareStatement(query);
-			preparedStmt.setInt (1, t.getIdAdministrativo());
-                        preparedStmt.setInt (2, t.getIdInventario());
-                        preparedStmt.setString (3, t.getNombreAdmin());
-                        preparedStmt.setInt (4, t.getTipoPermiso());
+			preparedStmt.setInt (1, t.getIdPrestamoSalon());
+                        preparedStmt.setInt (2, t.getIdSalon());
+                        preparedStmt.setInt (3, t.getIdPersona());
+                        preparedStmt.setDate (4, t.getFechaEntrada());
+                        preparedStmt.setDate (5, t.getFechaSalida());
 			result= preparedStmt.execute();
 	    } catch (SQLException e) {
 			e.printStackTrace();
@@ -111,20 +117,20 @@ public class administrativoDAO implements IBaseDatos<Administrativo> {
 	 * @param Departamento recibe un objeto de tipo Departamento 
 	 * @return boolean retorna true si la operacion de actualizacion es exitosa.
 	 */
-	public boolean update(Administrativo t) {
+	public boolean update(prestamoSalon t) {
 		boolean result=false;
 		Connection connection= null;
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(administrativoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(prestamoSalonDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-		String query = "UPDATE Administrativo set nombreAdmin = ? WHERE idAdministrativo = ?";
+		String query = "UPDATE prestamoSalon set fechaEntrada = ? WHERE idPrestamoSalon = ?";
 		PreparedStatement preparedStmt=null;
 		try {
 		    preparedStmt = connection.prepareStatement(query);
-		    preparedStmt.setString(1, t.getNombreAdmin());
-                    preparedStmt.setInt   (2, t.getIdAdministrativo());
+		    preparedStmt.setDate(1, t.getFechaEntrada());
+                    preparedStmt.setInt   (2, t.getIdPrestamoSalon());
 		    if (preparedStmt.executeUpdate() > 0){
 		    	result=true;
 		    }
@@ -141,19 +147,19 @@ public class administrativoDAO implements IBaseDatos<Administrativo> {
 	 * @param Departamento recibe un objeto de tipo Departamento 
 	 * @return boolean retorna true si la operacion de borrado es exitosa.
 	 */
-	public boolean delete(Administrativo t) {
+	public boolean delete(prestamoSalon t) {
 	   boolean result=false;
 	   Connection connection = null;
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(administrativoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(prestamoSalonDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	   String query = "DELETE * from Administrativo WHERE idAdministrativo = ?";
+	   String query = "DELETE * from prestamoSalon WHERE idPrestamoSalon = ?";
 	   PreparedStatement preparedStmt=null;
 	   try {
 		     preparedStmt = connection.prepareStatement(query);
-		     preparedStmt.setInt(1, t.getIdAdministrativo());
+		     preparedStmt.setInt(1, t.getIdPrestamoSalon());
 		    result= preparedStmt.execute();
 		} catch (SQLException e) {
 			e.printStackTrace();

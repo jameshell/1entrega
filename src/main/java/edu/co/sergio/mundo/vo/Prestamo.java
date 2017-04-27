@@ -11,7 +11,7 @@ import java.sql.Date;
 
 /**
  *
- * @author james
+ * @author Jaime Alonso
  */
 public class Prestamo {
     
@@ -22,6 +22,10 @@ public class Prestamo {
     private String tipoPractica;
     private Date fechaEntrada;
     private Date fechaSalida;
+    private String estado;
+    private String justificacion;
+    private String observaciones;
+    private String tipoPrestamo;
 
     public String getCodPrestamo() {
         return codPrestamo;
@@ -77,6 +81,38 @@ public class Prestamo {
 
     public void setFechaSalida(Date fechaSalida) {
         this.fechaSalida = fechaSalida;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getJustificacion() {
+        return justificacion;
+    }
+
+    public void setJustificacion(String justificacion) {
+        this.justificacion = justificacion;
+    }
+
+    public String getObservaciones() {
+        return observaciones;
+    }
+
+    public void setObservaciones(String observaciones) {
+        this.observaciones = observaciones;
+    }
+
+    public String getTipoPrestamo() {
+        return tipoPrestamo;
+    }
+
+    public void setTipoPrestamo(String tipoPrestamo) {
+        this.tipoPrestamo = tipoPrestamo;
     }
     
     

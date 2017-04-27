@@ -15,7 +15,7 @@ import java.sql.Date;
 public class prestamoSalon {
     
     private int idPrestamoSalon;
-    private String idSalon;
+    private int idSalon;
     private int idPersona;
     private Date fechaEntrada;
     private Date fechaSalida;
@@ -29,11 +29,11 @@ public class prestamoSalon {
         this.idPrestamoSalon = idPrestamoSalon;
     }
 
-    public String getIdSalon() {
+    public int getIdSalon() {
         return idSalon;
     }
 
-    public void setIdSalon(String idSalon) {
+    public void setIdSalon(int idSalon) {
         this.idSalon = idSalon;
     }
 

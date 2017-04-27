@@ -5,7 +5,7 @@
  */
 package edu.co.sergio.mundo.dao;
 
-import edu.co.sergio.mundo.vo.Administrativo;
+import edu.co.sergio.mundo.vo.Inventario;
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -21,17 +21,15 @@ import java.util.logging.Logger;
  *
  * @author Jaime Alonso
  */
-
-
-public class administrativoDAO implements IBaseDatos<Administrativo> {
+public class inventarioDAO implements IBaseDatos<Inventario> {
 
 	/**
 	 * Funcion que permite obtener una lista de los departamentos existentes en la base de datos
 	 * @return List<Departamento> Retorna la lista de Departamentos existentes en la base de datos
 	 */
-	public List<Administrativo> findAll() {
-		List<Administrativo> administrativos= null;
-	    String query = "SELECT * FROM Administrativo";
+	public List<Inventario> findAll() {
+		List<Inventario> inventarios= null;
+	    String query = "SELECT * FROM Inventario";
 	    Connection connection = null;
             try {
                 connection = Conexion.getConnection();
@@ -42,39 +40,37 @@ public class administrativoDAO implements IBaseDatos<Administrativo> {
 	    Statement st = connection.createStatement();
 	    ResultSet rs = st.executeQuery(query);
             
+            /*  Inventarios   */
 	    int id =0;
-            int idInv=0;
 	    String nombre = null;
-            int permiso = 0;
+            String descripcion=null;
 	
 	    while (rs.next()){
-	    	if(administrativos == null){
-	    		administrativos= new ArrayList<Administrativo>();
+	    	if(inventarios == null){
+	    		inventarios= new ArrayList<Inventario>();
 	    	}
 	      
-	        Administrativo registro= new Administrativo();
-	        id = rs.getInt("idAdministrativo");
-	        registro.setIdAdministrativo(id);
-                
-                idInv = rs.getInt("idInventario");
-	        registro.setIdInventario(idInv);
+	        Inventario registro= new Inventario();
+	        id = rs.getInt("idInventario");
+	        registro.setIdInventario(id);
 	        
-	        nombre = rs.getString("nombreAdmin");
-	        registro.setNombreAdmin(nombre);
+	        nombre = rs.getString("nombreInventario");
+	        registro.setNombreInventario(nombre);
                 
-                permiso = rs.getInt("tipoPermiso");
-	        registro.setTipoPermiso(permiso);
+                 descripcion = rs.getString("descripcionInventario");
+	        registro.setNombreInventario(nombre);
+                
 	        
-	        administrativos.add(registro);
+	        inventarios.add(registro);
 	    }
 	    st.close();
 	    
 	    } catch (SQLException e) {
-			System.out.println("Problemas al obtener la lista de admins");
+			System.out.println("Problemas al obtener la lista de Inventarios");
 			e.printStackTrace();
 		}
 	    
-	    return administrativos;
+	    return inventarios;
 	}
 
 	
@@ -83,22 +79,21 @@ public class administrativoDAO implements IBaseDatos<Administrativo> {
 	 * @param Departamento recibe un objeto de tipo Departamento 
 	 * @return boolean retorna true si la operacion de insercion es exitosa.
 	 */
-	public boolean insert(Administrativo t) {
+	public boolean insert(Inventario t) {
 		boolean result=false;
 		Connection connection=null;
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(administrativoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(inventarioDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	    String query = " INSERT into Administrativo (idAdministrativo, idInventario, nombreAdmin, tipoPermiso)"  + " values (?,?,?,?)";
+	    String query = " INSERT into Inventario (idInventario, nombreInventario, descripcionInventario)"  + " values (?,?,?)";
         PreparedStatement preparedStmt=null;
 	    try {
 			preparedStmt = connection.prepareStatement(query);
-			preparedStmt.setInt (1, t.getIdAdministrativo());
-                        preparedStmt.setInt (2, t.getIdInventario());
-                        preparedStmt.setString (3, t.getNombreAdmin());
-                        preparedStmt.setInt (4, t.getTipoPermiso());
+			preparedStmt.setInt (1, t.getIdInventario());
+                        preparedStmt.setString (2, t.getNombreInventario());
+                        preparedStmt.setString (3, t.getDescripcionInventario());
 			result= preparedStmt.execute();
 	    } catch (SQLException e) {
 			e.printStackTrace();
@@ -111,20 +106,20 @@ public class administrativoDAO implements IBaseDatos<Administrativo> {
 	 * @param Departamento recibe un objeto de tipo Departamento 
 	 * @return boolean retorna true si la operacion de actualizacion es exitosa.
 	 */
-	public boolean update(Administrativo t) {
+	public boolean update(Inventario t) {
 		boolean result=false;
 		Connection connection= null;
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(administrativoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(inventarioDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-		String query = "UPDATE Administrativo set nombreAdmin = ? WHERE idAdministrativo = ?";
+		String query = "UPDATE Inventario set nombreInventario = ? WHERE idInventario = ?";
 		PreparedStatement preparedStmt=null;
 		try {
 		    preparedStmt = connection.prepareStatement(query);
-		    preparedStmt.setString(1, t.getNombreAdmin());
-                    preparedStmt.setInt   (2, t.getIdAdministrativo());
+		    preparedStmt.setString(1, t.getNombreInventario());
+                    preparedStmt.setInt   (2, t.getIdInventario());
 		    if (preparedStmt.executeUpdate() > 0){
 		    	result=true;
 		    }
@@ -141,19 +136,19 @@ public class administrativoDAO implements IBaseDatos<Administrativo> {
 	 * @param Departamento recibe un objeto de tipo Departamento 
 	 * @return boolean retorna true si la operacion de borrado es exitosa.
 	 */
-	public boolean delete(Administrativo t) {
+	public boolean delete(Inventario t) {
 	   boolean result=false;
 	   Connection connection = null;
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(administrativoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(inventarioDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	   String query = "DELETE * from Administrativo WHERE idAdministrativo = ?";
+	   String query = "DELETE * from Inventario WHERE idInventario = ?";
 	   PreparedStatement preparedStmt=null;
 	   try {
 		     preparedStmt = connection.prepareStatement(query);
-		     preparedStmt.setInt(1, t.getIdAdministrativo());
+		     preparedStmt.setInt(1, t.getIdInventario());
 		    result= preparedStmt.execute();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -162,4 +157,3 @@ public class administrativoDAO implements IBaseDatos<Administrativo> {
 	   return result;
 	}
 }
-

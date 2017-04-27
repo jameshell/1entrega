@@ -75,7 +75,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
 	    st.close();
 	    
 	    } catch (SQLException e) {
-			System.out.println("Problemas al obtener la lista de Departamentos");
+			System.out.println("Problemas al obtener la lista de herramientas");
 			e.printStackTrace();
 		}
 	    
@@ -94,7 +94,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(herramientaDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
 	    String query = " INSERT into Herramienta (idHerramienta, idInventario, nombreHerramienta, noSerial, descripcionHerramienta)"  + " values (?,?,?,?,?)";
         PreparedStatement preparedStmt=null;
@@ -126,7 +126,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(herramientaDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
 		String query = "UPDATE Herramienta set nombreHerramienta = ? WHERE idHerramienta = ?";
                 
@@ -160,9 +160,9 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(herramientaDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	   String query = "DELETE from Herramienta WHERE idHerramienta = ?";
+	   String query = "DELETE * from Herramienta WHERE idHerramienta = ?";
 	   PreparedStatement preparedStmt=null;
 	   try {
 		     preparedStmt = connection.prepareStatement(query);
