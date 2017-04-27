@@ -178,6 +178,21 @@
                            
                              
                         </form>
+                        
+                        
+    <%
+       if( request.getAttribute("personas")!=null){
+          List<Persona> personas  = (List<Personas>)request.getAttribute("personas");
+           for (Persona persona : personas) {
+         %>      
+         <h1> <%=persona.getNombrePersona()%> </h1><br/> 
+         
+         <%      
+          }
+       }
+      
+    
+    %>
 
             </div>
             <!-- /.container-fluid -->
