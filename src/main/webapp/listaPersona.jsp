@@ -123,29 +123,31 @@
                 <div class="page-header">
                     <h1>Sistema de Inventario </h1>
                 </div>
-                <p>
-                    Lista De Personas
-                </p>
-                  
+           
                  <div align="center" style="margin-top: 50px;">
         <form action="listaControlador">
                           <button type="submit" class="btn btn-default" role="button" > Mostrar Lista</button>
-  
         </form>
-     </div>
+                     
                
+                     
+     </div>
+                  <table>
+                    <tr><th>Nombre</th> <th>Cargo</th> <th> ID</th></tr>  
+                    
             <%
        if( request.getAttribute("personas")!=null){
           List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
            for (Persona persona : personas) {
          %>      
-         <h3> <%=persona.getNombrePersona()%> </h3> <br/> 
+          <tr><td><%=persona.getNombrePersona()%> </td> <td><%=persona.getCargoPersona()%> </td> <td><%=persona.getIdPersona()%> </td></tr>
          <%      
           }
        }
     %>
                         
-
+    
+                  </table>
             </div>
             <!-- /.container-fluid -->
 
