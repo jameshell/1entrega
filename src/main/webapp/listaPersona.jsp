@@ -3,24 +3,18 @@
     Created on : Mar 13, 2017, 2:54:25 AM
     Author     : james
 --%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <%@ page import="edu.co.sergio.mundo.vo.*"%>
 <%@ page import="java.util.List" %>
-<%@page pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
     "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
-    <title>Sistema de GestiÃ³n</title>
+    <title>Sistema de Gestión</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -83,7 +77,7 @@
                                 <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
                              <li>
-                                <a href="">Lista de Formularios</a>
+                                <a href="">Lista de Prestamo</a>
                             </li>
                         
                              <li>
@@ -133,7 +127,7 @@
 
                 <div class="page-header">
                     
-                   <form action="personaControlador"> <!--ATENCION: la palabra action indica el tipo de acciÃ³n que va a realizar el formulario-->
+                   <form action="personaControlador"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
                                 
                             <div class="form-group">
