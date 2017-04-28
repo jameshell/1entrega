@@ -26,7 +26,7 @@
     
        <servlet>
         <servlet-name>personaList</servlet-name>
-        <servlet-class>com.crunchify.jsp.servlet.listaDePersonas</servlet-class>
+        <servlet-class>com.crunchify.jsp.servlet.listaControlador</servlet-class>
     </servlet>
     
     <servlet-mapping>
@@ -41,7 +41,7 @@
     
      <servlet-mapping>
         <servlet-name>personaList</servlet-name>
-        <url-pattern>/listaDePersonas</url-pattern>
+        <url-pattern>/listaControlador</url-pattern>
     </servlet-mapping>
     
 </web-app>

@@ -128,7 +128,7 @@
                 </p>
                   
                  <div align="center" style="margin-top: 50px;">
-        <form action="listaDePersonas">
+        <form action="listaControlador">
         <input type="submit" value="submit" name='Mostrar Lista'>
         </form>
      </div>
