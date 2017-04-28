@@ -182,7 +182,7 @@ public class prestamoDAO implements IBaseDatos<Prestamo> {
             } catch (URISyntaxException ex) {
                 Logger.getLogger(prestamoDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	   String query = "DELETE * from Prestamo where codPrestamo = ?";
+	   String query = "DELETE from Prestamo where codPrestamo = ?";
 	   PreparedStatement preparedStmt=null;
 	   try {
 		     preparedStmt = connection.prepareStatement(query);

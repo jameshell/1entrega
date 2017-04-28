@@ -141,7 +141,7 @@ public class salonDAO implements IBaseDatos<Salon> {
             } catch (URISyntaxException ex) {
                 Logger.getLogger(salonDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	   String query = "DELETE * from Salon WHERE idSalon = ?";
+	   String query = "DELETE from Salon WHERE idSalon = ?";
 	   PreparedStatement preparedStmt=null;
 	   try {
 		     preparedStmt = connection.prepareStatement(query);

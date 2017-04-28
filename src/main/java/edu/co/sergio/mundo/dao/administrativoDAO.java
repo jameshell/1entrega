@@ -149,7 +149,7 @@ public class administrativoDAO implements IBaseDatos<Administrativo> {
             } catch (URISyntaxException ex) {
                 Logger.getLogger(administrativoDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	   String query = "DELETE * from Administrativo WHERE idAdministrativo = ?";
+	   String query = "DELETE from Administrativo WHERE idAdministrativo = ?";
 	   PreparedStatement preparedStmt=null;
 	   try {
 		     preparedStmt = connection.prepareStatement(query);

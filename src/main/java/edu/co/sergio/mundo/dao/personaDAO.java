@@ -163,7 +163,7 @@ public class personaDAO implements IBaseDatos<Persona> {
             } catch (URISyntaxException ex) {
                 Logger.getLogger(personaDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	   String query = "DELETE * from Persona WHERE idPersona = ?";
+	   String query = "DELETE from Persona WHERE idPersona = ?";
 	   PreparedStatement preparedStmt=null;
 	   try {
 		     preparedStmt = connection.prepareStatement(query);

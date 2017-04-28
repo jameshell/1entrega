@@ -162,7 +162,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
             } catch (URISyntaxException ex) {
                 Logger.getLogger(herramientaDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	   String query = "DELETE * from Herramienta WHERE idHerramienta = ?";
+	   String query = "DELETE from Herramienta WHERE idHerramienta = ?";
 	   PreparedStatement preparedStmt=null;
 	   try {
 		     preparedStmt = connection.prepareStatement(query);

@@ -182,7 +182,7 @@ public class mantenimientoDAO implements IBaseDatos<Mantenimiento> {
             } catch (URISyntaxException ex) {
                 Logger.getLogger(mantenimientoDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	   String query = "DELETE * from Mantenimiento WHERE idMantenimiento = ?";
+	   String query = "DELETE from Mantenimiento WHERE idMantenimiento = ?";
 	   PreparedStatement preparedStmt=null;
 	   try {
 		     preparedStmt = connection.prepareStatement(query);

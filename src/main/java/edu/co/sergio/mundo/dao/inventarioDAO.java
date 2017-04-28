@@ -144,7 +144,7 @@ public class inventarioDAO implements IBaseDatos<Inventario> {
             } catch (URISyntaxException ex) {
                 Logger.getLogger(inventarioDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	   String query = "DELETE * from Inventario WHERE idInventario = ?";
+	   String query = "DELETE from Inventario WHERE idInventario = ?";
 	   PreparedStatement preparedStmt=null;
 	   try {
 		     preparedStmt = connection.prepareStatement(query);
