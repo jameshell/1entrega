@@ -125,18 +125,12 @@
                 </div>
            
                  <div align="center" style="margin-top: 50px;">
-        <form action="listaControlador">
-                          <button type="submit" class="btn btn-default" role="button" > Mostrar Lista</button>
-        </form>
-                     
-               
-                     
-     </div>
-                  <table>
+                               <div class="table-responsive">
+                             <table class="table table-bordered table-hover">
                     <tr><th>Nombre</th> <th>Cargo</th> <th> ID</th></tr>  
                     
             <%
-       if( request.getAttribute("personas")!=null){
+            if( request.getAttribute("personas")!=null){
           List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
            for (Persona persona : personas) {
          %>      
@@ -148,6 +142,17 @@
                         
     
                   </table>
+                               </div>
+                     
+                     
+        <form action="listaControlador">
+                          <button type="submit" class="btn btn-default" role="button" > Mostrar Lista</button>
+        </form>
+                     
+               
+                     
+     </div>
+          
             </div>
             <!-- /.container-fluid -->
 
