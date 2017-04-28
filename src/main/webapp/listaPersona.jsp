@@ -7,7 +7,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ page import="edu.co.sergio.mundo.vo.*"%>
 <%@ page import="java.util.List" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
     "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
     <title>Sistema de Gestión</title>
 
