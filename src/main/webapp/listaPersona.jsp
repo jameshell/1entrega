@@ -129,7 +129,7 @@
                   
                  <div align="center" style="margin-top: 50px;">
         <form action="listaControlador">
-        <input type="submit" value="submit" name='Mostrar Lista'>
+        <input type="submit" name="Mostrar Lista" value="submit" class="btn btn-primary btn-lg"  role="button"  >
         </form>
      </div>
                
