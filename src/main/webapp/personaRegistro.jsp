@@ -5,7 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+    "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
 <head>
@@ -15,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
     <title>Sistema de Gestión</title>
 
@@ -111,7 +113,7 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                                <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
                                 <i class="fa fa-desktop"></i> Registro de Persona
@@ -171,7 +173,7 @@
                        
    
                             
-                      <input type="submit" name="Registrar" value="Registrar" class="btn btn-primary btn-lg" role="button"  >
+                      <input type="submit" name="Registrar" value="submit" class="btn btn-primary btn-lg" role="button"  >
                          <input type="reset" name="reset" value="reset" class="btn btn-primary btn-lg" role="button"  >
                        </form>
                       </div>

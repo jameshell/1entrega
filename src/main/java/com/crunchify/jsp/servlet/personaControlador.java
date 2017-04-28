@@ -36,6 +36,7 @@ public class personaControlador extends HttpServlet {
         personaDAO dao = new personaDAO();
         
         Persona persona = new Persona();
+        
         persona.setIdPersona(Integer.parseInt(id));
         persona.setNombrePersona(nombre);
         persona.setApellidoPersona(apellido);
@@ -52,7 +53,7 @@ public class personaControlador extends HttpServlet {
        
        
         //Redireccionando la informacion
-        RequestDispatcher redireccion = request.getRequestDispatcher("personaRegistro.jsp");
+        RequestDispatcher redireccion = request.getRequestDispatcher("persona.jsp");
         redireccion.forward(request, response);
         
         
