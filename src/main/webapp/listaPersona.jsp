@@ -3,27 +3,20 @@
     Created on : Mar 13, 2017, 2:54:25 AM
     Author     : james
 --%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.Connection"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="edu.co.sergio.mundo.vo.Persona"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="edu.co.sergio.mundo.vo.*"%>
+<%@ page import="java.util.List" %>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
     "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 
-    <title>Sistema de GestiÃ³n</title>
+    <title>Sistema de Gestión</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -133,58 +126,23 @@
                 <p>
                     Lista De Personas
                 </p>
-
-                <div class="page-header">
-                    
-                       <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th> Cargo </th>
-                                      
-                                     
-                                    </tr>
-                                </thead>
-                                
-                           
-            <%
-               // Class.forName("com.mysql.jdbc.Driver");
-                 Class.forName("org.postgresql.Driver");
-                Connection conn = null;
-
-                //conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/semillero", "root", "root");
-                connection = DriverManager.getConnection("jdbc:postgresql://ec2-54-163-254-48.compute-1.amazonaws.com:5432/d7evqvm1q8ctov","hcmtdxuakzbxnu", "ef1edc574ca561a65104242e8951e9e72e93b7415203d51784840e49fc54cc33"); 
-                
-                Statement stmt = null;
-                stmt = conn.createStatement();
-                String query = "SELECT nombrePersona, cargoPersona FROM Persona";
-                ResultSet rs = null;
-                rs = stmt.executeQuery(query);
-                while(rs.next()){
-            %>
-            <tr>
-                <%
-                    String nombre= rs.getString("nombrePersona");
-                    String cargo = rs.getString("cargoPersona");
-                
-                %>
-                <td><%=nombre %></td>
-                <td><%=cargo %></td>
+                  
+                 <div align="center" style="margin-top: 50px;">
+        <form action="listaDePersonas">
+        <input type="submit" value="submit" name='Mostrar Lista'>
+        </form>
+     </div>
                
-            </tr>               
-
-            <%      
-                }
-            %>
-                                
-                                  
-                                
-                            </table>
-            
-                        </div>
-                      </div>
-  
+            <%
+       if( request.getAttribute("personas")!=null){
+          List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
+           for (Persona persona : personas) {
+         %>      
+         <h1> <%=persona.getNombrePersona()%> </h1> <br/> 
+         <%      
+          }
+       }
+    %>
                         
 
             </div>

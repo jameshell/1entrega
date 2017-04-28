@@ -15,22 +15,33 @@
     <servlet>
         <servlet-name>Hello</servlet-name>
         <servlet-class>com.crunchify.jsp.servlet.HelloCrunchify</servlet-class>
-        
     </servlet>
+    
+    
        <servlet>
         <servlet-name>personaRegistry</servlet-name>
         <servlet-class>com.crunchify.jsp.servlet.personaControlador</servlet-class>
-        
+    </servlet>
+    
+    
+       <servlet>
+        <servlet-name>personaList</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.listaDePersonas</servlet-class>
     </servlet>
     
     <servlet-mapping>
         <servlet-name>Hello</servlet-name>
         <url-pattern>/CrunchifyServlet</url-pattern>
     </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>personaRegistry</servlet-name>
         <url-pattern>/personaControlador</url-pattern>
     </servlet-mapping>
     
+     <servlet-mapping>
+        <servlet-name>personaList</servlet-name>
+        <url-pattern>/listaDePersonas</url-pattern>
+    </servlet-mapping>
     
 </web-app>
