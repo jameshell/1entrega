@@ -129,7 +129,7 @@
 
                 <div class="page-header">
                     
-                   <form action="personaControlador" method="POST"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
+                   <form action="personaControlador"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
                                 
                             <div class="form-group">
