@@ -78,7 +78,7 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Listas <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="">Listas de Personas</a>
+                                <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
                              <li>
                                 <a href="">Lista de Formularios</a>

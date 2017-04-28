@@ -83,20 +83,20 @@ and open the template in the editor.
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Listas <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="crudEstudiantes.jsp">Listas de Estudiantes</a>
+                                <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
                              <li>
-                                <a href="crudInscripciones.jsp">Lista de Formularios</a>
+                                <a href="">Lista de Prestamos</a>
                             </li>
                         
                              <li>
-                                <a href="crudProfesores.jsp">Lista de Herramientas</a>
+                                <a href="">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="crudCursos.jsp">Lista de Inventarios</a>
+                                <a href="">Lista de Inventarios</a>
                             </li>
                             <li>
-                                <a href="crudCursos.jsp">Lista de Mantenimientos</a>
+                                <a href="">Lista de Mantenimientos</a>
                             </li>
                         
                         
