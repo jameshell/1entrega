@@ -129,7 +129,8 @@
                   
                  <div align="center" style="margin-top: 50px;">
         <form action="listaControlador">
-        <input type="submit" name="Mostrar Lista" value="submit" class="btn btn-primary btn-lg"  role="button"  >
+                          <button type="submit" value="submit" class="btn btn-default" role="button" > Mostrar Lista</button>
+  
         </form>
      </div>
                
@@ -138,7 +139,7 @@
           List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
            for (Persona persona : personas) {
          %>      
-         <h1> <%=persona.getNombrePersona()%> </h1> <br/> 
+         <h3> <%=persona.getNombrePersona()%> </h3> <br/> 
          <%      
           }
        }
