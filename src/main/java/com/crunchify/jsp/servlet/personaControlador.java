@@ -52,7 +52,7 @@ public class personaControlador extends HttpServlet {
        
        
         //Redireccionando la informacion
-        RequestDispatcher redireccion = request.getRequestDispatcher("estudianteRegistro.jsp");
+        RequestDispatcher redireccion = request.getRequestDispatcher("personaRegistro.jsp");
         redireccion.forward(request, response);
         
         

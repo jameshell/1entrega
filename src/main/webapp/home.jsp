@@ -143,6 +143,8 @@ and open the template in the editor.
                 <p>
                     Prototipo para sistema de registro usando arboles para bases de datos.
                 </p>
+                
+                <a href='index.jsp'> Ejercicio Del Profe para pruebas
 
                 <div class="page-header">
                    

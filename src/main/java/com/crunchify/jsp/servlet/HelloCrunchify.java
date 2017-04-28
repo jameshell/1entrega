@@ -22,7 +22,6 @@ public class HelloCrunchify extends HttpServlet {
         
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
         DepartamentoDAO dao = new DepartamentoDAO();
-        
         Departamento departamento = new Departamento();
         departamento.setId_departamento(Integer.parseInt(id));
         departamento.setNom_departamento(nombre);
