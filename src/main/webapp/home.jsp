@@ -144,7 +144,7 @@ and open the template in the editor.
                     Prototipo para sistema de registro usando arboles para bases de datos.
                 </p>
                 
-                <a href='index.jsp'> Ejercicio Del Profe para pruebas
+                <a href='index.jsp'> Ejercicio Del Profe para pruebas <a/>
 
                 <div class="page-header">
                    
