@@ -29,6 +29,18 @@
         <servlet-class>com.crunchify.jsp.servlet.listaControlador</servlet-class>
     </servlet>
     
+    
+       <servlet>
+        <servlet-name>personaDeletion</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.personaEliminacion</servlet-class>
+    </servlet>
+    
+    
+    
+    
+    
+    
+    
     <servlet-mapping>
         <servlet-name>Hello</servlet-name>
         <url-pattern>/CrunchifyServlet</url-pattern>
@@ -42,6 +54,11 @@
      <servlet-mapping>
         <servlet-name>personaList</servlet-name>
         <url-pattern>/listaControlador</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>personaDeletion</servlet-name>
+        <url-pattern>/personaEliminacion</url-pattern>
     </servlet-mapping>
     
 </web-app>

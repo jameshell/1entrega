@@ -59,10 +59,10 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                         <a href="estudiante.jsp"><i class="fa fa-fw fa-user" ></i> Estudiante</a>
+                         <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Persona</a>
                     </li>
                      <li>
-                        <a href="formularios.jsp"><i class="fa fa-fw fa-table"></i> Formularios</a>
+                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamos </a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
@@ -78,14 +78,14 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Listas <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="crudEstudiantes.jsp">Listas de Estudiantes</a>
+                                <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
                              <li>
-                                <a href="crudInscripciones.jsp">Lista de Formularios</a>
+                                <a href="listaPrestamo.jsp">Lista de Prestamos</a>
                             </li>
                         
                              <li>
-                                <a href="crudProfesores.jsp">Lista de Herramientas</a>
+                                <a href="listaHerramienta.jsp">Lista de Herramientas</a>
                             </li>
                             <li>
                                 <a href="crudCursos.jsp">Lista de Inventarios</a>
@@ -109,14 +109,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Estudiante
+                          Persona
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Estudiantes
+                                <i class="fa fa-desktop"></i> Administración de Personas
                             </li>
                         </ol>
                     </div>
@@ -126,18 +126,18 @@
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Escriba la cédula del estudiante que desea borrar.
+                    Escriba el id de la persona que desea borrar.
                 </p>
 
                 <div class="page-header">
                  
-                   <form action="estudianteControlador" method="POST"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
+                   <form action="personaEliminacion"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
                                 
                             <div class="form-group">
-                                <label><h3>Cédula del Estudiante que desea eliminar:</h3>
+                                <label><h3>Cédula de la persona que desea eliminar:</h3>
                                 </label>
-                                <input type="text" class="form-control" name="cedulaEstudiante">
+                                <input type="text" class="form-control" name="idPersona">
                                 <p class="help-block">Ej: 1056373.</p>
                             </div>
                           
