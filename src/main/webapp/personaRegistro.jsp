@@ -59,10 +59,10 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                         <a href="estudiante.jsp"><i class="fa fa-fw fa-user" ></i> Persona </a>
+                         <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Personas </a>
                     </li>
                      <li>
-                        <a href="formularios.jsp"><i class="fa fa-fw fa-table"></i> Formularios</a>
+                        <a href="formularios.jsp"><i class="fa fa-fw fa-table"></i> Prestamos </a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
@@ -78,20 +78,20 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Listas <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="crudEstudiantes.jsp">Listas de Personas</a>
+                                <a href="">Listas de Personas</a>
                             </li>
                              <li>
-                                <a href="crudInscripciones.jsp">Lista de Formularios</a>
+                                <a href="">Lista de Formularios</a>
                             </li>
                         
                              <li>
-                                <a href="crudProfesores.jsp">Lista de Herramientas</a>
+                                <a href="">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="crudCursos.jsp">Lista de Inventarios</a>
+                                <a href="">Lista de Inventarios</a>
                             </li>
                             <li>
-                                <a href="crudCursos.jsp">Lista de Mantenimientos</a>
+                                <a href="">Lista de Mantenimientos</a>
                             </li>
                         
                         
