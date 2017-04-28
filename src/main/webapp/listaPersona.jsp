@@ -3,8 +3,7 @@
     Created on : Mar 13, 2017, 2:54:25 AM
     Author     : james
 --%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"%>
 <%@ page import="edu.co.sergio.mundo.vo.*"%>
 <%@ page import="java.util.List" %>
 <%@page pageEncoding="UTF-8"%>
@@ -21,7 +20,7 @@
     <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-    <title>Sistema de Gestión</title>
+    <title>Sistema de GestiÃ³n</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -134,7 +133,7 @@
 
                 <div class="page-header">
                     
-                   <form action="personaControlador"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
+                   <form action="personaControlador"> <!--ATENCION: la palabra action indica el tipo de acciÃ³n que va a realizar el formulario-->
             
                                 
                             <div class="form-group">
