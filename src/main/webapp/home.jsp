@@ -64,10 +64,10 @@ and open the template in the editor.
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                         <a href="estudiante.jsp"><i class="fa fa-fw fa-user"></i> Estudiante</a>
+                         <a href="persona.jsp"><i class="fa fa-fw fa-user"></i> Persona </a>
                     </li>
                      <li>
-                        <a href="formularios.jsp"><i class="fa fa-fw fa-table"></i> Formularios</a>
+                        <a href="formularios.jsp"><i class="fa fa-fw fa-table"></i> Prestamos </a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>

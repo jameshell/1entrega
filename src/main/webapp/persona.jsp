@@ -1,5 +1,5 @@
 <%-- 
-    Document   : estudiante
+    Document   : persona
     Created on : Mar 13, 2017, 2:07:56 AM
     Author     : james
 --%>
@@ -84,20 +84,20 @@ and open the template in the editor.
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Listas <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="crudEstudiantes.jsp">Listas de Personas</a>
+                                <a href="">Listas de Personas</a>
                             </li>
                              <li>
-                                <a href="crudInscripciones.jsp">Lista de Formularios</a>
+                                <a href="">Lista de Prestamos</a>
                             </li>
                         
                              <li>
-                                <a href="crudProfesores.jsp">Lista de Herramientas</a>
+                                <a href="">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="crudCursos.jsp">Lista de Inventarios</a>
+                                <a href="">Lista de Inventarios</a>
                             </li>
                             <li>
-                                <a href="crudCursos.jsp">Lista de Mantenimientos</a>
+                                <a href="">Lista de Mantenimientos</a>
                             </li>
                         
                         
@@ -119,10 +119,10 @@ and open the template in the editor.
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                                <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Estudiantes
+                                <i class="fa fa-desktop"></i> Administración de Personas en la plataforma
                             </li>
                         </ol>
                     </div>
@@ -132,14 +132,14 @@ and open the template in the editor.
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Decida que tipo de acción respecto a los datos de los estudiantes.
+                    Decida que tipo de acción tomar respecto a los datos de las personas.
                 </p>
 
                 <div class="page-header">
                     
-                   <a href="estudianteRegistro.jsp" class="btn btn-primary btn-lg">Registro</a>
-                       <a href="estudianteBorrado.jsp" class="btn btn-primary btn-lg">Eliminación</a>
-                           <a href="estudianteActualizacion.jsp" class="btn btn-primary btn-lg">Actualizacion</a>
+                   <a href="personaRegistro.jsp" class="btn btn-primary btn-lg">Registro</a>
+                       <a href="personaBorrado.jsp" class="btn btn-primary btn-lg">Eliminación</a>
+                           <a href="personaActualizacion.jsp" class="btn btn-primary btn-lg">Actualizacion</a>
 
             </div>
             <!-- /.container-fluid -->
