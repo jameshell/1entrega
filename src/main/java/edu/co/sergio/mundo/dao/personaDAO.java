@@ -132,13 +132,19 @@ public class personaDAO implements IBaseDatos<Persona> {
             } catch (URISyntaxException ex) {
                 Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-		String query = "update Persona set nombrePersona = ? where idPersona = ?";
+		String query =
+              "update Persona set nombrePersona = ?, apellidoPersona =?, semestrePersona=?, carreraPersona=?, cargoPersona=? where idPersona = ?";
+                // 
                 /* Revisar bien el query que se esta ejecutando en MYSQL*/
 		PreparedStatement preparedStmt=null;
 		try {
 		    preparedStmt = connection.prepareStatement(query);
 		    preparedStmt.setString(1, t.getNombrePersona());
-                    preparedStmt.setInt   (2, t.getIdPersona());
+                    preparedStmt.setString(2, t.getApellidoPersona());
+                    preparedStmt.setInt   (3, t.getSemestrePersona());
+                    preparedStmt.setString(4, t.getCarreraPersona());
+                    preparedStmt.setString(5, t.getCargoPersona());
+                    preparedStmt.setInt   (6, t.getIdPersona());
 		    if (preparedStmt.executeUpdate() > 0){
 		    	result=true;
 		    }
