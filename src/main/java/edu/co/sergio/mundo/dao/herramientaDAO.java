@@ -5,6 +5,7 @@
  */
 package edu.co.sergio.mundo.dao;
 
+import edu.co.sergio.mundo.vo.Administrativo;
 import edu.co.sergio.mundo.vo.Herramienta;
 import java.net.URISyntaxException;
 import java.sql.Connection;
@@ -21,14 +22,14 @@ import java.util.logging.Logger;
  *
  * @author Jaime Alonso
  */
-public class herramientaDAO implements IBaseDatos<Herramienta> {
+public class herramientaDAO implements IBaseDatos<Administrativo> {
 
 	/**
 	 * Funcion que permite obtener una lista de los departamentos existentes en la base de datos
 	 * @return List<Departamento> Retorna la lista de Departamentos existentes en la base de datos
 	 */
-	public List<Herramienta> findAll() {
-		List<Herramienta> herramientas= null;
+	public List<Administrativo> findAll() {
+		List<Administrativo> herramientas= null;
 	    String query = "SELECT * FROM Herramienta";
 	    Connection connection = null;
             try {
@@ -41,7 +42,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
 	    ResultSet rs = st.executeQuery(query);
             
 	    int id =0;
-            int idInv=0;
+            int idAdmin=0;
             String nombre=null;
             int serial=0;
             String descripcion=null;
@@ -49,16 +50,15 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
             
 	
 	    while (rs.next()){
-	    	if(herramientas == null){
+	    	if(Administrativos == null){
 	    		herramientas= new ArrayList<Herramienta>();
 	    	}
-	      
-	        Herramienta registro= new Herramienta();
+                Administrativo Registro=new Administrativo();
 	        id = rs.getInt("idHerramienta");
 	        registro.setIdHerramienta(id);
                 
-                 idInv = rs.getInt("idInventario");
-	        registro.setIdInventario(idInv);
+                idAdmin=rs.getInt("idAdministrativo");
+                administrativo.setIdAdministrativo(idAdmin);
                 
 	        nombre = rs.getString("nombreHerramienta");
 	        registro.setNombreHerramienta(nombre);
@@ -79,7 +79,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
 			e.printStackTrace();
 		}
 	    
-	    return herramientas;
+	    return Administrativo;
 	}
 
 	
@@ -88,7 +88,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
 	 * @param Departamento recibe un objeto de tipo Departamento 
 	 * @return boolean retorna true si la operacion de insercion es exitosa.
 	 */
-	public boolean insert(Herramienta t) {
+	public boolean insert(Administrativo a) {
 		boolean result=false;
 		Connection connection=null;
             try {
@@ -96,12 +96,12 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
             } catch (URISyntaxException ex) {
                 Logger.getLogger(herramientaDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	    String query = " INSERT into Herramienta (idHerramienta, idInventario, nombreHerramienta, noSerial, descripcionHerramienta)"  + " values (?,?,?,?,?)";
+	    String query = " INSERT into Herramienta (idHerramienta, idAdministrativo, nombreHerramienta, noSerial, descripcionHerramienta)"  + " values (?,?,?,?,?)";
         PreparedStatement preparedStmt=null;
 	    try {
 			preparedStmt = connection.prepareStatement(query);
 			preparedStmt.setInt (1, t.getIdHerramienta());
-                        preparedStmt.setInt (2, t.getIdInventario());
+                        preparedStmt.setInt (2, a.getIdAdministrativo());
                         preparedStmt.setString(3, t.getNombreHerramienta());
                         preparedStmt.setInt (4, t.getNoSerial());
                         preparedStmt.setString(5, t.getDescripcionHerramienta());

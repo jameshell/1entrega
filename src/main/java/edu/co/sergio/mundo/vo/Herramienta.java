@@ -5,6 +5,8 @@
  */
 package edu.co.sergio.mundo.vo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Jaime Alonso
@@ -12,13 +14,13 @@ package edu.co.sergio.mundo.vo;
 public class Herramienta {
     
   private int idHerramienta;
-  private int idInventario;
-  private String nombreHerramienta;
   private int noSerial;
+  private String nombreHerramienta;
   private String descripcionHerramienta;
-  
+  private ArrayList<Mantenimiento> listaMantenimientos;
+  private ArrayList<Prestamo> listaPrestamo;
 
-  
+
     public int getIdHerramienta() {
         return idHerramienta;
     }
@@ -26,21 +28,12 @@ public class Herramienta {
     public void setIdHerramienta(int idHerramienta) {
         this.idHerramienta = idHerramienta;
     }
-
     public int getNoSerial() {
         return noSerial;
     }
 
     public void setNoSerial(int noSerial) {
         this.noSerial = noSerial;
-    }
-
-    public String getDescripcionHerramienta() {
-        return descripcionHerramienta;
-    }
-
-    public void setDescripcionHerramienta(String descripcionHerramienta) {
-        this.descripcionHerramienta = descripcionHerramienta;
     }
 
     public String getNombreHerramienta() {
@@ -51,12 +44,29 @@ public class Herramienta {
         this.nombreHerramienta = nombreHerramienta;
     }
 
-    public int getIdInventario() {
-        return idInventario;
+    public String getDescripcionHerramienta() {
+        return descripcionHerramienta;
     }
 
-    public void setIdInventario(int idInventario) {
-        this.idInventario = idInventario;
+    public void setDescripcionHerramienta(String descripcionHerramienta) {
+        this.descripcionHerramienta = descripcionHerramienta;
     }
+
+    public ArrayList<Mantenimiento> getListaMantenimientos() {
+        return listaMantenimientos;
+    }
+
+    public void setListaMantenimientos(ArrayList<Mantenimiento> listaMantenimientos) {
+        this.listaMantenimientos = listaMantenimientos;
+    }
+
+    public ArrayList<Prestamo> getListaPrestamo() {
+        return listaPrestamo;
+    }
+
+    public void setListaPrestamo(ArrayList<Prestamo> listaPrestamo) {
+        this.listaPrestamo = listaPrestamo;
+    }
+  
     
 }

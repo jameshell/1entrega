@@ -16,7 +16,6 @@ import java.sql.Date;
 public class Mantenimiento {
     
     private int idMantenimiento;
-    private int idHerramienta;
     private String refFabricante;
     private String enServicio;
     private int nivelImportancia;
@@ -25,7 +24,8 @@ public class Mantenimiento {
     private String nombreTecnico;
     private Date fechaInicio;
     private Date fechaFinal;
-    
+
+
     
     public int getIdMantenimiento() {
         return idMantenimiento;
@@ -33,14 +33,6 @@ public class Mantenimiento {
 
     public void setIdMantenimiento(int idMantenimiento) {
         this.idMantenimiento = idMantenimiento;
-    }
-
-    public int getIdHerramienta() {
-        return idHerramienta;
-    }
-
-    public void setIdHerramienta(int idHerramienta) {
-        this.idHerramienta = idHerramienta;
     }
 
     public String getRefFabricante() {

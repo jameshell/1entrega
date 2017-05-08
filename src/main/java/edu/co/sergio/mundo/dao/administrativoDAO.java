@@ -55,9 +55,6 @@ public class administrativoDAO implements IBaseDatos<Administrativo> {
 	        Administrativo registro= new Administrativo();
 	        id = rs.getInt("idAdministrativo");
 	        registro.setIdAdministrativo(id);
-                
-                idInv = rs.getInt("idInventario");
-	        registro.setIdInventario(idInv);
 	        
 	        nombre = rs.getString("nombreAdmin");
 	        registro.setNombreAdmin(nombre);

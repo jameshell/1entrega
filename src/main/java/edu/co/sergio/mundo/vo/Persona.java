@@ -5,6 +5,8 @@
  */
 package edu.co.sergio.mundo.vo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Jaime Alonso
@@ -17,6 +19,10 @@ public class Persona {
     private int semestrePersona;
     private String carreraPersona;
     private String cargoPersona;
+    private ArrayList<Prestamo> listaPrestamo;
+    private ArrayList<prestamoSalon> prestamoSalon;
+
+ 
 
     public int getIdPersona() {
         return idPersona;

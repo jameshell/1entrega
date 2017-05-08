@@ -5,6 +5,8 @@
  */
 package edu.co.sergio.mundo.vo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Jaime Alonso
@@ -12,9 +14,13 @@ package edu.co.sergio.mundo.vo;
 public class Administrativo {
     
     private int idAdministrativo;
-    private int idInventario;
+    private String Contrasena;
     private String nombreAdmin;
     private int tipoPermiso;
+    private ArrayList<Herramienta> listaHerramientas;
+    private ArrayList<Prestamo> listaPrestamo;
+
+
 
     public int getIdAdministrativo() {
         return idAdministrativo;
@@ -24,12 +30,12 @@ public class Administrativo {
         this.idAdministrativo = idAdministrativo;
     }
 
-    public int getIdInventario() {
-        return idInventario;
+    public String getContrasena() {
+        return Contrasena;
     }
 
-    public void setIdInventario(int idInventario) {
-        this.idInventario = idInventario;
+    public void setContrasena(String Contrasena) {
+        this.Contrasena = Contrasena;
     }
 
     public String getNombreAdmin() {
@@ -47,8 +53,21 @@ public class Administrativo {
     public void setTipoPermiso(int tipoPermiso) {
         this.tipoPermiso = tipoPermiso;
     }
-    
-    
-    
+
+    public ArrayList<Herramienta> getListaHerramientas() {
+        return listaHerramientas;
+    }
+
+    public void setListaHerramientas(ArrayList<Herramienta> listaHerramientas) {
+        this.listaHerramientas = listaHerramientas;
+    }
+
+    public ArrayList<Prestamo> getListaPrestamo() {
+        return listaPrestamo;
+    }
+
+    public void setListaPrestamo(ArrayList<Prestamo> listaPrestamo) {
+        this.listaPrestamo = listaPrestamo;
+    }
     
 }

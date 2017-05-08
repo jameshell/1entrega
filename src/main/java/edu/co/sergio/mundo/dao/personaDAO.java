@@ -52,8 +52,7 @@ public class personaDAO implements IBaseDatos<Persona> {
 	    	if(personas == null){
 	    		personas= new ArrayList<Persona>();
 	    	}
-	      
-	        Persona registro= new Persona();
+                Persona registro= new Persona();
 	        id = rs.getInt("idPersona");
 	        registro.setIdPersona(id);
 	        
@@ -71,6 +70,7 @@ public class personaDAO implements IBaseDatos<Persona> {
                 
                 cargo= rs.getString("cargoPersona");
                 registro.setCargoPersona(cargo);
+                
                 
                 
 	        

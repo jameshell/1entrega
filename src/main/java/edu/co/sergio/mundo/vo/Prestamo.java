@@ -16,9 +16,6 @@ import java.sql.Date;
 public class Prestamo {
     
     private String codPrestamo;
-    private int idPersona;
-    private int idAdministrativo;
-    private int idSalon;
     private String tipoPractica;
     private Date fechaEntrada;
     private Date fechaSalida;
@@ -26,7 +23,7 @@ public class Prestamo {
     private String justificacion;
     private String observaciones;
     private String tipoPrestamo;
-
+    
     public String getCodPrestamo() {
         return codPrestamo;
     }
@@ -34,31 +31,6 @@ public class Prestamo {
     public void setCodPrestamo(String codPrestamo) {
         this.codPrestamo = codPrestamo;
     }
-
-    public int getIdPersona() {
-        return idPersona;
-    }
-
-    public void setIdPersona(int idPersona) {
-        this.idPersona = idPersona;
-    }
-
-    public int getIdAdministrativo() {
-        return idAdministrativo;
-    }
-
-    public void setIdAdministrativo(int idAdministrativo) {
-        this.idAdministrativo = idAdministrativo;
-    }
-
-    public int getIdSalon() {
-        return idSalon;
-    }
-
-    public void setIdSalon(int idSalon) {
-        this.idSalon = idSalon;
-    }
-
     public String getTipoPractica() {
         return tipoPractica;
     }
