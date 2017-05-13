@@ -20,6 +20,22 @@ public class Persona {
     private String carreraPersona;
     private String cargoPersona;
     private ArrayList<Prestamo> listaPrestamo;
+
+    public ArrayList<Prestamo> getListaPrestamo() {
+        return listaPrestamo;
+    }
+
+    public void setListaPrestamo(ArrayList<Prestamo> listaPrestamo) {
+        this.listaPrestamo = listaPrestamo;
+    }
+
+    public ArrayList<prestamoSalon> getPrestamoSalon() {
+        return prestamoSalon;
+    }
+
+    public void setPrestamoSalon(ArrayList<prestamoSalon> prestamoSalon) {
+        this.prestamoSalon = prestamoSalon;
+    }
     private ArrayList<prestamoSalon> prestamoSalon;
 
  

@@ -22,14 +22,14 @@ import java.util.logging.Logger;
  *
  * @author Jaime Alonso
  */
-public class herramientaDAO implements IBaseDatos<Administrativo> {
+public class herramientaDAO implements IBaseDatos<Herramienta> {
 
 	/**
 	 * Funcion que permite obtener una lista de los departamentos existentes en la base de datos
 	 * @return List<Departamento> Retorna la lista de Departamentos existentes en la base de datos
 	 */
-	public List<Administrativo> findAll() {
-		List<Administrativo> herramientas= null;
+	public List<Herramienta> findAll() {
+		List<Herramienta> herramientas= null;
 	    String query = "SELECT * FROM Herramienta";
 	    Connection connection = null;
             try {
@@ -50,15 +50,15 @@ public class herramientaDAO implements IBaseDatos<Administrativo> {
             
 	
 	    while (rs.next()){
-	    	if(Administrativos == null){
+	    	if(herramientas == null){
 	    		herramientas= new ArrayList<Herramienta>();
 	    	}
-                Administrativo Registro=new Administrativo();
+                Herramienta registro=new Herramienta();
 	        id = rs.getInt("idHerramienta");
 	        registro.setIdHerramienta(id);
                 
                 idAdmin=rs.getInt("idAdministrativo");
-                administrativo.setIdAdministrativo(idAdmin);
+                registro.(idAdmin);
                 
 	        nombre = rs.getString("nombreHerramienta");
 	        registro.setNombreHerramienta(nombre);

@@ -14,6 +14,8 @@ import java.sql.Date;
  * @author Jaime Alonso
  */
 public class Mantenimiento {
+    private int idHerramienta;
+
     
     private int idMantenimiento;
     private String refFabricante;
@@ -26,6 +28,13 @@ public class Mantenimiento {
     private Date fechaFinal;
 
 
+    public int getIdHerramienta() {
+        return idHerramienta;
+    }
+
+    public void setIdHerramienta(int idHerramienta) {
+        this.idHerramienta = idHerramienta;
+    }
     
     public int getIdMantenimiento() {
         return idMantenimiento;

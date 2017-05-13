@@ -13,7 +13,24 @@ import java.sql.Date;
  * @author Jaime Alonso
  */
 public class prestamoSalon {
-    
+    private int idSalon;
+    private int idPersona;
+
+    public int getIdSalon() {
+        return idSalon;
+    }
+
+    public void setIdSalon(int idSalon) {
+        this.idSalon = idSalon;
+    }
+
+    public int getIdPersona() {
+        return idPersona;
+    }
+
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
+    }
     private int idPrestamoSalon;
     private Date fechaEntrada;
     private Date fechaSalida;

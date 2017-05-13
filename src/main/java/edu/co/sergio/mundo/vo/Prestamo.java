@@ -14,7 +14,10 @@ import java.sql.Date;
  * @author Jaime Alonso
  */
 public class Prestamo {
-    
+    private int idPersona;
+    private int idHerramienta;
+    private int idSalon;
+    private int idAdministrativo;
     private String codPrestamo;
     private String tipoPractica;
     private Date fechaEntrada;
@@ -85,6 +88,38 @@ public class Prestamo {
 
     public void setTipoPrestamo(String tipoPrestamo) {
         this.tipoPrestamo = tipoPrestamo;
+    }
+
+    public int getIdPersona() {
+        return idPersona;
+    }
+
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
+    }
+
+    public int getIdHerramienta() {
+        return idHerramienta;
+    }
+
+    public void setIdHerramienta(int idHerramienta) {
+        this.idHerramienta = idHerramienta;
+    }
+
+    public int getIdSalon() {
+        return idSalon;
+    }
+
+    public void setIdSalon(int idSalon) {
+        this.idSalon = idSalon;
+    }
+
+    public int getIdAdministrativo() {
+        return idAdministrativo;
+    }
+
+    public void setIdAdministrativo(int idAdministrativo) {
+        this.idAdministrativo = idAdministrativo;
     }
     
     

@@ -12,13 +12,21 @@ import java.util.ArrayList;
  * @author Jaime Alonso
  */
 public class Herramienta {
-    
+  private int idAdministrativo;
   private int idHerramienta;
   private int noSerial;
   private String nombreHerramienta;
   private String descripcionHerramienta;
   private ArrayList<Mantenimiento> listaMantenimientos;
   private ArrayList<Prestamo> listaPrestamo;
+
+    public int getIdAdministrativo() {
+        return idAdministrativo;
+    }
+
+    public void setIdAdministrativo(int idAdministrativo) {
+        this.idAdministrativo = idAdministrativo;
+    }
 
 
     public int getIdHerramienta() {
