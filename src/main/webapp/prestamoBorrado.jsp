@@ -62,7 +62,7 @@
                          <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Persona</a>
                     </li>
                      <li>
-                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamos </a>
+                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo </a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
@@ -109,15 +109,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Persona
+                          Prestamo
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Personas
-                            </li>
+                                <i class="fa fa-desktop"></i> Administración de Prestamos
                         </ol>
                     </div>
                 </div>
@@ -126,18 +125,18 @@
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Escriba el id de la persona que desea borrar.
+                    Escriba el id del prestamo que desea borrar.
                 </p>
 
                 <div class="page-header">
                  
-                   <form action="personaEliminacion"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
+                   <form action="prestamoEliminacion"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
                                 
                             <div class="form-group">
-                                <label><h3>Cédula de la persona que desea eliminar:</h3>
+                                <label><h3>ID del prestamo que se requiere borrar:</h3>
                                 </label>
-                                <input type="text" class="form-control" name="idPersona">
+                                <input type="text" class="form-control" name="codPrestamo">
                                 <p class="help-block">Ej: 1056373.</p>
                             </div>
                           

@@ -107,14 +107,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Estudiante
+                            Prestamo
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Persona
+                                <i class="fa fa-desktop"></i> Administración de Prestamo
                             </li>
                         </ol>
                     </div>
@@ -128,7 +128,7 @@
                 </p>
 
                 <div class="page-header">
-                       <h2>La persona ya se encuentra registrado en la memoria</h2>
+                       <h2>El id del prestamo ya se encuentra registrado en la plataforma.</h2>
                        
                        
                    <a href="persona.jsp" class="btn btn-primary btn-lg">Volver a Persona</a>
