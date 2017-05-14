@@ -83,12 +83,11 @@
                              <li>
                                 <a href="listaPrestamo.jsp">Lista de Prestamos</a>
                             </li>
-                        
                              <li>
-                                <a href="listaHerramienta">Lista de Herramientas</a>
+                                <a href="listaHerramienta.jsp">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="listaSalon">Lista de Salones</a>
+                                <a href="listaSalon.jsp">Lista de Salones</a>
                             </li>
                             <li>
                                 <a href="listaMantenimiento">Lista de Mantenimientos</a>
@@ -109,14 +108,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Prestamo
+                          Herramienta
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Actualizacion de Prestamo
+                                <i class="fa fa-desktop"></i> Registro de Herramienta
                             </li>
                         </ol>
                     </div>
@@ -126,84 +125,45 @@
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Introduzca los datos del prestamo que desea actualizar.
+                    Introduzca los datos de la herramienta que desea registrar.
                 </p>
 
                 <div class="page-header">
                     
-                   <form action="prestamoActualizador"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
+                   <form action="herramientaActualizador"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
                                 
                             <div class="form-group">
-                                <label><h3>Cédula de la persona va a realizar el prestamo</h3>
+                                <label><h3>ID del administrativo</h3>
                                 </label>
-                                <input type="text" class="form-control" name="idPersona">
-                                <p class="help-block">Ej: 1056373.</p>
+                                <input type="text" class="form-control" name="idAdministrativo">
+                                <p class="help-block">Id del administrativo que realiza la acción.</p>
                             </div>
                             <div class="form-group">
-                                <label><h3> ID de la herramienta que se va a entregar</h3>
+                                <label><h3> ID de la herramienta </h3>
                                 </label>
                                 <input type="text" class="form-control" name="idHerramienta">
                                 <p class="help-block">Ej: 76842684</p>
                             </div>
                                <div class="form-group">
-                                <label><h3>ID del Salon si es una practica guiada</h3>
+                                <label><h3>Serial del dispositivo</h3>
                                 </label>
-                                <input type="text" class="form-control" name="idSalon">
+                                <input type="text" class="form-control" name="noSerial">
                                 <p class="help-block">Ej: 64546</p>
                             </div>
                             <div class="form-group">
-                                <label><h3>Código de Prestamo</h3>
+                                <label><h3>Nombre de la Herramienta</h3>
                                 </label>
-                                <input type="text" class="form-control" name="codPrestamo">
-                                <p class="help-block">Ej: 356464</p>
+                                <input type="text" class="form-control" name="nombreHerramienta">
+                                <p class="help-block">Ej: Osciloscopio</p>
                             </div>
                               <div class="form-group">
-                                <label><h3> Tipo de práctica </h3>
+                                <label><h3> Descripcion de la Herramienta </h3>
                                 </label>
-                                <input type="text" class="form-control" name="tipoPractica">
-                                <p class="help-block">Ej: Guíada  o Libre</p>
-                            </div>
-                              <div class="form-group">
-                                <label><h3>Fecha de salida</h3>
-                                </label>
-                                <input type="date" class="form-control" name="fechaSalida">
-                                <p class="help-block"> Introduzca la fecha en la que se realiza el prestamo</p>
-                            </div>  
-                             <div class="form-group">
-                                <label><h3>Fecha de Entrada</h3>
-                                </label>
-                                <input type="date" class="form-control" name="fechaSalida">
-                                <p class="help-block"> Introduzca la fecha en la que se devuelve el objeto de prestamo</p>
-                            </div>
-                            <div class="form-group">
-                                <label><h3>Estado del objeto a prestar</h3>
-                                </label>
-                                <input type="text" class="form-control" name="estado">
-                                <p class="help-block">Ej: Bueno </p>
-                            </div>
-                           <div class="form-group">
-                                <label><h3>Justificación</h3>
-                                </label>
-                                <input type="text" class="form-control" name="justificacion">
-                                <p class="help-block">Ej: Khé </p>
-                            </div>
-                         <div class="form-group">
-                                <label><h3>Observaciones</h3>
-                                </label>
-                                <input type="text" class="form-control" name="observaciones">
-                                <p class="help-block">Ej: Observaciones del prestamo </p>
-                            </div>
-                       <div class="form-group">
-                                <label><h3>Tipo de Prestamo</h3>
-                                </label>
-                           <br>
-                                <input type="radio" name="tipoPrestamo"  value="externo" checked> Externo<br>
-                                <input type="radio" name="tipoPrestamo"  value="interno"> Interno 
-                            
-                                <p class="help-block">Ej: Elija si el prestamo es de caracter interno o externo </p>
-                            </div>
-                 
+                                <input type="text" class="form-control" name="descripcionHerramienta">
+                                <p class="help-block">Ej: Osciloscopio marca Altera</p>
+                              </div>
+                         
                        
    
                             
@@ -213,7 +173,7 @@
                       </div>
                            
                              
-                        </form>
+                       
                         
 
             </div>

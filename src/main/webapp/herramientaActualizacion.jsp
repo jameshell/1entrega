@@ -160,8 +160,8 @@
                               <div class="form-group">
                                 <label><h3> Descripcion de la Herramienta </h3>
                                 </label>
-                                <input type="text" class="form-control" name="tipoPractica">
-                                <p class="help-block">Ej: Guíada  o Libre</p>
+                                <input type="text" class="form-control" name="descripcionHerramienta">
+                                <p class="help-block">Ej: Osciloscopio marca Altera</p>
                               </div>
                          
                        

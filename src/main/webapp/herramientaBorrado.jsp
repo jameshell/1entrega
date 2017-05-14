@@ -113,7 +113,7 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                                <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
                                 <i class="fa fa-desktop"></i> Administración de Prestamos
@@ -134,9 +134,9 @@
             
                                 
                             <div class="form-group">
-                                <label><h3>ID del prestamo que se requiere borrar:</h3>
+                                <label><h3>ID de la Herramienta que desea borrar:</h3>
                                 </label>
-                                <input type="text" class="form-control" name="codPrestamo">
+                                <input type="text" class="form-control" name="idHerramienta">
                                 <p class="help-block">Ej: 1056373.</p>
                             </div>
                           
