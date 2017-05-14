@@ -62,7 +62,7 @@
                          <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Personas</a>
                     </li>
                      <li>
-                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamos</a>
+                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo</a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>

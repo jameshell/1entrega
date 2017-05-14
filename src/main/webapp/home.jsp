@@ -67,13 +67,13 @@ and open the template in the editor.
                          <a href="persona.jsp"><i class="fa fa-fw fa-user"></i> Persona </a>
                     </li>
                      <li>
-                        <a href="formularios.jsp"><i class="fa fa-fw fa-table"></i> Prestamos </a>
+                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo </a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
                            <li>
-                        <a href="inventario.jsp"><i class="fa fa-fw fa-file"></i> Inventario</a>
+                        <a href="salon.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
                     </li>
                            <li>
                         <a href="mantenimiento.jsp"><i class="fa fa-fw fa-dashboard"></i> Mantenimiento</a>
@@ -86,7 +86,7 @@ and open the template in the editor.
                                 <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
                              <li>
-                                <a href="">Lista de Prestamos</a>
+                                <a href="listaPrestamo.jsp">Lista de Prestamos</a>
                             </li>
                         
                              <li>

@@ -62,7 +62,7 @@
                          <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Personas </a>
                     </li>
                      <li>
-                        <a href="formularios.jsp"><i class="fa fa-fw fa-table"></i> Prestamos </a>
+                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo </a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
@@ -81,14 +81,14 @@
                                 <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
                              <li>
-                                <a href="">Lista de Formularios</a>
+                                <a href="listaPrestamo.jsp">Lista de Prestamos</a>
                             </li>
                         
                              <li>
                                 <a href="">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="">Lista de Inventarios</a>
+                                <a href="">Lista de Salones</a>
                             </li>
                             <li>
                                 <a href="">Lista de Mantenimientos</a>

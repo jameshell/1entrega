@@ -59,10 +59,10 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                         <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Personas</a>
+                         <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Persona</a>
                     </li>
                      <li>
-                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamos</a>
+                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo</a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
@@ -78,10 +78,10 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Listas <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="">Listas de Personas</a>
+                                <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
                              <li>
-                                <a href="">Lista de Prestamos</a>
+                                <a href="listaPrestamo.jsp">Lista de Prestamos</a>
                             </li>
                         
                              <li>

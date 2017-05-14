@@ -57,16 +57,16 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                         <a href="estudiante.jsp"><i class="fa fa-fw fa-user" ></i> Estudiante</a>
+                         <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Persona</a>
                     </li>
                      <li>
-                        <a href="formularios.jsp"><i class="fa fa-fw fa-table"></i> Formularios</a>
+                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo</a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
                            <li>
-                        <a href="inventario.jsp"><i class="fa fa-fw fa-file"></i> Inventario</a>
+                        <a href="salon.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
                     </li>
                            <li>
                         <a href="mantenimiento.jsp"><i class="fa fa-fw fa-dashboard"></i> Mantenimiento</a>
@@ -76,17 +76,17 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Listas <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="crudEstudiantes.jsp">Listas de Estudiantes</a>
+                                <a href="listaPersona.jsp">Lista de Persona</a>
                             </li>
                              <li>
-                                <a href="crudInscripciones.jsp">Lista de Formularios</a>
+                                <a href="listaPrestamo.jsp">Lista de Prestamos</a>
                             </li>
                         
                              <li>
                                 <a href="crudProfesores.jsp">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="crudCursos.jsp">Lista de Inventarios</a>
+                                <a href="salon.jsp">Lista de Salones</a>
                             </li>
                             <li>
                                 <a href="crudCursos.jsp">Lista de Mantenimientos</a>
@@ -114,7 +114,7 @@
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Estudiantes
+                                <i class="fa fa-desktop"></i> Administración de Persona
                             </li>
                         </ol>
                     </div>
@@ -128,10 +128,10 @@
                 </p>
 
                 <div class="page-header">
-                       <h2>El estudiante ya se encuentra registrado en la memoria</h2>
+                       <h2>La persona ya se encuentra registrado en la memoria</h2>
                        
                        
-                   <a href="estudiante.jsp" class="btn btn-primary btn-lg">Volver a Estudiante</a>
+                   <a href="persona.jsp" class="btn btn-primary btn-lg">Volver a Persona</a>
                     
 
             </div>
