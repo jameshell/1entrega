@@ -195,9 +195,9 @@
                                 <p class="help-block">Ej: Observaciones del prestamo </p>
                             </div>
                        <div class="form-group">
-                                <label><h3>Tipo De Prestamo</h3>
+                                <label><h3>Tipo de Prestamo</h3>
                                 </label>
-                       
+                           <br>
                                 <input type="radio" name="tipoPrestamo"  value="externo" checked> Externo<br>
                                 <input type="radio" name="tipoPrestamo"  value="interno"> Interno 
                             
