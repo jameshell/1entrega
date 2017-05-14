@@ -66,7 +66,7 @@
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
                            <li>
-                        <a href="inventario.jsp"><i class="fa fa-fw fa-file"></i> Inventario</a>
+                        <a href="inventario.jsp"><i class="fa fa-fw fa-file"></i> Salones</a>
                     </li>
                            <li>
                         <a href="mantenimiento.jsp"><i class="fa fa-fw fa-dashboard"></i> Mantenimiento</a>
@@ -78,6 +78,7 @@
                             <li>
                                 <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
+                            
                              <li>
                                 <a href="">Lista de Prestamo</a>
                             </li>
@@ -85,9 +86,7 @@
                              <li>
                                 <a href="">Lista de Herramientas</a>
                             </li>
-                            <li>
-                                <a href="">Lista de Inventarios</a>
-                            </li>
+                            
                             <li>
                                 <a href="">Lista de Mantenimientos</a>
                             </li>

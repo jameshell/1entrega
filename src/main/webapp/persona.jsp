@@ -68,13 +68,13 @@ and open the template in the editor.
                          <a href="registroCursos.jsp"><i class="fa fa-fw fa-user" ></i> Persona </a>
                     </li>
                      <li>
-                        <a href="prestamos.jsp"><i class="fa fa-fw fa-table"></i> Prestamos</a>
+                        <a href="prestamos.jsp"><i class="fa fa-fw fa-table"></i> Prestamo</a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
                            <li>
-                        <a href="inventario.jsp"><i class="fa fa-fw fa-file"></i> Inventario</a>
+                        <a href="inventario.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
                     </li>
                            <li>
                         <a href="mantenimiento.jsp"><i class="fa fa-fw fa-dashboard"></i> Mantenimiento</a>
@@ -89,12 +89,11 @@ and open the template in the editor.
                              <li>
                                 <a href="">Lista de Prestamos</a>
                             </li>
-                        
                              <li>
                                 <a href="">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="">Lista de Inventarios</a>
+                                <a href="">Lista de Salones</a>
                             </li>
                             <li>
                                 <a href="">Lista de Mantenimientos</a>
