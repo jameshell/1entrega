@@ -65,7 +65,7 @@ and open the template in the editor.
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                         <a href="registroCursos.jsp"><i class="fa fa-fw fa-user" ></i> Persona </a>
+                         <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Persona </a>
                     </li>
                      <li class="active">
                         <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo</a>

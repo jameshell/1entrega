@@ -65,15 +65,15 @@ and open the template in the editor.
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                         <a href="registroCursos.jsp"><i class="fa fa-fw fa-user" ></i> Persona </a>
+                         <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Persona </a>
                     </li>
                      <li>
                         <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo</a>
                     </li>
-                     <li class="active">
+                     <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
-                           <li>
+                           <li class="active">
                         <a href="salon.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
                     </li>
                            <li>
@@ -93,10 +93,10 @@ and open the template in the editor.
                                 <a href="listaHerramienta.jsp">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="">Lista de Salones</a>
+                                <a href="listaSalon.jsp">Lista de Salones</a>
                             </li>
                             <li>
-                                <a href="">Lista de Mantenimientos</a>
+                                <a href="listaMantenimiento.jsp">Lista de Mantenimientos</a>
                             </li>
                         
                         
@@ -114,14 +114,14 @@ and open the template in the editor.
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Herramienta
+                            Salon
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Herramientas en la plataforma
+                                <i class="fa fa-desktop"></i> Administración de Salones en la plataforma
                             </li>
                         </ol>
                     </div>
@@ -131,14 +131,14 @@ and open the template in the editor.
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Decida que tipo de acción tomar respecto a los datos de las Herramientas.
+                    Decida que tipo de acción tomar respecto a los datos de las Salones.
                 </p>
 
                 <div class="page-header">
                     
-                   <a href="herramientaRegistro.jsp" class="btn btn-primary btn-lg">Registro</a>
-                       <a href="herramientaBorrado.jsp" class="btn btn-primary btn-lg">Eliminación</a>
-                           <a href="herramientaActualizacion.jsp" class="btn btn-primary btn-lg">Actualizacion</a>
+                   <a href="salonRegistro.jsp" class="btn btn-primary btn-lg">Registro</a>
+                       <a href="salonBorrado.jsp" class="btn btn-primary btn-lg">Eliminación</a>
+                           <a href="salonActualizacion.jsp" class="btn btn-primary btn-lg">Actualizacion</a>
 
             </div>
             <!-- /.container-fluid -->
