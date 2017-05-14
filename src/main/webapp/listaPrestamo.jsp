@@ -60,13 +60,13 @@
                          <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Personas </a>
                     </li>
                      <li>
-                        <a href="formularios.jsp"><i class="fa fa-fw fa-table"></i> Prestamos </a>
+                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo </a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
                            <li>
-                        <a href="inventario.jsp"><i class="fa fa-fw fa-file"></i> Salones</a>
+                        <a href="salon.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
                     </li>
                            <li>
                         <a href="mantenimiento.jsp"><i class="fa fa-fw fa-dashboard"></i> Mantenimiento</a>
@@ -80,7 +80,7 @@
                             </li>
                             
                              <li>
-                                <a href="">Lista de Prestamo</a>
+                                <a href="listaPrestamo.jsp">Lista de Prestamo</a>
                             </li>
                         
                              <li>
@@ -106,14 +106,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Persona
+                          Prestamos
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Registro de Persona
+                                <i class="fa fa-desktop"></i> Registro de Prestamos
                             </li>
                         </ol>
                     </div>
@@ -126,14 +126,22 @@
                  <div align="center" style="margin-top: 50px;">
                                <div class="table-responsive">
                              <table class="table table-bordered table-hover">
-                    <tr><th>Nombre</th> <th>Cargo</th> <th> ID</th></tr>  
+                    <tr><th>Cod Prestamo</th> 
+                        <th> ID Persona</th> 
+                        <th> ID Herramienta </th> 
+                        <th> Salida </th> 
+                        <th> Entrada </th></tr>  
                     
             <%
-            if( request.getAttribute("personas")!=null){
-          List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
-           for (Persona persona : personas) {
+            if( request.getAttribute("prestamos")!=null){
+          List<Prestamo> prestamos  = (List<Prestamo>)request.getAttribute("prestamos");
+           for (Prestamo prestamo : prestamos) {
          %>      
-          <tr><td><%=persona.getNombrePersona()%> </td> <td><%=persona.getCargoPersona()%> </td> <td><%=persona.getIdPersona()%> </td></tr>
+          <tr><td><%=prestamo.getCodPrestamo()%> </td> 
+              <td><%=prestamo.getIdPersona()%> </td> 
+              <td><%=prestamo.getIdHerramienta()%> </td>
+              <td><%=prestamo.getFechaSalida()%> </td>
+              <td><%=prestamo.getFechaEntrada()%> </td></tr>
          <%      
           }
        }
@@ -144,8 +152,8 @@
                                </div>
                      
                      
-        <form action="listaControlador">
-                          <button type="submit" class="btn btn-default" role="button" > Mostrar Lista</button>
+        <form action="listaControladorPrestamo">
+                          <button type="submit" class="btn btn-default" role="button" > Mostrar Lista de Prestamos</button>
         </form>
                      
                
