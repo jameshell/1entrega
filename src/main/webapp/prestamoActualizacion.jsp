@@ -135,7 +135,7 @@
             
                                 
                             <div class="form-group">
-                                <label><h1>Cédula de la persona va a realizar el prestamo</h1>
+                                <label><h3>Cédula de la persona va a realizar el prestamo</h3>
                                 </label>
                                 <input type="text" class="form-control" name="idPersona">
                                 <p class="help-block">Ej: 1056373.</p>
@@ -197,8 +197,10 @@
                        <div class="form-group">
                                 <label><h3>Tipo De Prestamo</h3>
                                 </label>
-                                <input type="radio" name="tipoPrestamo" class="form-control" value="externo" checked> Externo<br>
-                                <input type="radio" name="tipoPrestamo" class="form-control" value="interno"> Interno <br>
+                           <div class="form-control">
+                                <input type="radio" name="tipoPrestamo"  value="externo" checked> Externo<br>
+                                <input type="radio" name="tipoPrestamo"  value="interno"> Interno <br>
+                                </div>
                                 <p class="help-block">Ej: Elija si el prestamo es de caracter interno o externo </p>
                             </div>
                  
