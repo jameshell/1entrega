@@ -68,7 +68,7 @@ and open the template in the editor.
                          <a href="registroCursos.jsp"><i class="fa fa-fw fa-user" ></i> Persona </a>
                     </li>
                      <li>
-                        <a href="formulario.jsp"><i class="fa fa-fw fa-table"></i> Formularios</a>
+                        <a href="prestamos.jsp"><i class="fa fa-fw fa-table"></i> Prestamos</a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
