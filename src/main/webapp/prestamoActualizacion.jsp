@@ -194,7 +194,7 @@
                                 <input type="text" class="form-control" name="observaciones">
                                 <p class="help-block">Ej: Observaciones del prestamo </p>
                             </div>
-                       <div class="form-group">
+                       <div>
                                 <label><h3>Tipo De Prestamo</h3>
                                 </label>
                            <div class="form-control">
