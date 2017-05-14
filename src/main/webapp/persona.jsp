@@ -74,7 +74,7 @@ and open the template in the editor.
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
                            <li>
-                        <a href="inventario.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
+                        <a href="salon.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
                     </li>
                            <li>
                         <a href="mantenimiento.jsp"><i class="fa fa-fw fa-dashboard"></i> Mantenimiento</a>
@@ -84,10 +84,10 @@ and open the template in the editor.
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Listas <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="">Listas de Personas</a>
+                                <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
                              <li>
-                                <a href="">Lista de Prestamos</a>
+                                <a href="listaPersona.jsp">Lista de Prestamos</a>
                             </li>
                              <li>
                                 <a href="">Lista de Herramientas</a>

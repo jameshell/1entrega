@@ -64,17 +64,17 @@ and open the template in the editor.
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
+                    <li>
                          <a href="registroCursos.jsp"><i class="fa fa-fw fa-user" ></i> Persona </a>
                     </li>
-                     <li>
-                        <a href="prestamos.jsp"><i class="fa fa-fw fa-table"></i> Prestamo</a>
+                     <li class="active">
+                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo</a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
                            <li>
-                        <a href="inventario.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
+                        <a href="salon.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
                     </li>
                            <li>
                         <a href="mantenimiento.jsp"><i class="fa fa-fw fa-dashboard"></i> Mantenimiento</a>
@@ -84,10 +84,10 @@ and open the template in the editor.
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Listas <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="">Listas de Personas</a>
+                                <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
                              <li>
-                                <a href="">Lista de Prestamos</a>
+                                <a href="listaPrestamo.jsp">Lista de Prestamos</a>
                             </li>
                              <li>
                                 <a href="">Lista de Herramientas</a>
@@ -114,14 +114,14 @@ and open the template in the editor.
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Persona
+                            Prestamo
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Personas en la plataforma
+                                <i class="fa fa-desktop"></i> Administración de Prestamos en la plataforma
                             </li>
                         </ol>
                     </div>
@@ -131,14 +131,14 @@ and open the template in the editor.
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Decida que tipo de acción tomar respecto a los datos de las personas.
+                    Decida que tipo de acción tomar respecto a los datos de los prestamos.
                 </p>
 
                 <div class="page-header">
                     
-                   <a href="personaRegistro.jsp" class="btn btn-primary btn-lg">Registro</a>
-                       <a href="personaBorrado.jsp" class="btn btn-primary btn-lg">Eliminación</a>
-                           <a href="personaActualizacion.jsp" class="btn btn-primary btn-lg">Actualizacion</a>
+                   <a href="prestamoRegistro.jsp" class="btn btn-primary btn-lg">Registro</a>
+                       <a href="prestamoBorrado.jsp" class="btn btn-primary btn-lg">Eliminación</a>
+                           <a href="prestamoActualizacion.jsp" class="btn btn-primary btn-lg">Actualizacion</a>
 
             </div>
             <!-- /.container-fluid -->
