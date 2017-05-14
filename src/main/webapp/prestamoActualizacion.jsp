@@ -194,13 +194,13 @@
                                 <input type="text" class="form-control" name="observaciones">
                                 <p class="help-block">Ej: Observaciones del prestamo </p>
                             </div>
-                       <div>
+                       <div class="form-group">
                                 <label><h3>Tipo De Prestamo</h3>
                                 </label>
-                           <div class="form-control">
+                       
                                 <input type="radio" name="tipoPrestamo"  value="externo" checked> Externo<br>
                                 <input type="radio" name="tipoPrestamo"  value="interno"> Interno <br>
-                                </div>
+                            
                                 <p class="help-block">Ej: Elija si el prestamo es de caracter interno o externo </p>
                             </div>
                  
