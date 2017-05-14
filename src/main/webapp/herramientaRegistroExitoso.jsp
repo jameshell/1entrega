@@ -85,7 +85,7 @@
                             </li>
                         
                              <li>
-                                <a href="">Lista de Herramientas</a>
+                                <a href="listaHerramienta">Lista de Herramientas</a>
                             </li>
                             <li>
                                 <a href="">Lista de Inventarios</a>
@@ -109,14 +109,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Persona
+                            Herramienta
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Personas
+                                <i class="fa fa-desktop"></i> Administración de Herramientas
                             </li>
                         </ol>
                     </div>
@@ -127,10 +127,10 @@
                 </div>
 
                 <div class="page-header">
-                       <h2>El prestamo se ha registrado de manera exitosa.</h2>
+                       <h2>La Herramienta se ha registrado de manera exitosa.</h2>
                        
                        
-                   <a href="persona.jsp" class="btn btn-primary btn-lg">Volver a Persona</a>
+                   <a href="persona.jsp" class="btn btn-primary btn-lg">Volver a Herramienta</a>
                     
 
             </div>

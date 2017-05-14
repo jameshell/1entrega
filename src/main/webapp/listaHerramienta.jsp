@@ -78,17 +78,17 @@
                             <li>
                                 <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
-                            
                              <li>
                                 <a href="listaPrestamo.jsp">Lista de Prestamo</a>
                             </li>
-                        
                              <li>
-                                <a href="">Lista de Herramientas</a>
+                                <a href="listaHerramienta.jsp">Lista de Herramientas</a>
                             </li>
-                            
+                               <li>
+                                <a href="listaSalon.jsp">Lista de Salones</a>
+                            </li>
                             <li>
-                                <a href="">Lista de Mantenimientos</a>
+                                <a href="listaMantenimiento.jsp">Lista de Mantenimientos</a>
                             </li>
                         
                         
@@ -126,22 +126,22 @@
                  <div align="center" style="margin-top: 50px;">
                                <div class="table-responsive">
                              <table class="table table-bordered table-hover">
-                    <tr><th>Cod Prestamo</th> 
-                        <th> ID Persona</th> 
-                        <th> ID Herramienta </th> 
-                        <th> Salida </th> 
-                        <th> Entrada </th></tr>  
+                    <tr><th> ID Admnistrativo</th> 
+                        <th> ID Herramienta</th> 
+                        <th> Nombre </th> 
+                        <th> Descripcion </th> 
+                        </tr>  
                     
             <%
-            if( request.getAttribute("prestamos")!=null){
-          List<Prestamo> prestamos  = (List<Prestamo>)request.getAttribute("prestamos");
-           for (Prestamo prestamo : prestamos) {
+            if( request.getAttribute("herramientas")!=null){
+          List<Herramienta> herramientas  = (List<Herramienta>)request.getAttribute("herramientas");
+           for (Herramienta herramienta : herramientas) {
          %>      
-          <tr><td><%=prestamo.getCodPrestamo()%> </td> 
-              <td><%=prestamo.getIdPersona()%> </td> 
-              <td><%=prestamo.getIdHerramienta()%> </td>
-              <td><%=prestamo.getFechaSalida()%> </td>
-              <td><%=prestamo.getFechaEntrada()%> </td></tr>
+          <tr><td><%=herramienta.getIdAdministrativo()%> </td> 
+              <td><%=herramienta.getIdHerramienta()%> </td> 
+              <td><%=herramienta.getNombreHerramienta()%> </td>
+              <td><%=herramienta.getDescripcionHerramienta()%> </td>
+              </tr>
          <%      
           }
        }
@@ -153,7 +153,7 @@
                      
                      
         <form action="listaControladorPrestamo">
-                          <button type="submit" class="btn btn-default" role="button" > Mostrar Lista de Prestamos</button>
+                          <button type="submit" class="btn btn-default" role="button" > Mostrar Lista de Herramientas</button>
         </form>
                      
                

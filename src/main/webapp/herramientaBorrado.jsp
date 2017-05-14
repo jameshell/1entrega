@@ -58,13 +58,13 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
+                    <li>
                          <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Persona</a>
                     </li>
                      <li>
                         <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo </a>
                     </li>
-                     <li>
+                     <li class="active">
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
                            <li>
@@ -109,14 +109,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Prestamo
+                          Herramietnta
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Prestamos
+                                <i class="fa fa-desktop"></i> Administración de Herramientas
                         </ol>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Escriba el id del prestamo que desea borrar.
+                    Escriba el ID de la Herramienta que desea borrar.
                 </p>
 
                 <div class="page-header">
