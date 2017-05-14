@@ -35,7 +35,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(herramientaDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
 	    try {
 	    Statement st = connection.createStatement();
@@ -58,7 +58,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
 	        registro.setIdHerramienta(id);
                 
                 idAdmin=rs.getInt("idAdministrativo");
-                registro.(idAdmin);
+                registro.setIdAdministrativo(idAdmin);
                 
 	        nombre = rs.getString("nombreHerramienta");
 	        registro.setNombreHerramienta(nombre);
@@ -79,7 +79,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
 			e.printStackTrace();
 		}
 	    
-	    return Administrativo;
+	    return herramientas;
 	}
 
 	
@@ -88,7 +88,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
 	 * @param Departamento recibe un objeto de tipo Departamento 
 	 * @return boolean retorna true si la operacion de insercion es exitosa.
 	 */
-	public boolean insert(Administrativo a) {
+	public boolean insert(Herramienta t) {
 		boolean result=false;
 		Connection connection=null;
             try {
@@ -101,7 +101,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
 	    try {
 			preparedStmt = connection.prepareStatement(query);
 			preparedStmt.setInt (1, t.getIdHerramienta());
-                        preparedStmt.setInt (2, a.getIdAdministrativo());
+                        preparedStmt.setInt (2, t.getIdAdministrativo());
                         preparedStmt.setString(3, t.getNombreHerramienta());
                         preparedStmt.setInt (4, t.getNoSerial());
                         preparedStmt.setString(5, t.getDescripcionHerramienta());

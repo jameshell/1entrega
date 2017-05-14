@@ -1,7 +1,5 @@
 package com.crunchify.jsp.servlet;
- 
-import edu.co.sergio.mundo.dao.DepartamentoDAO;
-import edu.co.sergio.mundo.vo.Departamento;
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +14,7 @@ import javax.servlet.RequestDispatcher;
  
 public class HelloCrunchify extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        /*
         // reading the user input
         String id = request.getParameter("id");
         String nombre = request.getParameter("nombre");
@@ -35,7 +34,7 @@ public class HelloCrunchify extends HttpServlet {
         //Redireccionando la informacion
         RequestDispatcher redireccion = request.getRequestDispatcher("index.jsp");
         redireccion.forward(request, response);
-        
+        */
         
         }
 }

@@ -36,7 +36,7 @@ public class administrativoDAO implements IBaseDatos<Administrativo> {
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(administrativoDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
 	    try {
 	    Statement st = connection.createStatement();
@@ -88,12 +88,12 @@ public class administrativoDAO implements IBaseDatos<Administrativo> {
             } catch (URISyntaxException ex) {
                 Logger.getLogger(administrativoDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	    String query = " INSERT into Administrativo (idAdministrativo, idInventario, nombreAdmin, tipoPermiso)"  + " values (?,?,?,?)";
+	    String query = " INSERT into Administrativo (idAdministrativo, Contrasena, nombreAdmin, tipoPermiso)"  + " values (?,?,?,?)";
         PreparedStatement preparedStmt=null;
 	    try {
 			preparedStmt = connection.prepareStatement(query);
 			preparedStmt.setInt (1, t.getIdAdministrativo());
-                        preparedStmt.setInt (2, t.getIdInventario());
+                        preparedStmt.setString (2, t.getContrasena());
                         preparedStmt.setString (3, t.getNombreAdmin());
                         preparedStmt.setInt (4, t.getTipoPermiso());
 			result= preparedStmt.execute();

@@ -150,7 +150,7 @@ public class mantenimientoDAO implements IBaseDatos<Mantenimiento> {
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(personaDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
 		String query = "UPDATE Mantenimiento set nombreTenico = ? WHERE idMantenimiento = ?";
 		PreparedStatement preparedStmt=null;

@@ -130,7 +130,7 @@ public class personaDAO implements IBaseDatos<Persona> {
             try {
                 connection = Conexion.getConnection();
             } catch (URISyntaxException ex) {
-                Logger.getLogger(DepartamentoDAO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(personaDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
 		String query =
               "update Persona set nombrePersona = ?, apellidoPersona =?, semestrePersona=?, carreraPersona=?, cargoPersona=? where idPersona = ?";
