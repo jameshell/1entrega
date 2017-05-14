@@ -83,12 +83,11 @@
                              <li>
                                 <a href="listaPrestamo.jsp">Lista de Prestamos</a>
                             </li>
-                        
                              <li>
-                                <a href="listaHerramienta">Lista de Herramientas</a>
+                                <a href="listaHerramienta.jsp">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="listaSalon">Lista de Salones</a>
+                                <a href="listaSalon.jsp">Lista de Salones</a>
                             </li>
                             <li>
                                 <a href="listaMantenimiento">Lista de Mantenimientos</a>
@@ -109,14 +108,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Prestamo
+                          Herramienta
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Actualizacion de Prestamo
+                                <i class="fa fa-desktop"></i> Actualizacion de Herramienta
                             </li>
                         </ol>
                     </div>
@@ -126,7 +125,7 @@
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Introduzca los datos del prestamo que desea actualizar.
+                    Introduzca los datos de la herramienta que desea actualizar.
                 </p>
 
                 <div class="page-header">

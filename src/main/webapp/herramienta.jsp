@@ -67,10 +67,10 @@ and open the template in the editor.
                     <li>
                          <a href="registroCursos.jsp"><i class="fa fa-fw fa-user" ></i> Persona </a>
                     </li>
-                     <li class="active">
+                     <li>
                         <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo</a>
                     </li>
-                     <li>
+                     <li class="active">
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
                            <li>
@@ -90,7 +90,7 @@ and open the template in the editor.
                                 <a href="listaPrestamo.jsp">Lista de Prestamos</a>
                             </li>
                              <li>
-                                <a href="">Lista de Herramientas</a>
+                                <a href="listaHerramienta.jsp">Lista de Herramientas</a>
                             </li>
                             <li>
                                 <a href="">Lista de Salones</a>
@@ -114,14 +114,14 @@ and open the template in the editor.
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Prestamo
+                            Herramienta
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Prestamos en la plataforma
+                                <i class="fa fa-desktop"></i> Administración de Herramientas en la plataforma
                             </li>
                         </ol>
                     </div>
@@ -131,14 +131,14 @@ and open the template in the editor.
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Decida que tipo de acción tomar respecto a los datos de los prestamos.
+                    Decida que tipo de acción tomar respecto a los datos de las Herramientas.
                 </p>
 
                 <div class="page-header">
                     
-                   <a href="prestamoRegistro.jsp" class="btn btn-primary btn-lg">Registro</a>
-                       <a href="prestamoBorrado.jsp" class="btn btn-primary btn-lg">Eliminación</a>
-                           <a href="prestamoActualizacion.jsp" class="btn btn-primary btn-lg">Actualizacion</a>
+                   <a href="herramientaRegistro.jsp" class="btn btn-primary btn-lg">Registro</a>
+                       <a href="herramientaBorrado.jsp" class="btn btn-primary btn-lg">Eliminación</a>
+                           <a href="herramientaActualizacion.jsp" class="btn btn-primary btn-lg">Actualizacion</a>
 
             </div>
             <!-- /.container-fluid -->

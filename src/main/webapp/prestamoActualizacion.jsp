@@ -85,13 +85,13 @@
                             </li>
                         
                              <li>
-                                <a href="listaHerramienta">Lista de Herramientas</a>
+                                <a href="listaHerramienta.jsp">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="listaSalon">Lista de Salones</a>
+                                <a href="listaSalon.jsp">Lista de Salones</a>
                             </li>
                             <li>
-                                <a href="listaMantenimiento">Lista de Mantenimientos</a>
+                                <a href="listaMantenimiento.jsp">Lista de Mantenimientos</a>
                             </li>
                         
                         
