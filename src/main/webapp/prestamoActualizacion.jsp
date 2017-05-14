@@ -198,8 +198,8 @@
                                 <label><h3>Tipo De Prestamo</h3>
                                 </label>
                        
-                                <input type="radio" name="tipoPrestamo"  value="externo" checked> Externo
-                                <input type="radio" name="tipoPrestamo"  value="interno"> Interno <br>
+                                <input type="radio" name="tipoPrestamo"  value="externo" checked> Externo<br>
+                                <input type="radio" name="tipoPrestamo"  value="interno"> Interno 
                             
                                 <p class="help-block">Ej: Elija si el prestamo es de caracter interno o externo </p>
                             </div>
