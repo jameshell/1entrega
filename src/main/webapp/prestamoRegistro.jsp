@@ -131,7 +131,7 @@
 
                 <div class="page-header">
                     
-                   <form action="prestamoActualizador"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
+                   <form action="prestamoControlador"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
                                 
                             <div class="form-group">

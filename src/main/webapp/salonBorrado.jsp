@@ -64,11 +64,11 @@
                      <li>
                         <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo </a>
                     </li>
-                     <li class="active">
+                     <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
-                           <li>
-                        <a href="inventario.jsp"><i class="fa fa-fw fa-file"></i> Inventario</a>
+                           <li class="active">
+                        <a href="salon.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
                     </li>
                            <li>
                         <a href="mantenimiento.jsp"><i class="fa fa-fw fa-dashboard"></i> Mantenimiento</a>
@@ -88,10 +88,10 @@
                                 <a href="listaHerramienta.jsp">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="crudCursos.jsp">Lista de Inventarios</a>
+                                <a href="listaSalon.jsp">Lista de Salones</a>
                             </li>
                             <li>
-                                <a href="crudCursos.jsp">Lista de Mantenimientos</a>
+                                <a href="listaMantenimiento.jsp">Lista de Mantenimientos</a>
                             </li>
                         
                         
@@ -109,14 +109,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Herramietnta
+                          Salon
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Herramientas
+                                <i class="fa fa-desktop"></i> Administración de Salones
                         </ol>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Escriba el ID de la Herramienta que desea borrar.
+                    Escriba el ID del Salon que desea borrar.
                 </p>
 
                 <div class="page-header">
@@ -134,9 +134,9 @@
             
                                 
                             <div class="form-group">
-                                <label><h3>ID de la Herramienta que desea borrar:</h3>
+                                <label><h3>ID del Salon:</h3>
                                 </label>
-                                <input type="text" class="form-control" name="idHerramienta">
+                                <input type="text" class="form-control" name="idSalon">
                                 <p class="help-block">Ej: 1056373.</p>
                             </div>
                           

@@ -68,7 +68,7 @@
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
                            <li>
-                        <a href="inventario.jsp"><i class="fa fa-fw fa-file"></i> Inventario</a>
+                        <a href="Salon.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
                     </li>
                            <li>
                         <a href="mantenimiento.jsp"><i class="fa fa-fw fa-dashboard"></i> Mantenimiento</a>
@@ -88,7 +88,7 @@
                                 <a href="listaHerramienta.jsp">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="crudCursos.jsp">Lista de Inventarios</a>
+                                <a href="listaSalon.jsp">Lista de Salon</a>
                             </li>
                             <li>
                                 <a href="crudCursos.jsp">Lista de Mantenimientos</a>
@@ -113,7 +113,7 @@
                         </h1>
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                                <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
                                 <i class="fa fa-desktop"></i> Administración de Personas

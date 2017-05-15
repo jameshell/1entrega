@@ -114,7 +114,7 @@
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Prestamo
+                                <i class="fa fa-desktop"></i> Administración de Salones
                             </li>
                         </ol>
                     </div>
@@ -128,10 +128,10 @@
                 </p>
 
                 <div class="page-header">
-                       <h2>El id del prestamo ya se encuentra registrado en la plataforma.</h2>
+                       <h2>El id del Salon ya se encuentra registrado en la plataforma.</h2>
                        
                        
-                   <a href="persona.jsp" class="btn btn-primary btn-lg">Volver a Persona</a>
+                   <a href="salon.jsp" class="btn btn-primary btn-lg">Volver a Salon</a>
                     
 
             </div>

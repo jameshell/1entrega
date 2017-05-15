@@ -68,7 +68,7 @@
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
                     </li>
                            <li>
-                        <a href="inventario.jsp"><i class="fa fa-fw fa-file"></i> Inventario</a>
+                        <a href="salon.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
                     </li>
                            <li>
                         <a href="mantenimiento.jsp"><i class="fa fa-fw fa-dashboard"></i> Mantenimiento</a>
@@ -88,10 +88,10 @@
                                 <a href="listaHerramienta">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="">Lista de Inventarios</a>
+                                <a href="listaSalon.jsp">Lista de Salones</a>
                             </li>
                             <li>
-                                <a href="">Lista de Mantenimientos</a>
+                                <a href="listaMantenimiento.jsp">Lista de Mantenimientos</a>
                             </li>
                         
                         
@@ -116,7 +116,7 @@
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Herramientas
+                                <i class="fa fa-desktop"></i> Administración de Salones
                             </li>
                         </ol>
                     </div>
@@ -127,10 +127,10 @@
                 </div>
 
                 <div class="page-header">
-                       <h2>La Herramienta se ha registrado de manera exitosa.</h2>
+                       <h2>El salon ha sido registrado de manera exitosa.</h2>
                        
                        
-                   <a href="persona.jsp" class="btn btn-primary btn-lg">Volver a Herramienta</a>
+                   <a href="salon.jsp" class="btn btn-primary btn-lg">Volver a Salon</a>
                     
 
             </div>
