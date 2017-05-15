@@ -13,25 +13,9 @@ import java.sql.Date;
  * @author Jaime Alonso
  */
 public class prestamoSalon {
-    private int idSalon;
-    private int idPersona;
-
-    public int getIdSalon() {
-        return idSalon;
-    }
-
-    public void setIdSalon(int idSalon) {
-        this.idSalon = idSalon;
-    }
-
-    public int getIdPersona() {
-        return idPersona;
-    }
-
-    public void setIdPersona(int idPersona) {
-        this.idPersona = idPersona;
-    }
     private int idPrestamoSalon;
+    private Persona persona;
+    private Salon salon;
     private Date fechaEntrada;
     private Date fechaSalida;
 
@@ -57,6 +41,22 @@ public class prestamoSalon {
 
     public void setFechaSalida(Date fechaSalida) {
         this.fechaSalida = fechaSalida;
+    }
+
+    public Persona getPersona() {
+        return persona;
+    }
+
+    public void setPersona(Persona persona) {
+        this.persona = persona;
+    }
+
+    public Salon getSalon() {
+        return salon;
+    }
+
+    public void setSalon(Salon salon) {
+        this.salon = salon;
     }
     
     

@@ -6,6 +6,7 @@
 package edu.co.sergio.mundo.vo;
 
 import java.sql.Date;
+import java.util.ArrayList;
 
 
 
@@ -14,10 +15,10 @@ import java.sql.Date;
  * @author Jaime Alonso
  */
 public class Prestamo {
-    private int idPersona;
-    private int idHerramienta;
-    private int idSalon;
-    private int idAdministrativo;
+    private Persona Persona;
+    private Herramienta Herramienta;
+    private Salon Salon;
+    private Administrativo Administrativo;
     private String codPrestamo;
     private String tipoPractica;
     private Date fechaEntrada;
@@ -26,6 +27,7 @@ public class Prestamo {
     private String justificacion;
     private String observaciones;
     private String tipoPrestamo;
+    private ArrayList<Transaccion> transacciones; 
     
     public String getCodPrestamo() {
         return codPrestamo;
@@ -90,37 +92,44 @@ public class Prestamo {
         this.tipoPrestamo = tipoPrestamo;
     }
 
-    public int getIdPersona() {
-        return idPersona;
+    public Persona getPersona() {
+        return Persona;
     }
 
-    public void setIdPersona(int idPersona) {
-        this.idPersona = idPersona;
+    public void setPersona(Persona Persona) {
+        this.Persona = Persona;
     }
 
-    public int getIdHerramienta() {
-        return idHerramienta;
+    public Herramienta getHerramienta() {
+        return Herramienta;
     }
 
-    public void setIdHerramienta(int idHerramienta) {
-        this.idHerramienta = idHerramienta;
+    public void setHerramienta(Herramienta Herramienta) {
+        this.Herramienta = Herramienta;
     }
 
-    public int getIdSalon() {
-        return idSalon;
+    public Salon getSalon() {
+        return Salon;
     }
 
-    public void setIdSalon(int idSalon) {
-        this.idSalon = idSalon;
+    public void setSalon(Salon Salon) {
+        this.Salon = Salon;
     }
 
-    public int getIdAdministrativo() {
-        return idAdministrativo;
+    public Administrativo getAdministrativo() {
+        return Administrativo;
     }
 
-    public void setIdAdministrativo(int idAdministrativo) {
-        this.idAdministrativo = idAdministrativo;
+    public void setAdministrativo(Administrativo Administrativo) {
+        this.Administrativo = Administrativo;
     }
-    
-    
+
+    public ArrayList<Transaccion> getTransacciones() {
+        return transacciones;
+    }
+
+    public void setTransacciones(ArrayList<Transaccion> transacciones) {
+        this.transacciones = transacciones;
+    }
+
 }

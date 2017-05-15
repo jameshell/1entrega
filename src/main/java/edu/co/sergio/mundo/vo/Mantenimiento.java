@@ -14,9 +14,7 @@ import java.sql.Date;
  * @author Jaime Alonso
  */
 public class Mantenimiento {
-    private int idHerramienta;
-
-    
+    private Herramienta herramienta;
     private int idMantenimiento;
     private String refFabricante;
     private String enServicio;
@@ -28,16 +26,16 @@ public class Mantenimiento {
     private Date fechaFinal;
 
 
-    public int getIdHerramienta() {
-        return idHerramienta;
-    }
-
-    public void setIdHerramienta(int idHerramienta) {
-        this.idHerramienta = idHerramienta;
-    }
-    
     public int getIdMantenimiento() {
         return idMantenimiento;
+    }
+
+    public Herramienta getHerramienta() {
+        return herramienta;
+    }
+
+    public void setHerramienta(Herramienta herramienta) {
+        this.herramienta = herramienta;
     }
 
     public void setIdMantenimiento(int idMantenimiento) {

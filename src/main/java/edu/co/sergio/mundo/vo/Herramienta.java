@@ -12,25 +12,32 @@ import java.util.ArrayList;
  * @author Jaime Alonso
  */
 public class Herramienta {
-  private int idAdministrativo;
+  private Administrativo administrativo;
   private int idHerramienta;
   private int noSerial;
   private String nombreHerramienta;
   private String descripcionHerramienta;
   private ArrayList<Mantenimiento> listaMantenimientos;
-  private ArrayList<Prestamo> listaPrestamo;
-
-    public int getIdAdministrativo() {
-        return idAdministrativo;
-    }
-
-    public void setIdAdministrativo(int idAdministrativo) {
-        this.idAdministrativo = idAdministrativo;
-    }
-
+  private ArrayList<Transaccion> transacciones;
 
     public int getIdHerramienta() {
         return idHerramienta;
+    }
+
+    public Administrativo getAdministrativo() {
+        return administrativo;
+    }
+
+    public void setAdministrativo(Administrativo administrativo) {
+        this.administrativo = administrativo;
+    }
+
+    public ArrayList<Transaccion> getTransacciones() {
+        return transacciones;
+    }
+
+    public void setTransacciones(ArrayList<Transaccion> transacciones) {
+        this.transacciones = transacciones;
     }
 
     public void setIdHerramienta(int idHerramienta) {
@@ -66,14 +73,6 @@ public class Herramienta {
 
     public void setListaMantenimientos(ArrayList<Mantenimiento> listaMantenimientos) {
         this.listaMantenimientos = listaMantenimientos;
-    }
-
-    public ArrayList<Prestamo> getListaPrestamo() {
-        return listaPrestamo;
-    }
-
-    public void setListaPrestamo(ArrayList<Prestamo> listaPrestamo) {
-        this.listaPrestamo = listaPrestamo;
     }
   
     
