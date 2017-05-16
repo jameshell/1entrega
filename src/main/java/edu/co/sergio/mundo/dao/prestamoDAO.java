@@ -6,7 +6,10 @@
 package edu.co.sergio.mundo.dao;
 
 
+import edu.co.sergio.mundo.vo.Administrativo;
+import edu.co.sergio.mundo.vo.Persona;
 import edu.co.sergio.mundo.vo.Prestamo;
+import edu.co.sergio.mundo.vo.Salon;
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.Date;
@@ -55,6 +58,7 @@ public class prestamoDAO implements IBaseDatos<Prestamo> {
             String justificacion=null;
             String observaciones=null;
             String tipoprestamo=null;
+            
 
 	    while (rs.next()){
 	    	if(prestamos == null){
@@ -62,18 +66,24 @@ public class prestamoDAO implements IBaseDatos<Prestamo> {
 	    	}
 	      
 	        Prestamo registro= new Prestamo();
+                Persona persona= new Persona();
+                Administrativo admin= new Administrativo();
+                Salon salon=new Salon();
                 
 	        codprestamos = rs.getString("codPrestamo");
 	        registro.setCodPrestamo(codprestamos);
 	        
 	        idpersona = rs.getInt("idPersona");
-	        registro.setIdPersona(idpersona);
+                persona.setIdPersona(idpersona);
+	        registro.setPersona(persona);
                 
                 idadministrativo = rs.getInt("idAdministrativo");
-	        registro.setIdAdministrativo(idadministrativo);
+                admin.setIdAdministrativo(idadministrativo);
+	        registro.setAdministrativo(admin);
                 
                 idsalon = rs.getInt("idSalon");
-	        registro.setIdSalon(idsalon);
+                salon.setIdSalon(idsalon);
+	        registro.setSalon(salon);
                 
                 tipopractica = rs.getString("tipoPractica");
 	        registro.setTipoPractica(tipopractica);
@@ -116,9 +126,9 @@ public class prestamoDAO implements IBaseDatos<Prestamo> {
 	    try {
 			preparedStmt = connection.prepareStatement(query);
 			preparedStmt.setString (1, t.getCodPrestamo());
-                        preparedStmt.setInt (2, t.getIdPersona());
-                        preparedStmt.setInt (3, t.getIdAdministrativo());
-                        preparedStmt.setInt (4, t.getIdSalon());
+                        preparedStmt.setInt (2, t.getPersona().getIdPersona());
+                        preparedStmt.setInt (3, t.getAdministrativo().getIdAdministrativo());
+                        preparedStmt.setInt (4, t.getSalon().getIdSalon());
                         preparedStmt.setString (5, t.getTipoPractica());
                         preparedStmt.setDate(6, t.getFechaEntrada());
                         preparedStmt.setDate(7, t.getFechaSalida());

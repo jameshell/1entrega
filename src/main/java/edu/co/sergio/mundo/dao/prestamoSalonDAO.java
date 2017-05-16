@@ -5,6 +5,8 @@
  */
 package edu.co.sergio.mundo.dao;
 
+import edu.co.sergio.mundo.vo.Persona;
+import edu.co.sergio.mundo.vo.Salon;
 import edu.co.sergio.mundo.vo.prestamoSalon;
 import java.net.URISyntaxException;
 import java.sql.Connection;
@@ -46,6 +48,7 @@ public class prestamoSalonDAO implements IBaseDatos<prestamoSalon> {
 	    int idprestamosalon =0;
             int idsalon=0;
             int idpersona=0;
+            
             Date entrada=null;
 	    Date salida=null;
 	
@@ -55,14 +58,19 @@ public class prestamoSalonDAO implements IBaseDatos<prestamoSalon> {
 	    	}
 	      
 	        prestamoSalon registro= new prestamoSalon();
+                Salon salon= new Salon();
+                Persona persona= new Persona();
+                
 	        idprestamosalon = rs.getInt("idPrestamoSalon");
 	        registro.setIdPrestamoSalon(idprestamosalon);
                 
                 idsalon = rs.getInt("idSalon");
-	        registro.setIdSalon(idsalon);
+                salon.setIdSalon(idsalon);
+	        registro.setSalon(salon);
                 
                  idpersona = rs.getInt("idPersona");
-	        registro.setIdPersona(idpersona);
+                 persona.setIdPersona(idpersona);
+	        registro.setPersona(persona);
 	        
 	        entrada = rs.getDate("fechaEntrada");
 	        registro.setFechaEntrada(entrada);
@@ -101,8 +109,8 @@ public class prestamoSalonDAO implements IBaseDatos<prestamoSalon> {
 	    try {
 			preparedStmt = connection.prepareStatement(query);
 			preparedStmt.setInt (1, t.getIdPrestamoSalon());
-                        preparedStmt.setInt (2, t.getIdSalon());
-                        preparedStmt.setInt (3, t.getIdPersona());
+                        preparedStmt.setInt (2, t.getSalon().getIdSalon());
+                        preparedStmt.setInt (3, t.getPersona().getIdPersona());
                         preparedStmt.setDate (4, t.getFechaEntrada());
                         preparedStmt.setDate (5, t.getFechaSalida());
 			result= preparedStmt.execute();

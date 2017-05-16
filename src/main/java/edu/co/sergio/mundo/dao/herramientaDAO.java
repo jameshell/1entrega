@@ -46,19 +46,22 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
             String nombre=null;
             int serial=0;
             String descripcion=null;
-            
+            Administrativo admin= new Administrativo();
             
 	
 	    while (rs.next()){
 	    	if(herramientas == null){
+              
 	    		herramientas= new ArrayList<Herramienta>();
 	    	}
                 Herramienta registro=new Herramienta();
 	        id = rs.getInt("idHerramienta");
 	        registro.setIdHerramienta(id);
                 
+
                 idAdmin=rs.getInt("idAdministrativo");
-                registro.setIdAdministrativo(idAdmin);
+                admin.setIdAdministrativo(idAdmin);
+                registro.setAdministrativo(admin);
                 
 	        nombre = rs.getString("nombreHerramienta");
 	        registro.setNombreHerramienta(nombre);
@@ -101,7 +104,7 @@ public class herramientaDAO implements IBaseDatos<Herramienta> {
 	    try {
 			preparedStmt = connection.prepareStatement(query);
 			preparedStmt.setInt (1, t.getIdHerramienta());
-                        preparedStmt.setInt (2, t.getIdAdministrativo());
+                        preparedStmt.setInt (2, t.getAdministrativo().getIdAdministrativo());
                         preparedStmt.setString(3, t.getNombreHerramienta());
                         preparedStmt.setInt (4, t.getNoSerial());
                         preparedStmt.setString(5, t.getDescripcionHerramienta());

@@ -6,6 +6,7 @@
 package edu.co.sergio.mundo.dao;
 
 
+import edu.co.sergio.mundo.vo.Herramienta;
 import edu.co.sergio.mundo.vo.Mantenimiento;
 import java.net.URISyntaxException;
 import java.sql.Connection;
@@ -53,6 +54,7 @@ public class mantenimientoDAO implements IBaseDatos<Mantenimiento> {
             String nombretecnico=null;
             Date inicio=null;
             Date final1 = null;
+            Herramienta herramienta= new Herramienta();
 
 	    while (rs.next()){
 	    	if(mantenimientos == null){
@@ -64,8 +66,9 @@ public class mantenimientoDAO implements IBaseDatos<Mantenimiento> {
 	        registro.setIdMantenimiento(idmant);
                 
                 idherramienta = rs.getInt("idHerramienta");
-	        registro.setIdHerramienta(idherramienta);
-	        
+	        herramienta.setIdHerramienta(idherramienta);
+                registro.setHerramienta(herramienta);
+                
 	        ref = rs.getString("refFabricante");
 	        registro.setRefFabricante(ref);
                 
@@ -121,7 +124,7 @@ public class mantenimientoDAO implements IBaseDatos<Mantenimiento> {
 	    try {
 			preparedStmt = connection.prepareStatement(query);
 			preparedStmt.setInt (1, t.getIdMantenimiento());
-                        preparedStmt.setInt (2, t.getIdHerramienta());
+                        preparedStmt.setInt (2, t.getHerramienta().getIdHerramienta());
                         preparedStmt.setString (3, t.getRefFabricante());
                         preparedStmt.setString (4, t.getEnServicio());
                         preparedStmt.setInt (5, t.getNivelImportancia());
