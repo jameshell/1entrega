@@ -102,6 +102,7 @@ and open the template in the editor.
                         
                     </li>
                 </ul>
+                    </li>
             </div>
             <!-- /.navbar-collapse -->
         </nav>
