@@ -65,7 +65,7 @@ and open the template in the editor.
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                         <a href="registroCursos.jsp"><i class="fa fa-fw fa-user" ></i> Persona </a>
+                         <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Persona </a>
                     </li>
                      <li>
                         <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo</a>
@@ -93,10 +93,10 @@ and open the template in the editor.
                                 <a href="listaHerramienta.jsp">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="">Lista de Salones</a>
+                                <a href="listaSalon.jsp">Lista de Salones</a>
                             </li>
                             <li>
-                                <a href="">Lista de Mantenimientos</a>
+                                <a href="listaMantenimiento.jsp">Lista de Mantenimientos</a>
                             </li>
                         
                         

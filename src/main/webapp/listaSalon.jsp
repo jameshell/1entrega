@@ -78,17 +78,17 @@
                             <li>
                                 <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
-                            
                              <li>
                                 <a href="listaPrestamo.jsp">Lista de Prestamo</a>
                             </li>
-                        
-                             <li>
-                                <a href="">Lista de Herramientas</a>
+                                <li>
+                                <a href="listaSalon.jsp">Lista de Salones</a>
                             </li>
-                            
+                             <li>
+                                <a href="listaHerramienta.jsp">Lista de Herramientas</a>
+                            </li>
                             <li>
-                                <a href="">Lista de Mantenimientos</a>
+                                <a href="listaMantenimiento.jsp">Lista de Mantenimientos</a>
                             </li>
                         
                         

@@ -130,7 +130,7 @@
 
                 <div class="page-header">
                  
-                   <form action="prestamoEliminacion"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
+                   <form action="salonEliminacion"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
                                 
                             <div class="form-group">
