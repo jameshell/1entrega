@@ -136,12 +136,7 @@ public class prestamoDAO implements IBaseDatos<Prestamo> {
                         preparedStmt.setString (9, t.getJustificacion());
                         preparedStmt.setString (10, t.getObservaciones());
                         preparedStmt.setString (11, t.getTipoPrestamo());
-                        
-                         
-                         
-                        
-                        
-                        
+
 			result= preparedStmt.execute();
 	    } catch (SQLException e) {
 			e.printStackTrace();
