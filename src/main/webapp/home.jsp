@@ -114,7 +114,7 @@ and open the template in the editor.
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Interfaz Principal
+                            Sistema de Almacenamiento
                         </h1>
                         <ol class="breadcrumb">
                             <li>
