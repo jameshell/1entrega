@@ -50,8 +50,6 @@ public class personaActualizador extends HttpServlet {
         
         try {
             dao.edit(persona);
-        } catch (NonexistentEntityException ex) {
-            Logger.getLogger(personaActualizador.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
             Logger.getLogger(personaActualizador.class.getName()).log(Level.SEVERE, null, ex);
         }
