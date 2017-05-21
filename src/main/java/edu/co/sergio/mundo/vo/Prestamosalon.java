@@ -3,10 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sergio.mundo.dao.exceptions;
+package edu.co.sergio.mundo.vo;
 
-import edu.co.sergio.mundo.vo.Persona;
-import edu.co.sergio.mundo.vo.Salon;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -132,7 +130,7 @@ public class Prestamosalon implements Serializable {
 
     @Override
     public String toString() {
-        return "edu.co.sergio.mundo.dao.exceptions.Prestamosalon[ idprestamosalon=" + idprestamosalon + " ]";
+        return "edu.co.sergio.mundo.vo.Prestamosalon[ idprestamosalon=" + idprestamosalon + " ]";
     }
     
 }
