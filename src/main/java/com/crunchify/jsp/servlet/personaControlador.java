@@ -5,10 +5,12 @@
  */
 package com.crunchify.jsp.servlet;
 
-import edu.co.sergio.mundo.dao.personaDAO;
+import edu.co.sergio.mundo.dao.PersonaDAO;
 import edu.co.sergio.mundo.vo.Persona;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -33,22 +35,26 @@ public class personaControlador extends HttpServlet {
         
         
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
-        personaDAO dao = new personaDAO();
+        PersonaDAO dao = new PersonaDAO();
         
         Persona persona = new Persona();
         
-        persona.setIdPersona(Integer.parseInt(id));
-        persona.setNombrePersona(nombre);
-        persona.setApellidoPersona(apellido);
-        persona.setSemestrePersona(Integer.parseInt(semestre));
-        persona.setCarreraPersona(carrera);
-        persona.setCargoPersona(cargo);
+        persona.setIdpersona(Integer.parseInt(id));
+        persona.setNombrepersona(nombre);
+        persona.setApellidopersona(apellido);
+        persona.setSemestrepersona(Integer.parseInt(semestre));
+        persona.setCarrerapersona(carrera);
+        persona.setCargopersona(cargo);
         
         
-        dao.insert(persona);
+        try {
+            dao.create(persona);
+        } catch (Exception ex) {
+            Logger.getLogger(personaControlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         //Listando la informacion  
-        List<Persona> personas =  dao.findAll();
+        List<Persona> personas =  dao.findPersonaEntities();
         request.setAttribute("personas", personas);
        
        

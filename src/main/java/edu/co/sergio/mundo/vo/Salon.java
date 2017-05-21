@@ -5,51 +5,123 @@
  */
 package edu.co.sergio.mundo.vo;
 
-import java.util.ArrayList;
+import java.io.Serializable;
+import java.util.Collection;
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import org.codehaus.jackson.annotate.JsonIgnore;
 
 /**
  *
- * @author Jaime Alonso
+ * @author Carlos
  */
-public class Salon {
-    
-    private int idSalon;
-    private String nombreSalon;
-    private ArrayList<Prestamo> listaPrestamo;
-    private ArrayList<prestamoSalon> listaprestamoSalon;
+@Entity
+@Table(name = "salon")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "Salon.findAll", query = "SELECT s FROM Salon s")
+    , @NamedQuery(name = "Salon.findByIdsalon", query = "SELECT s FROM Salon s WHERE s.idsalon = :idsalon")
+    , @NamedQuery(name = "Salon.findByNombresalon", query = "SELECT s FROM Salon s WHERE s.nombresalon = :nombresalon")})
+public class Salon implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+    @Id
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "idsalon")
+    private Integer idsalon;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 2147483647)
+    @Column(name = "nombresalon")
+    private String nombresalon;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idsalon")
+    private Collection<Prestamosalon> prestamosalonCollection;
+    @OneToMany(mappedBy = "idsalon")
+    private Collection<Prestamo> prestamoCollection;
 
-
-    public ArrayList<Prestamo> getListaPrestamo() {
-        return listaPrestamo;
+    public Salon() {
     }
 
-    public void setListaPrestamo(ArrayList<Prestamo> listaPrestamo) {
-        this.listaPrestamo = listaPrestamo;
+    public Salon(Integer idsalon) {
+        this.idsalon = idsalon;
     }
 
-    public ArrayList<prestamoSalon> getListaprestamoSalon() {
-        return listaprestamoSalon;
+    public Salon(Integer idsalon, String nombresalon) {
+        this.idsalon = idsalon;
+        this.nombresalon = nombresalon;
     }
 
-    public void setListaprestamoSalon(ArrayList<prestamoSalon> listaprestamoSalon) {
-        this.listaprestamoSalon = listaprestamoSalon;
+    public Integer getIdsalon() {
+        return idsalon;
     }
 
-    public int getIdSalon() {
-        return idSalon;
+    public void setIdsalon(Integer idsalon) {
+        this.idsalon = idsalon;
     }
 
-    public void setIdSalon(int idSalon) {
-        this.idSalon = idSalon;
+    public String getNombresalon() {
+        return nombresalon;
     }
 
-    public String getNombreSalon() {
-        return nombreSalon;
+    public void setNombresalon(String nombresalon) {
+        this.nombresalon = nombresalon;
     }
 
-    public void setNombreSalon(String nombreSalon) {
-        this.nombreSalon = nombreSalon;
+    @XmlTransient
+    @JsonIgnore
+    public Collection<Prestamosalon> getPrestamosalonCollection() {
+        return prestamosalonCollection;
+    }
+
+    public void setPrestamosalonCollection(Collection<Prestamosalon> prestamosalonCollection) {
+        this.prestamosalonCollection = prestamosalonCollection;
+    }
+
+    @XmlTransient
+    @JsonIgnore
+    public Collection<Prestamo> getPrestamoCollection() {
+        return prestamoCollection;
+    }
+
+    public void setPrestamoCollection(Collection<Prestamo> prestamoCollection) {
+        this.prestamoCollection = prestamoCollection;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (idsalon != null ? idsalon.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Salon)) {
+            return false;
+        }
+        Salon other = (Salon) object;
+        if ((this.idsalon == null && other.idsalon != null) || (this.idsalon != null && !this.idsalon.equals(other.idsalon))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "edu.co.sergio.mundo.vo.Salon[ idsalon=" + idsalon + " ]";
     }
     
 }

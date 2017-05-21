@@ -5,7 +5,9 @@
  */
 package com.crunchify.jsp.servlet;
 
-import edu.co.sergio.mundo.dao.personaDAO;
+import edu.co.sergio.mundo.dao.PersonaDAO;
+import edu.co.sergio.mundo.dao.exceptions.IllegalOrphanException;
+import edu.co.sergio.mundo.dao.exceptions.NonexistentEntityException;
 import edu.co.sergio.mundo.vo.Persona;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -13,6 +15,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
  
 /**
@@ -26,11 +30,17 @@ public class personaEliminacion extends HttpServlet {
      
         
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
-        personaDAO dao = new personaDAO();
+        PersonaDAO dao = new PersonaDAO();
         Persona persona = new Persona();
-        persona.setIdPersona(Integer.parseInt(id));
+        persona.setIdpersona(Integer.parseInt(id));
       
-        dao.delete(persona);
+        try {
+            dao.destroy(Integer.parseInt(id));
+        } catch (IllegalOrphanException ex) {
+            Logger.getLogger(personaEliminacion.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(personaEliminacion.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
       
        

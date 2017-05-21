@@ -1,7 +1,7 @@
 package com.crunchify.jsp.servlet;
  
 
-import edu.co.sergio.mundo.dao.personaDAO;
+import edu.co.sergio.mundo.dao.PersonaDAO;
 import edu.co.sergio.mundo.vo.Persona;
 
 import java.io.IOException;
@@ -20,11 +20,11 @@ public class listaControlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
-        personaDAO dao = new personaDAO();
+        PersonaDAO dao = new PersonaDAO();
 
         
         //Listando la informacion  
-        List<Persona> personas =  dao.findAll();
+        List<Persona> personas =  dao.findPersonaEntities();
         request.setAttribute("personas", personas);
        
        

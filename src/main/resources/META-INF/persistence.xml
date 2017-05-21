@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-  <persistence-unit name="catalogPU" transaction-type="JTA">
+  <persistence-unit name="LABUSA" transaction-type="JTA">
     <jta-data-source>app/jdbc/petcatalog</jta-data-source>
-<!--    <jta-data-source>java:/petcatalog</jta-data-source>-->
+    <!--    <jta-data-source>java:/petcatalog</jta-data-source>-->
+    <class>edu.co.sergio.mundo.vo.Administrativo</class>
+    <class>edu.co.sergio.mundo.vo.Herramienta</class>
+    <class>edu.co.sergio.mundo.vo.Mantenimiento</class>
+    <class>edu.co.sergio.mundo.vo.Prestamo</class>
+    <class>edu.co.sergio.mundo.vo.Persona</class>
+    <class>edu.co.sergio.mundo.vo.Transaccion</class>
+    <class>edu.co.sergio.mundo.vo.Prestamosalon</class>
+    <class>edu.co.sergio.mundo.vo.Salon</class>
     <properties/>
   </persistence-unit>
 </persistence>

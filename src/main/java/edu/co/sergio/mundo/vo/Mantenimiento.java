@@ -5,106 +5,208 @@
  */
 package edu.co.sergio.mundo.vo;
 
-import java.sql.Date;
-
-
+import java.io.Serializable;
+import java.util.Date;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Jaime Alonso
+ * @author Carlos
  */
-public class Mantenimiento {
-    private Herramienta herramienta;
-    private int idMantenimiento;
-    private String refFabricante;
-    private String enServicio;
-    private int nivelImportancia;
-    private String tipoMantenimiento;
-    private String entidadCargo;
-    private String nombreTecnico;
-    private Date fechaInicio;
-    private Date fechaFinal;
+@Entity
+@Table(name = "mantenimiento")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "Mantenimiento.findAll", query = "SELECT m FROM Mantenimiento m")
+    , @NamedQuery(name = "Mantenimiento.findByIdmantenimiento", query = "SELECT m FROM Mantenimiento m WHERE m.idmantenimiento = :idmantenimiento")
+    , @NamedQuery(name = "Mantenimiento.findByReffabricante", query = "SELECT m FROM Mantenimiento m WHERE m.reffabricante = :reffabricante")
+    , @NamedQuery(name = "Mantenimiento.findByEnservicio", query = "SELECT m FROM Mantenimiento m WHERE m.enservicio = :enservicio")
+    , @NamedQuery(name = "Mantenimiento.findByNivelimportancia", query = "SELECT m FROM Mantenimiento m WHERE m.nivelimportancia = :nivelimportancia")
+    , @NamedQuery(name = "Mantenimiento.findByTipomantenimiento", query = "SELECT m FROM Mantenimiento m WHERE m.tipomantenimiento = :tipomantenimiento")
+    , @NamedQuery(name = "Mantenimiento.findByEntidadcargo", query = "SELECT m FROM Mantenimiento m WHERE m.entidadcargo = :entidadcargo")
+    , @NamedQuery(name = "Mantenimiento.findByMombretecnico", query = "SELECT m FROM Mantenimiento m WHERE m.mombretecnico = :mombretecnico")
+    , @NamedQuery(name = "Mantenimiento.findByFechainicio", query = "SELECT m FROM Mantenimiento m WHERE m.fechainicio = :fechainicio")
+    , @NamedQuery(name = "Mantenimiento.findByFechafinal", query = "SELECT m FROM Mantenimiento m WHERE m.fechafinal = :fechafinal")})
+public class Mantenimiento implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+    @Id
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "idmantenimiento")
+    private Integer idmantenimiento;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 2147483647)
+    @Column(name = "reffabricante")
+    private String reffabricante;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 2147483647)
+    @Column(name = "enservicio")
+    private String enservicio;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "nivelimportancia")
+    private int nivelimportancia;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 2147483647)
+    @Column(name = "tipomantenimiento")
+    private String tipomantenimiento;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 2147483647)
+    @Column(name = "entidadcargo")
+    private String entidadcargo;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 2147483647)
+    @Column(name = "mombretecnico")
+    private String mombretecnico;
+    @Column(name = "fechainicio")
+    @Temporal(TemporalType.DATE)
+    private Date fechainicio;
+    @Column(name = "fechafinal")
+    @Temporal(TemporalType.DATE)
+    private Date fechafinal;
+    @JoinColumn(name = "idherramienta", referencedColumnName = "idherramienta")
+    @ManyToOne(optional = false)
+    private Herramienta idherramienta;
 
-    public int getIdMantenimiento() {
-        return idMantenimiento;
+    public Mantenimiento() {
     }
 
-    public Herramienta getHerramienta() {
-        return herramienta;
+    public Mantenimiento(Integer idmantenimiento) {
+        this.idmantenimiento = idmantenimiento;
     }
 
-    public void setHerramienta(Herramienta herramienta) {
-        this.herramienta = herramienta;
+    public Mantenimiento(Integer idmantenimiento, String reffabricante, String enservicio, int nivelimportancia, String tipomantenimiento, String entidadcargo, String mombretecnico) {
+        this.idmantenimiento = idmantenimiento;
+        this.reffabricante = reffabricante;
+        this.enservicio = enservicio;
+        this.nivelimportancia = nivelimportancia;
+        this.tipomantenimiento = tipomantenimiento;
+        this.entidadcargo = entidadcargo;
+        this.mombretecnico = mombretecnico;
     }
 
-    public void setIdMantenimiento(int idMantenimiento) {
-        this.idMantenimiento = idMantenimiento;
+    public Integer getIdmantenimiento() {
+        return idmantenimiento;
     }
 
-    public String getRefFabricante() {
-        return refFabricante;
+    public void setIdmantenimiento(Integer idmantenimiento) {
+        this.idmantenimiento = idmantenimiento;
     }
 
-    public void setRefFabricante(String refFabricante) {
-        this.refFabricante = refFabricante;
+    public String getReffabricante() {
+        return reffabricante;
     }
 
-    public String getEnServicio() {
-        return enServicio;
+    public void setReffabricante(String reffabricante) {
+        this.reffabricante = reffabricante;
     }
 
-    public void setEnServicio(String enServicio) {
-        this.enServicio = enServicio;
+    public String getEnservicio() {
+        return enservicio;
     }
 
-    public int getNivelImportancia() {
-        return nivelImportancia;
+    public void setEnservicio(String enservicio) {
+        this.enservicio = enservicio;
     }
 
-    public void setNivelImportancia(int nivelImportancia) {
-        this.nivelImportancia = nivelImportancia;
+    public int getNivelimportancia() {
+        return nivelimportancia;
     }
 
-    public String getTipoMantenimiento() {
-        return tipoMantenimiento;
+    public void setNivelimportancia(int nivelimportancia) {
+        this.nivelimportancia = nivelimportancia;
     }
 
-    public void setTipoMantenimiento(String tipoMantenimiento) {
-        this.tipoMantenimiento = tipoMantenimiento;
+    public String getTipomantenimiento() {
+        return tipomantenimiento;
     }
 
-    public String getEntidadCargo() {
-        return entidadCargo;
+    public void setTipomantenimiento(String tipomantenimiento) {
+        this.tipomantenimiento = tipomantenimiento;
     }
 
-    public void setEntidadCargo(String entidadCargo) {
-        this.entidadCargo = entidadCargo;
+    public String getEntidadcargo() {
+        return entidadcargo;
     }
 
-    public String getNombreTecnico() {
-        return nombreTecnico;
+    public void setEntidadcargo(String entidadcargo) {
+        this.entidadcargo = entidadcargo;
     }
 
-    public void setNombreTecnico(String nombreTecnico) {
-        this.nombreTecnico = nombreTecnico;
+    public String getMombretecnico() {
+        return mombretecnico;
     }
 
-    public Date getFechaInicio() {
-        return fechaInicio;
+    public void setMombretecnico(String mombretecnico) {
+        this.mombretecnico = mombretecnico;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
-        this.fechaInicio = fechaInicio;
+    public Date getFechainicio() {
+        return fechainicio;
     }
 
-    public Date getFechaFinal() {
-        return fechaFinal;
+    public void setFechainicio(Date fechainicio) {
+        this.fechainicio = fechainicio;
     }
 
-    public void setFechaFinal(Date fechaFinal) {
-        this.fechaFinal = fechaFinal;
+    public Date getFechafinal() {
+        return fechafinal;
     }
-  
+
+    public void setFechafinal(Date fechafinal) {
+        this.fechafinal = fechafinal;
+    }
+
+    public Herramienta getIdherramienta() {
+        return idherramienta;
+    }
+
+    public void setIdherramienta(Herramienta idherramienta) {
+        this.idherramienta = idherramienta;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (idmantenimiento != null ? idmantenimiento.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Mantenimiento)) {
+            return false;
+        }
+        Mantenimiento other = (Mantenimiento) object;
+        if ((this.idmantenimiento == null && other.idmantenimiento != null) || (this.idmantenimiento != null && !this.idmantenimiento.equals(other.idmantenimiento))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "edu.co.sergio.mundo.vo.Mantenimiento[ idmantenimiento=" + idmantenimiento + " ]";
+    }
     
 }

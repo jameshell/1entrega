@@ -5,10 +5,13 @@
  */
 package com.crunchify.jsp.servlet;
 
-import edu.co.sergio.mundo.dao.personaDAO;
+import edu.co.sergio.mundo.dao.PersonaDAO;
+import edu.co.sergio.mundo.dao.exceptions.NonexistentEntityException;
 import edu.co.sergio.mundo.vo.Persona;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -33,19 +36,25 @@ public class personaActualizador extends HttpServlet {
         
         
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
-        personaDAO dao = new personaDAO();
+        PersonaDAO dao = new PersonaDAO();
         
         Persona persona = new Persona();
         
-        persona.setIdPersona(Integer.parseInt(id));
-        persona.setNombrePersona(nombre);
-        persona.setApellidoPersona(apellido);
-        persona.setSemestrePersona(Integer.parseInt(semestre));
-        persona.setCarreraPersona(carrera);
-        persona.setCargoPersona(cargo);
+        persona.setIdpersona(Integer.parseInt(id));
+        persona.setNombrepersona(nombre);
+        persona.setApellidopersona(apellido);
+        persona.setSemestrepersona(Integer.parseInt(semestre));
+        persona.setCarrerapersona(carrera);
+        persona.setCargopersona(cargo);
         
         
-        dao.update(persona);
+        try {
+            dao.edit(persona);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(personaActualizador.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(personaActualizador.class.getName()).log(Level.SEVERE, null, ex);
+        }
        
         //Redireccionando la informacion
         RequestDispatcher redireccion = request.getRequestDispatcher("persona.jsp");
