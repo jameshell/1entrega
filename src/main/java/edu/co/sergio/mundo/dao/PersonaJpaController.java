@@ -18,19 +18,23 @@ import edu.co.sergio.mundo.vo.Prestamosalon;
 import java.util.ArrayList;
 import java.util.Collection;
 import edu.co.sergio.mundo.vo.Prestamo;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 /**
  *
  * @author Carlos
  */
 public class PersonaJpaController implements Serializable {
-
-    public PersonaJpaController(EntityManagerFactory emf) {
-        this.emf = emf;
-    }
+    private EntityManager em=null;
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
@@ -44,7 +48,7 @@ public class PersonaJpaController implements Serializable {
         if (persona.getPrestamoCollection() == null) {
             persona.setPrestamoCollection(new ArrayList<Prestamo>());
         }
-        EntityManager em = null;
+        startOperation();
         try {
             em = getEntityManager();
             em.getTransaction().begin();
@@ -88,12 +92,13 @@ public class PersonaJpaController implements Serializable {
         } finally {
             if (em != null) {
                 em.close();
+                emf.close();
             }
         }
     }
 
     public void edit(Persona persona) throws IllegalOrphanException, NonexistentEntityException, Exception {
-        EntityManager em = null;
+        startOperation();
         try {
             em = getEntityManager();
             em.getTransaction().begin();
@@ -172,12 +177,13 @@ public class PersonaJpaController implements Serializable {
         } finally {
             if (em != null) {
                 em.close();
+                emf.close();
             }
         }
     }
 
     public void destroy(Integer id) throws IllegalOrphanException, NonexistentEntityException {
-        EntityManager em = null;
+        startOperation();
         try {
             em = getEntityManager();
             em.getTransaction().begin();
@@ -211,6 +217,7 @@ public class PersonaJpaController implements Serializable {
         } finally {
             if (em != null) {
                 em.close();
+                emf.close();
             }
         }
     }
@@ -224,7 +231,7 @@ public class PersonaJpaController implements Serializable {
     }
 
     private List<Persona> findPersonaEntities(boolean all, int maxResults, int firstResult) {
-        EntityManager em = getEntityManager();
+        startOperation();
         try {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
             cq.select(cq.from(Persona.class));
@@ -236,20 +243,22 @@ public class PersonaJpaController implements Serializable {
             return q.getResultList();
         } finally {
             em.close();
+            emf.close();
         }
     }
 
     public Persona findPersona(Integer id) {
-        EntityManager em = getEntityManager();
+        startOperation();
         try {
             return em.find(Persona.class, id);
         } finally {
             em.close();
+            emf.close();
         }
     }
 
     public int getPersonaCount() {
-        EntityManager em = getEntityManager();
+        startOperation();
         try {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
             Root<Persona> rt = cq.from(Persona.class);
@@ -258,7 +267,29 @@ public class PersonaJpaController implements Serializable {
             return ((Long) q.getSingleResult()).intValue();
         } finally {
             em.close();
+            emf.close();
         }
     }
-    
+    protected void startOperation() { 
+        URI dbUri = null;
+        try {
+            dbUri = new URI(System.getenv("DATABASE_URL")); 
+            String username = dbUri.getUserInfo().split(":")[0];
+            String password = dbUri.getUserInfo().split(":")[1];
+            String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+
+            Map<String, String> properties = new HashMap<String, String>();
+            properties.put("javax.persistence.jdbc.url", dbUrl);
+            properties.put("javax.persistence.jdbc.user", username );
+            properties.put("javax.persistence.jdbc.password", password );
+            properties.put("javax.persistence.jdbc.driver", "org.postgresql.Driver");
+            properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+            this.emf = Persistence.createEntityManagerFactory("LABUSA",properties);
+            this.em = emf.createEntityManager();
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(PersonaJpaController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+       
+    }
 }
