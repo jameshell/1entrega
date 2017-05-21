@@ -130,7 +130,7 @@ and open the template in the editor.
 
                 <!-- Main jumbotron for a primary marketing message or call to action -->
                 <div class="jumbotron">
-                    <h1>Universidad Sergio Arboleda</h1>
+                   <img class="img-responsive" src="usergioarboleda.png">
                     <p>Sistema de registro - Proyecto Primer Corte - Bases de Datos</p>
                     <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a>
                     </p>
