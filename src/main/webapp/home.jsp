@@ -114,7 +114,7 @@ and open the template in the editor.
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Sistema de Almacenamiento
+                            Interfaz Principal
                         </h1>
                         <ol class="breadcrumb">
                             <li>
@@ -130,7 +130,7 @@ and open the template in the editor.
 
                 <!-- Main jumbotron for a primary marketing message or call to action -->
                 <div class="jumbotron">
-                    <img src="usergioarboleda.png" class="img-responsive" alt="Cinque Terre">
+                    <h1>Universidad Sergio Arboleda</h1>
                     <p>Sistema de registro - Proyecto Primer Corte - Bases de Datos</p>
                     <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a>
                     </p>
