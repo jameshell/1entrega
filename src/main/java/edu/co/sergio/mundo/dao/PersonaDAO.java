@@ -33,7 +33,7 @@ import javax.persistence.Persistence;
  *
  * @author Carlos
  */
-public class PersonaJpaController implements Serializable {
+public class PersonaDAO implements Serializable {
     private EntityManager em=null;
     private EntityManagerFactory emf = null;
 
@@ -270,6 +270,7 @@ public class PersonaJpaController implements Serializable {
             emf.close();
         }
     }
+    
     protected void startOperation() { 
         URI dbUri = null;
         try {
@@ -287,7 +288,7 @@ public class PersonaJpaController implements Serializable {
             this.emf = Persistence.createEntityManagerFactory("LABUSA",properties);
             this.em = emf.createEntityManager();
         } catch (URISyntaxException ex) {
-            Logger.getLogger(PersonaJpaController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PersonaDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         
        
