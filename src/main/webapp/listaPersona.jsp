@@ -136,7 +136,7 @@
           List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
            for (Persona persona : personas) {
          %>      
-          <tr><td><%=persona.getNombrePersona()%> </td> <td><%=persona.getCargoPersona()%> </td> <td><%=persona.getIdPersona()%> </td></tr>
+          <tr><td><%=persona.getgetNombrepersona()%> </td> <td><%=persona.getCargopersona()%> </td> <td><%=persona.getIdpersona()%> </td></tr>
          <%      
           }
        }
