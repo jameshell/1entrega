@@ -149,9 +149,10 @@
                      
         <form action="listaControlador">
                           <button type="submit" class="btn btn-default" role="button" > Mostrar Lista</button>
+                          <a href="graficasPersona.jsp" class="btn btn-warning" role="button">Mostrar Gráfica</a>
         </form>
                      
-               <a href="graficasPersona.jsp" class="btn btn-warning" role="button">Mostrar Gráfica</a>
+               
                      
      </div>
           
