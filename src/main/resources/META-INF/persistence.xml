@@ -11,6 +11,7 @@
     <class>edu.co.sergio.mundo.vo.Transaccion</class>
     <class>edu.co.sergio.mundo.vo.Prestamosalon</class>
     <class>edu.co.sergio.mundo.vo.Salon</class>
+    <class>edu.co.sergio.mundo.dao.exceptions.Prestamosalon</class>
     <properties/>
   </persistence-unit>
 </persistence>

@@ -5,6 +5,7 @@
  */
 package edu.co.sergio.mundo.vo;
 
+import edu.co.sergio.mundo.dao.exceptions.Prestamosalon;
 import java.io.Serializable;
 import java.util.Collection;
 import javax.persistence.Basic;
@@ -38,6 +39,9 @@ import org.codehaus.jackson.annotate.JsonIgnore;
     , @NamedQuery(name = "Persona.findByCarrerapersona", query = "SELECT p FROM Persona p WHERE p.carrerapersona = :carrerapersona")
     , @NamedQuery(name = "Persona.findByCargopersona", query = "SELECT p FROM Persona p WHERE p.cargopersona = :cargopersona")})
 public class Persona implements Serializable {
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idpersona")
+    private Collection<Prestamosalon> prestamosalonCollection;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -178,6 +182,16 @@ public class Persona implements Serializable {
     @Override
     public String toString() {
         return "edu.co.sergio.mundo.vo.Persona[ idpersona=" + idpersona + " ]";
+    }
+
+    @XmlTransient
+    @JsonIgnore
+    public Collection<Prestamosalon> getPrestamosalonCollection() {
+        return prestamosalonCollection;
+    }
+
+    public void setPrestamosalonCollection(Collection<Prestamosalon> prestamosalonCollection) {
+        this.prestamosalonCollection = prestamosalonCollection;
     }
     
 }
