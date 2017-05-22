@@ -53,7 +53,7 @@ public class loginControlador extends HttpServlet {
                 admin.setIdadministrativo(Integer.parseInt(idAdmin));
                 HttpSession session = request.getSession();
                 session.setAttribute("administrador", admin);
-                session.setAttribute("loginResult", true);
+                session.setAttribute("loginResult", false);
                 request.getRequestDispatcher("home.jsp").forward(request, response);
                 
                 
@@ -63,13 +63,13 @@ public class loginControlador extends HttpServlet {
           }else{
               //Contrasena incorrecta!
               //Crear un jsp para el error!
-              request.setAttribute("loginResult", false);
-         
+              request.setAttribute("loginResult", true);
+              request.getRequestDispatcher("login.jsp").forward(request, response);
           }
       }else{
           //Usuario incorrecto!
-           request.setAttribute("loginResult", false);
-  
+           request.setAttribute("loginResult", true);
+           request.getRequestDispatcher("login.jsp").forward(request, response);
           
       }
      
