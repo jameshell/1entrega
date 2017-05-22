@@ -34,24 +34,19 @@
 			    		<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
 			    	</fieldset>
 			      	</form>
+                                    <%
+                                if(request.getAttribute("loginResult") != null && request.getAttribute("loginResult") == "false"){
+                                    %>
+                                <p style="color:red"> Usuario o Contraseña invalido.</p>
+                                     <%
+                                    }
+                                        %>
 			    </div>
 			</div>
 		</div>
 	</div>
 </div>
-          <%
-             session.setMaxInactiveInterval(2);
-          %>
-
-                      <script type="text/javascript">
-                      var Msg ='<%=session.getAttribute("administrador")%>';
-                      if (Msg == "null") {
-                      function alertName(){
-                      alert("Usuario y/o Contraseña no validos.");
-                             } 
-                             }
- </script> 
+         
     <script src='js/bootstrap.min.js'></script>
-    <script type="text/javascript"> window.onload = alertName; </script>
   </body>
 </html>
