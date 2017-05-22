@@ -34,13 +34,6 @@
 			    		<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
 			    	</fieldset>
 			      	</form>
-                                    <%
-                                if(request.getAttribute("loginResult") != null && request.getAttribute("loginResult") == "true"){
-                                    %>
-                                <p style="color:red"> Usuario o Contraseña invalido.</p>
-                                     <%
-                                    }
-                                        %>
 			    </div>
 			</div>
 		</div>

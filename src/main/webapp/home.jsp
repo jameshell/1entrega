@@ -16,6 +16,15 @@ and open the template in the editor.
 <html lang="en">
 
 <head>
+<% import edu.co.sergio.mundo.vo.*;  %>
+<%import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession; %>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -159,6 +168,15 @@ and open the template in the editor.
     <!-- /#wrapper -->
 
     <!-- jQuery -->
+      <% HttpSession session = request.getSession();
+        Administrativo admin= (Administrativo) session.getAttribute("administrativo");
+        
+        if(admin==null){
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+        }
+        %>
+    
+    
      <%
              session.setMaxInactiveInterval(2);
           %>
@@ -167,7 +185,7 @@ and open the template in the editor.
                       var Msg ='<%=session.getAttribute("administrador")%>';
                       if (Msg != "null") {
                       function alertName(){
-                      alert("Bienvenido!");
+                      alert("Bienvenido! Sesion HTTP iniciada! ");
                              } 
                              }
  </script> 
