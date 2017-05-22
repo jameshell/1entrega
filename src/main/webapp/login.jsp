@@ -35,7 +35,7 @@
 			    	</fieldset>
 			      	</form>
                                     <%
-                                if(request.getAttribute("loginResult") != null && request.getAttribute("loginResult") == "false"){
+                                if(request.getAttribute("loginResult") != null && request.getAttribute("loginResult") == "true"){
                                     %>
                                 <p style="color:red"> Usuario o Contraseña invalido.</p>
                                      <%
