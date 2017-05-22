@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
+    <style>
+   body {padding-top: 40px;}
+</style>
   <head>
     <title>Universidad Sergio Arboleda</title>
+    
+    <link href='css/bootstrap.min.css' rel='stylesheet'>
+    <link href='css/main.css' rel='stylesheet'>
   </head>
-  <style>
-   body {padding-top: 30px;}
-</style>
   <body>
     <div class="container">
     <div class="row">
@@ -16,7 +19,7 @@
 			 	</div>
 			  	<div class="panel-body">
 			    	<form accept-charset="UTF-8" role="form">
-                    <fieldset>
+                              <fieldset>
 			    	  	<div class="form-group">
 			    		    <input class="form-control" placeholder="E-mail" name="email" type="text">
 			    		</div>
