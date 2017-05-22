@@ -212,7 +212,7 @@
          %>
             
    
-        var data = google.visualization.arrayToDataTable([<%=shades%>]);
+        var data = google.visualization.arrayToDataTable(<%=shades%>);
         
         
         var options = {
