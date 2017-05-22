@@ -10,6 +10,7 @@ package com.crunchify.jsp.servlet;
  * and open the template in the editor.
  */
 
+import edu.co.sergio.mundo.vo.Administrativo;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,10 +18,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author james
+ * @author James Alonso
  */
 
 @WebServlet(urlPatterns = {"/loginServlet"})
@@ -41,21 +43,37 @@ public class loginControlador extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet loginServlet </title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet loginServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        } finally {
-            out.close();
-        }
+        
+      String idAdmin, contrasena;
+      idAdmin=request.getParameter("idAdmin");
+      contrasena=request.getParameter("contrasena");
+      if(idAdmin.equalsIgnoreCase("12345")){
+          if(contrasena.equalsIgnoreCase("12345")){
+                Administrativo admin= new Administrativo();
+                admin.setIdadministrativo(Integer.parseInt(idAdmin));
+                HttpSession session = request.getSession();
+                session.setAttribute("administrador", admin);
+                request.getRequestDispatcher("home.jsp").forward(request, response);
+                
+                
+                
+                
+              //Usuario correcto!
+          }else{
+              //Contrasena incorrecta!
+              //Crear un jsp para el error!
+              request.getRequestDispatcher("login.jsp").forward(request, response);
+          }
+      }else{
+          //Usuario incorrecto!
+           request.getRequestDispatcher("login.jsp").forward(request, response);
+          
+      }
+     
+      
+      
+      
+       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

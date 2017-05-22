@@ -21,10 +21,10 @@
                                     <form accept-charset="UTF-8" role="form" action="loginControlador" method="post">
                               <fieldset>
 			    	  	<div class="form-group">
-			    		    <input class="form-control" placeholder="E-mail" name="email" type="text">
+			    		    <input class="form-control" placeholder="E-mail" name="idAdmin" type="text">
 			    		</div>
 			    		<div class="form-group">
-			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
+			    			<input class="form-control" placeholder="Password" name="contrasena" type="password" value="">
 			    		</div>
 			    		<div class="checkbox">
 			    	    	<label>
@@ -39,6 +39,19 @@
 		</div>
 	</div>
 </div>
+          <%
+             session.setMaxInactiveInterval(2);
+          %>
+
+                      <script type="text/javascript">
+                      var Msg ='<%=session.getAttribute("administrador")%>';
+                      if (Msg != "null") {
+                      function alertName(){
+                      alert("Usuario y/o Contraseña no validos.");
+                             } 
+                             }
+ </script> 
     <script src='js/bootstrap.min.js'></script>
+    <script type="text/javascript"> window.onload = alertName; </script>
   </body>
 </html>
