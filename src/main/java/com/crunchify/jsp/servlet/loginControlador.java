@@ -64,12 +64,12 @@ public class loginControlador extends HttpServlet {
               //Contrasena incorrecta!
               //Crear un jsp para el error!
               request.setAttribute("loginResult", false);
-              request.getRequestDispatcher("login.jsp").forward(request, response);
+         
           }
       }else{
           //Usuario incorrecto!
            request.setAttribute("loginResult", false);
-           request.getRequestDispatcher("login.jsp").forward(request, response);
+  
           
       }
      
