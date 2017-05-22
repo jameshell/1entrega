@@ -25,6 +25,9 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = {"/loginServlet"})
 public class loginControlador extends HttpServlet {
+    
+    
+    
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -44,7 +47,7 @@ public class loginControlador extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet loginServlet</title>");            
+            out.println("<title>Servlet loginServlet </title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet loginServlet at " + request.getContextPath() + "</h1>");

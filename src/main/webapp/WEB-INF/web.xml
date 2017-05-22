@@ -41,6 +41,11 @@
         <servlet-class>com.crunchify.jsp.servlet.personaActualizador</servlet-class>
     </servlet>
     
+         <servlet>
+        <servlet-name>loginValidate</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.loginControlador</servlet-class>
+    </servlet>
+    
     
     
     
@@ -69,6 +74,11 @@
       <servlet-mapping>
         <servlet-name>personaUpdate</servlet-name>
         <url-pattern>/personaActualizador</url-pattern>
+    </servlet-mapping>
+    
+       <servlet-mapping>
+        <servlet-name>loginValidate</servlet-name>
+        <url-pattern>/loginControlador</url-pattern>
     </servlet-mapping>
     
 </web-app>
