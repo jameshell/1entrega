@@ -153,7 +153,7 @@
              
       
     
-               <div id="piechart" style="width: 100%; height: 100%;"></div>
+               <div id="piechart" style="width: 900px; height: 500px;"></div>
                      
      </div>
           
@@ -177,20 +177,44 @@
      <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-
+    
       function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-            
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
           
-        ]);
+          
+          <%
 
+             ArrayList<String> listica= new ArrayList<String>();
+          if( request.getAttribute("personas")!=null){
+          List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
+
+         int z=0;
+
+           for (Persona persona : personas) {
+
+                  listica.add (persona.getNombrepersona()); 
+                  listica.add(persona.getCargopersona());
+          }
+          
+        int filas=(listica.size()/2);
+        int columnas= 2;
+
+         String[][] shades = new String[filas][columnas];
+         
+          int f=0;
+          for (int r=0; r<shades.length; r++) {
+          for (int c=0; c<shades[r].length; c++) {
+           shades[r][c]=listica.get(f);
+           f++;
+             }
+            }
+
+       }
+         %>
+            
+   
+        var data = google.visualization.arrayToDataTable([<%=shades%>]);
+        
+        
         var options = {
           title: 'My Daily Activities'
         };
