@@ -159,10 +159,25 @@ and open the template in the editor.
     <!-- /#wrapper -->
 
     <!-- jQuery -->
+     <%
+             session.setMaxInactiveInterval(2);
+          %>
+
+                      <script type="text/javascript">
+                      var Msg ='<%=session.getAttribute("administrador")%>';
+                      if (Msg != "null") {
+                      function alertName(){
+                      alert("Bienvenido!");
+                             } 
+                             }
+ </script> 
+    
+    
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript"> window.onload = alertName; </script>
 
 </body>
 

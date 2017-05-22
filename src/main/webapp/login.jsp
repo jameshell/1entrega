@@ -45,7 +45,7 @@
 
                       <script type="text/javascript">
                       var Msg ='<%=session.getAttribute("administrador")%>';
-                      if (Msg != "null") {
+                      if (Msg == "null") {
                       function alertName(){
                       alert("Usuario y/o Contraseña no validos.");
                              } 
