@@ -116,7 +116,7 @@
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Salones
+                                <i class="fa fa-desktop"></i> Administración de Mantenimientos
                             </li>
                         </ol>
                     </div>
@@ -127,10 +127,10 @@
                 </div>
 
                 <div class="page-header">
-                       <h2>El salon ha sido registrado de manera exitosa.</h2>
+                       <h2>El mantenimiento ha sido registrado de manera exitosa.</h2>
                        
                        
-                   <a href="salon.jsp" class="btn btn-primary btn-lg">Volver a Salon</a>
+                   <a href="mantenimiento.jsp" class="btn btn-primary btn-lg">Volver a Mantenimiento</a>
                     
 
             </div>
