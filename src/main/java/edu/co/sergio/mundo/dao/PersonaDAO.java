@@ -98,21 +98,13 @@ public class PersonaDAO implements Serializable {
     }
 
     public void edit(Persona persona) throws IllegalOrphanException, NonexistentEntityException, Exception {
-            URI dbUri = null;
+            startOperation();
         try {
-            dbUri = new URI(System.getenv("DATABASE_URL")); 
-            String username = dbUri.getUserInfo().split(":")[0];
-            String password = dbUri.getUserInfo().split(":")[1];
-            String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
-            Map<String, String> properties = new HashMap<String, String>();
-            properties.put("javax.persistence.jdbc.url", dbUrl);
-            properties.put("javax.persistence.jdbc.user", username );
-            properties.put("javax.persistence.jdbc.password", password );
-            properties.put("javax.persistence.jdbc.driver", "org.postgresql.Driver");
-            properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
-            this.emf = Persistence.createEntityManagerFactory("LABUSA",properties);
             this.em = emf.createEntityManager();
             em.getTransaction().begin();
+            if (em==null) {
+                System.out.println("AIUDDAA");
+            }
             Persona persistentPersona = em.find(Persona.class, persona.getIdpersona());
             Collection<Prestamosalon> prestamosalonCollectionOld = persistentPersona.getPrestamosalonCollection();
             Collection<Prestamosalon> prestamosalonCollectionNew = persona.getPrestamosalonCollection();
