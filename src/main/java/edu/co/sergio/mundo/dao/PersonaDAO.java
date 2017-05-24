@@ -100,6 +100,7 @@ public class PersonaDAO implements Serializable {
     public void edit(Persona persona) throws IllegalOrphanException, NonexistentEntityException, Exception {
         startOperation();
         try {
+            em = getEntityManager();
             em.getTransaction().begin();
             Persona persistentPersona = em.find(Persona.class, persona.getIdpersona());
             Collection<Prestamosalon> prestamosalonCollectionOld = persistentPersona.getPrestamosalonCollection();
@@ -178,7 +179,6 @@ public class PersonaDAO implements Serializable {
                 em.close();
                 emf.close();
             }
-             
         }
     }
 
