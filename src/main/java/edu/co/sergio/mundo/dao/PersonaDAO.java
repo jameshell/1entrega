@@ -34,8 +34,8 @@ import javax.persistence.Persistence;
  * @author Carlos
  */
 public class PersonaDAO implements Serializable {
-    private static EntityManager em=null;
-    private static EntityManagerFactory emf = null;
+    private EntityManager em=null;
+    private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
@@ -98,8 +98,8 @@ public class PersonaDAO implements Serializable {
     }
 
     public void edit(Persona persona) throws IllegalOrphanException, NonexistentEntityException, Exception {
-        startOperation();
         try {
+            startOperation();
             em = getEntityManager();
             em.getTransaction().begin();
             Persona persistentPersona = em.find(Persona.class, persona.getIdpersona());
