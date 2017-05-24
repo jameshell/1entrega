@@ -286,6 +286,7 @@ public class PersonaDAO implements Serializable {
             properties.put("javax.persistence.jdbc.driver", "org.postgresql.Driver");
             properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
             this.emf = Persistence.createEntityManagerFactory("LABUSA",properties);
+            this.em = emf.createEntityManager();
         } catch (URISyntaxException ex) {
             Logger.getLogger(PersonaDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
