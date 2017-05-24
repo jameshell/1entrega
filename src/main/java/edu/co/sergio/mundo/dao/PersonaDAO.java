@@ -177,8 +177,6 @@ public class PersonaDAO implements Serializable {
         } finally {
             if (em != null) {
                 
-                emf.close();
-                em.close();
             }
         }
     }
