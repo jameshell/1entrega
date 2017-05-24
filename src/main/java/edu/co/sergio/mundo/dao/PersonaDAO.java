@@ -34,8 +34,8 @@ import javax.persistence.Persistence;
  * @author Carlos
  */
 public class PersonaDAO implements Serializable {
-    private EntityManager em=null;
-    private EntityManagerFactory emf = null;
+    private static EntityManager em=null;
+    private static EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
