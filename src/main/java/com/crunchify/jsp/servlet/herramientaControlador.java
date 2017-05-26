@@ -29,7 +29,7 @@ public class herramientaControlador extends HttpServlet {
         String nombre = request.getParameter("nombrePersona");
         String apellido= request.getParameter("apellidoPersona");
         String semestre= request.getParameter("semestrePersona");
-        String carrera= request.getParameter("carreraPersona");=
+        String carrera= request.getParameter("carreraPersona");
 
         
         
@@ -44,6 +44,7 @@ public class herramientaControlador extends HttpServlet {
         persona.setApellidopersona(apellido);
         persona.setSemestrepersona(Integer.parseInt(semestre));
         persona.setCarrerapersona(carrera);
+        String cargo = null;
         persona.setCargopersona(cargo);
         
         

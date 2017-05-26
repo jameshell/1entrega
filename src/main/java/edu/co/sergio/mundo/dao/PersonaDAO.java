@@ -100,7 +100,7 @@ public class PersonaDAO implements Serializable {
     public void edit(Persona persona) throws IllegalOrphanException, NonexistentEntityException, Exception {
             startOperation();
         try {
-            this.em = emf.createEntityManager();
+            em= getEntityManager();
             em.getTransaction().begin();
             if (em==null) {
                 System.out.println("AIUDDAA");
