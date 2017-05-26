@@ -98,13 +98,16 @@ public class PersonaDAO implements Serializable {
     }
 
     public void edit(Persona persona) throws IllegalOrphanException, NonexistentEntityException, Exception {
-            startOperation();
+        if (persona.getPrestamosalonCollection() == null) {
+            persona.setPrestamosalonCollection(new ArrayList<Prestamosalon>());
+        }
+        if (persona.getPrestamoCollection() == null) {
+            persona.setPrestamoCollection(new ArrayList<Prestamo>());
+        }
+        startOperation();
         try {
-            this.em = emf.createEntityManager();
+            em= getEntityManager();
             em.getTransaction().begin();
-            if (em==null) {
-                System.out.println("AIUDDAA");
-            }
             Persona persistentPersona = em.find(Persona.class, persona.getIdpersona());
             Collection<Prestamosalon> prestamosalonCollectionOld = persistentPersona.getPrestamosalonCollection();
             Collection<Prestamosalon> prestamosalonCollectionNew = persona.getPrestamosalonCollection();

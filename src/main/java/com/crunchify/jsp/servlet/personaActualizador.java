@@ -36,10 +36,8 @@ public class personaActualizador extends HttpServlet {
         
         
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
-        PersonaDAO dao = new PersonaDAO();
-        
-        Persona persona = new Persona();
-        
+        PersonaDAO dao1 = new PersonaDAO();
+        Persona persona = new Persona();  
         persona.setIdpersona(Integer.parseInt(id));
         persona.setNombrepersona(nombre);
         persona.setApellidopersona(apellido);
@@ -49,7 +47,9 @@ public class personaActualizador extends HttpServlet {
         
         
         try {
-            dao.edit(persona);
+            dao1.edit(persona);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(personaActualizador.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
             Logger.getLogger(personaActualizador.class.getName()).log(Level.SEVERE, null, ex);
         }

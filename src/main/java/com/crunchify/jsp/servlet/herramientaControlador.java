@@ -45,6 +45,7 @@ public class herramientaControlador extends HttpServlet {
         persona.setApellidopersona(apellido);
         persona.setSemestrepersona(Integer.parseInt(semestre));
         persona.setCarrerapersona(carrera);
+        String cargo = null;
         persona.setCargopersona(cargo);
         
         
