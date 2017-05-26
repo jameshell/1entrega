@@ -5,8 +5,8 @@
  */
 package com.crunchify.jsp.servlet;
 
-import edu.co.sergio.mundo.dao.PersonaDAO;
-import edu.co.sergio.mundo.vo.Persona;
+import edu.co.sergio.mundo.dao.HerramientaDAO;
+import edu.co.sergio.mundo.vo.Herramienta;
 import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
@@ -29,15 +29,16 @@ public class herramientaControlador extends HttpServlet {
         String nombre = request.getParameter("nombrePersona");
         String apellido= request.getParameter("apellidoPersona");
         String semestre= request.getParameter("semestrePersona");
-        String carrera= request.getParameter("carreraPersona");=
+        String carrera= request.getParameter("carreraPersona");
 
         
         
         
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
-        PersonaDAO dao = new PersonaDAO();
+        HerramientaDAO dao = new HerramientaDAO();
+        Herramienta herramienta = new Herramienta();
         
-        Persona persona = new Persona();
+        
         
         persona.setIdpersona(Integer.parseInt(id));
         persona.setNombrepersona(nombre);
