@@ -8,7 +8,6 @@ package com.crunchify.jsp.servlet;
 import edu.co.sergio.mundo.dao.SalonDAO;
 import edu.co.sergio.mundo.dao.exceptions.IllegalOrphanException;
 import edu.co.sergio.mundo.dao.exceptions.NonexistentEntityException;
-import edu.co.sergio.mundo.vo.Persona;
 import edu.co.sergio.mundo.vo.Salon;
 import java.io.IOException;
 import javax.servlet.ServletException;
