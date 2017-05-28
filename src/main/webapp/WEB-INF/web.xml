@@ -46,6 +46,14 @@
         <servlet-class>com.crunchify.jsp.servlet.loginControlador</servlet-class>
     </servlet>
     
+        <servlet>
+        <servlet-name>herramientaRegistry</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.herramientaControlador</servlet-class>
+    </servlet>
+    
+    
+    
+    
     
     
     
@@ -81,4 +89,8 @@
         <url-pattern>/loginControlador</url-pattern>
     </servlet-mapping>
     
+      <servlet-mapping>
+        <servlet-name>herramientaRegistry</servlet-name>
+        <url-pattern>/herramientaControlador</url-pattern>
+    </servlet-mapping>
 </web-app>

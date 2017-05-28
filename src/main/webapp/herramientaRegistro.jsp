@@ -148,7 +148,7 @@
                                <div class="form-group">
                                 <label><h3>Serial del dispositivo</h3>
                                 </label>
-                                <input type="text" class="form-control" name="noSerial">
+                                <input type="text" class="form-control" name="noserialHerramienta">
                                 <p class="help-block">Ej: 64546</p>
                             </div>
                             <div class="form-group">

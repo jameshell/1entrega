@@ -152,7 +152,7 @@
                                </div>
                      
                      
-        <form action="listaControladorPrestamo">
+        <form action="listaHerramientas">
                           <button type="submit" class="btn btn-default" role="button" > Mostrar Lista de Herramientas</button>
         </form>
                      
