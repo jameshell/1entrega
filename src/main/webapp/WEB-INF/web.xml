@@ -51,6 +51,10 @@
         <servlet-class>com.crunchify.jsp.servlet.herramientaControlador</servlet-class>
     </servlet>
     
+      <servlet>
+        <servlet-name>salonRegistry</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.salonControlador</servlet-class>
+    </servlet>
     
     
     
@@ -92,5 +96,10 @@
       <servlet-mapping>
         <servlet-name>herramientaRegistry</servlet-name>
         <url-pattern>/herramientaControlador</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>salonRegistry</servlet-name>
+        <url-pattern>/salonControlador</url-pattern>
     </servlet-mapping>
 </web-app>
