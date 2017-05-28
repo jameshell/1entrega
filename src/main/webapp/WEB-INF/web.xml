@@ -111,6 +111,6 @@
     
     <servlet-mapping>
         <servlet-name>salonDeletion</servlet-name>
-        <url-pattern>/salonElminacion</url-pattern>
+        <url-pattern>/salonEliminacion</url-pattern>
     </servlet-mapping>
 </web-app>

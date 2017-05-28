@@ -37,9 +37,9 @@ public class personaEliminacion extends HttpServlet {
         try {
             dao.destroy(Integer.parseInt(id));
         } catch (IllegalOrphanException ex) {
-            Logger.getLogger(personaEliminacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(salonEliminacion.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NonexistentEntityException ex) {
-            Logger.getLogger(personaEliminacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(salonEliminacion.class.getName()).log(Level.SEVERE, null, ex);
         }
         
       

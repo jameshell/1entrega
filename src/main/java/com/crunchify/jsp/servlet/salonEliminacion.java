@@ -32,6 +32,7 @@ public class salonEliminacion extends HttpServlet {
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
         SalonDAO dao = new SalonDAO();
         Salon salon = new Salon();
+        
         salon.setIdsalon(Integer.parseInt(id));
       
         try {
