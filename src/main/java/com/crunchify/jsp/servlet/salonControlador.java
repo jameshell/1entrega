@@ -5,8 +5,9 @@
  */
 package com.crunchify.jsp.servlet;
 
-import edu.co.sergio.mundo.dao.PersonaDAO;
-import edu.co.sergio.mundo.vo.Persona;
+
+import edu.co.sergio.mundo.dao.SalonDAO;
+import edu.co.sergio.mundo.vo.Salon;
 import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
@@ -23,47 +24,37 @@ import javax.servlet.http.HttpServletResponse;
  */
 
 public class salonControlador extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // reading the user input
-        String id = request.getParameter("idPersona");
-        String nombre = request.getParameter("nombrePersona");
-        String apellido= request.getParameter("apellidoPersona");
-        String semestre= request.getParameter("semestrePersona");
-        String carrera= request.getParameter("carreraPersona");
-        String cargo= request.getParameter("cargoPersona");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
         
+         // reading the user input
+        int id = Integer.parseInt(request.getParameter("idSalon"));
+        String nombre = request.getParameter("nombreSalon");
+ 
         
         
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
-        PersonaDAO dao = new PersonaDAO();
+        SalonDAO dao = new SalonDAO();
+        Salon salon = new Salon();
         
-        Persona persona = new Persona();
-        
-        persona.setIdpersona(Integer.parseInt(id));
-        persona.setNombrepersona(nombre);
-        persona.setApellidopersona(apellido);
-        persona.setSemestrepersona(Integer.parseInt(semestre));
-        persona.setCarrerapersona(carrera);
-        persona.setCargopersona(cargo);
-        
+        salon.setIdsalon(id);
+        salon.setNombresalon(nombre);
+
         
         try {
-            dao.create(persona);
+            dao.create(salon);
         } catch (Exception ex) {
             Logger.getLogger(personaControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         //Listando la informacion  
-        List<Persona> personas =  dao.findPersonaEntities();
-        request.setAttribute("personas", personas);
+        List<Salon> salones =  dao.findSalonEntities();
+        request.setAttribute("salones", salones);
        
        
         //Redireccionando la informacion
-        RequestDispatcher redireccion = request.getRequestDispatcher("persona.jsp");
+        RequestDispatcher redireccion = request.getRequestDispatcher("salon.jsp");
         redireccion.forward(request, response);
         
-        
-        }
 }
 
-
+}

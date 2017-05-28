@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 package com.crunchify.jsp.servlet;
-import edu.co.sergio.mundo.dao.SalonDAO;
-import edu.co.sergio.mundo.vo.Salon;
+
+import edu.co.sergio.mundo.dao.PersonaDAO;
+import edu.co.sergio.mundo.vo.Persona;
 import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
@@ -24,32 +25,41 @@ import javax.servlet.http.HttpServletResponse;
 public class personaControlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // reading the user input
-        int id = Integer.parseInt(request.getParameter("idSalon"));
-        String nombre = request.getParameter("nombreSalon");
- 
+        String id = request.getParameter("idPersona");
+        String nombre = request.getParameter("nombrePersona");
+        String apellido= request.getParameter("apellidoPersona");
+        String semestre= request.getParameter("semestrePersona");
+        String carrera= request.getParameter("carreraPersona");
+        String cargo= request.getParameter("cargoPersona");
+        
         
         
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
-        SalonDAO dao = new SalonDAO();
-        Salon salon = new Salon();
+        PersonaDAO dao = new PersonaDAO();
         
-        salon.setIdsalon(id);
-        salon.setNombresalon(nombre);
-
+        Persona persona = new Persona();
+        
+        persona.setIdpersona(Integer.parseInt(id));
+        persona.setNombrepersona(nombre);
+        persona.setApellidopersona(apellido);
+        persona.setSemestrepersona(Integer.parseInt(semestre));
+        persona.setCarrerapersona(carrera);
+        persona.setCargopersona(cargo);
+        
         
         try {
-            dao.create(salon);
+            dao.create(persona);
         } catch (Exception ex) {
             Logger.getLogger(personaControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         //Listando la informacion  
-        List<Salon> salones =  dao.findSalonEntities();
-        request.setAttribute("salones", salones);
+        List<Persona> personas =  dao.findPersonaEntities();
+        request.setAttribute("personas", personas);
        
        
         //Redireccionando la informacion
-        RequestDispatcher redireccion = request.getRequestDispatcher("salon.jsp");
+        RequestDispatcher redireccion = request.getRequestDispatcher("persona.jsp");
         redireccion.forward(request, response);
         
         
