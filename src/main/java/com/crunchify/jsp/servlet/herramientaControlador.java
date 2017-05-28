@@ -46,6 +46,7 @@ public class herramientaControlador extends HttpServlet {
         HerramientaDAO dao = new HerramientaDAO();
         Herramienta herramienta = new Herramienta();
         Administrativo admin = new Administrativo();
+        
         admin.setIdadministrativo(idadministrativo);
         
         herramienta.setIdadministrativo(admin);
@@ -56,6 +57,7 @@ public class herramientaControlador extends HttpServlet {
         
         try {
             dao.create(herramienta);
+            //Existe un problema con el DAO, probablemente es porque no se hace mencion de administrativo.
         } catch (Exception ex) {
             Logger.getLogger(personaControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
