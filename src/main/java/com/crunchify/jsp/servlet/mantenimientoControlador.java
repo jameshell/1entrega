@@ -51,13 +51,9 @@ public class mantenimientoControlador extends HttpServlet {
           Herramienta herr= new Herramienta();
         try {  
             
-            Date date = new SimpleDateFormat("dd/MM/yyyy").parse(inicio1);
-            Date date1 = new SimpleDateFormat("dd/MM/yyyy").parse(final1);
-           
-       
+        Date date = new SimpleDateFormat().parse(final1);
+        Date date1 = new SimpleDateFormat().parse(final1);
         herr.setIdherramienta(Integer.parseInt(idherramienta));
-        
-        
         mant.setIdmantenimiento(Integer.parseInt(id));
         mant.setReffabricante(fabricante);
         mant.setEnservicio(enservicio);
@@ -68,14 +64,7 @@ public class mantenimientoControlador extends HttpServlet {
         mant.setIdherramienta(herr);
         mant.setFechainicio(date);
         mant.setFechafinal(date1);
-            
-            
-            
-            
-            
-            
-            
-            dao.create(mant);
+        dao.create(mant);
         } catch (Exception ex) {
             Logger.getLogger(mantenimientoControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
