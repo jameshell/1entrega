@@ -125,24 +125,24 @@
                 <div class="page-header">
                     <h1>Sistema de Inventario </h1>
                 </div>
-                <p>
-                    Escriba el id de la persona que desea borrar.
+                <p style="color:red;">
+                    WARNING: Escriba el id del administrador que desea borrar.
                 </p>
 
                 <div class="page-header">
                  
-                   <form action="personaEliminacion"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
+                   <form action="adminEliminacion"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
                                 
                             <div class="form-group">
                                 <label><h3>Cédula de la persona que desea eliminar:</h3>
                                 </label>
-                                <input type="text" class="form-control" name="idPersona">
+                                <input type="text" class="form-control" name="idAdmin">
                                 <p class="help-block">Ej: 1056373.</p>
                             </div>
                           
                             
-                      <input type="submit" name="Registrar" value="Eliminar" class="btn btn-primary btn-lg" role="button"  >
+                      <input type="submit" name="Registrar" value="Eliminar" class="btn btn-danger btn-lg" role="button"  >
                          <input type="reset" name="reset" value="reset" class="btn btn-primary btn-lg" role="button"  >
                        </form>
 

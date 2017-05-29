@@ -88,7 +88,7 @@
                                 <a href="">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="">Lista de Inventarios</a>
+                                <a href="">Lista de Salones</a>
                             </li>
                             <li>
                                 <a href="">Lista de Mantenimientos</a>
@@ -116,7 +116,7 @@
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Actualizacion de Persona
+                                <i class="fa fa-desktop"></i> Registro de Administrativos
                             </li>
                         </ol>
                     </div>
@@ -125,55 +125,44 @@
                 <div class="page-header">
                     <h1>Sistema de Inventario </h1>
                 </div>
-                <p>
-                    Introduzca los datos de la persona que desea actualizar.
+                <p style="color:red;">
+                    Introduzca los datos del nuevo admnistrador:
                 </p>
 
                 <div class="page-header">
                     
-                   <form action="personaActualizador"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
+                   <form action="adminActualizador"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
                                 
                             <div class="form-group">
-                                <label><h1>Cédula del Persona va a Modificar</h1>
+                                <label><h3>Cédula del Administrativo</h3>
                                 </label>
-                                <input type="text" class="form-control" name="idPersona">
+                                <input type="text" class="form-control" name="idAdmin">
                                 <p class="help-block">Ej: 1056373.</p>
                             </div>
                             <div class="form-group">
-                                <label><h3> Nombres de la Persona</h3>
+                                <label><h3> Nombres del Administrativo</h3>
                                 </label>
-                                <input type="text" class="form-control" name="nombrePersona">
+                                <input type="text" class="form-control" name="nombreAdmin">
                                 <p class="help-block">Ej: Nicolas</p>
                             </div>
                                <div class="form-group">
-                                <label><h3>Apellidos del Persona</h3>
+                                <label><h3>Contraseña</h3>
                                 </label>
-                                <input type="text" class="form-control" name="apellidoPersona">
+                                <input type="text" class="form-control" name="contrasenaAdmin">
                                 <p class="help-block">Ej: Infante</p>
                             </div>
                             <div class="form-group">
-                                <label><h3>Semestre en el cual se encuentra el Persona</h3>
+                                <label><h3>Nivel de privilegios o autorizacion</h3>
                                 </label>
-                                <input type="text" class="form-control" name="semestrePersona">
-                                <p class="help-block">Ej: 3</p>
+                                <input type="text" class="form-control" name="tipoPermiso">
+                                <p class="help-block">Nivel 1: Todos los privilegios</p>
+                                 <p class="help-block">Nivel 2: Privilegios limitados</p>
                             </div>
-                              <div class="form-group">
-                                <label><h3>Carrera</h3>
-                                </label>
-                                <input type="text" class="form-control" name="carreraPersona">
-                                <p class="help-block">Ej: Ingeniería de Sistemas</p>
-                            </div>
-                              <div class="form-group">
-                                <label><h3>Cargo de la Persona</h3>
-                                </label>
-                                <input type="text" class="form-control" name="cargoPersona">
-                                <p class="help-block">Tip: Si es estudiante escriba en el cargo... Estudiante</p>
-                            </div>                      
-                       
+                  
    
                             
-                      <input type="submit" name="Registrar" value="submit" class="btn btn-primary btn-lg" role="button"  >
+                      <input type="submit" name="Registrar" value="submit" class="btn btn-danger btn-lg" role="button"  >
                          <input type="reset" name="reset" value="reset" class="btn btn-primary btn-lg" role="button"  >
                        </form>
                       </div>

@@ -127,7 +127,7 @@
                 </div>
 
                 <div class="page-header">
-                       <h2>La persona ha sido registrada exitosamente.</h2>
+                       <h2 style="color:red;">El administrador ha sido registrada exitosamente.</h2>
                        
                        
                    <a href="persona.jsp" class="btn btn-primary btn-lg">Volver a Persona</a>

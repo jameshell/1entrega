@@ -114,14 +114,14 @@ and open the template in the editor.
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Persona
+                            Administrador
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Administración de Personas en la plataforma
+                                <i class="fa fa-desktop"></i> Administración de admins en la plataforma
                             </li>
                         </ol>
                     </div>
@@ -130,15 +130,15 @@ and open the template in the editor.
                 <div class="page-header">
                     <h1>Sistema de Inventario </h1>
                 </div>
-                <p>
-                    Decida que tipo de acción tomar respecto a los datos de las personas.
+                <p style="color:red;">
+                    WARNING: Esta creando/borrando administrativos en la plataforma. 
                 </p>
 
                 <div class="page-header">
                     
-                   <a href="personaRegistro.jsp" class="btn btn-primary btn-lg">Registro</a>
-                       <a href="personaBorrado.jsp" class="btn btn-primary btn-lg">Eliminación</a>
-                           <a href="personaActualizacion.jsp" class="btn btn-primary btn-lg">Actualizacion</a>
+                   <a href="administrativoRegistro.jsp" class="btn btn-warning btn-lg">Registro</a>
+                       <a href="administrativoBorrado.jsp" class="btn btn-warning btn-lg">Eliminación</a>
+                           <a href="administrativoActualizacion.jsp" class="btn btn-warning btn-lg">Actualizacion</a>
 
             </div>
             <!-- /.container-fluid -->
