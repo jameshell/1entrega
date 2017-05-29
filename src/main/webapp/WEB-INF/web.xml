@@ -81,7 +81,10 @@
         <servlet-class>com.crunchify.jsp.servlet.adminEliminacion</servlet-class>
     </servlet>
     
-    
+    <servlet>
+        <servlet-name>adminList</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.listaControladorAdmin</servlet-class>
+    </servlet>
     
     
     
@@ -150,5 +153,10 @@
     <servlet-mapping>
         <servlet-name>adminDeletion</servlet-name>
         <url-pattern>/adminEliminacion</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>adminList</servlet-name>
+        <url-pattern>/listaControladorAdmin</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -1,8 +1,8 @@
 package com.crunchify.jsp.servlet;
  
 
-import edu.co.sergio.mundo.dao.SalonDAO;
-import edu.co.sergio.mundo.vo.Salon;
+import edu.co.sergio.mundo.dao.AdministrativoDAO;
+import edu.co.sergio.mundo.vo.Administrativo;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -15,20 +15,20 @@ import javax.servlet.RequestDispatcher;
  * @author Crunchify.com
  */
  
-public class listaControladorSalon extends HttpServlet {
+public class listaControladorAdmin extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
-        SalonDAO dao = new SalonDAO();
+        AdministrativoDAO dao = new AdministrativoDAO();
 
         
         //Listando la informacion  
-        List<Salon> salones =  dao.findSalonEntities();
-        request.setAttribute("salones", salones);
+        List<Administrativo> admins =  dao.findAdministrativoEntities();
+        request.setAttribute("admins", admins);
        
        
         //Redireccionando la informacion
-        RequestDispatcher redireccion = request.getRequestDispatcher("listaSalon.jsp");
+        RequestDispatcher redireccion = request.getRequestDispatcher("listaAdministrativo.jsp");
         redireccion.forward(request, response);
         
         

@@ -109,14 +109,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Persona
+                          Administrador
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Registro de Persona
+                                <i class="fa fa-desktop"></i> Registro de Admin
                             </li>
                         </ol>
                     </div>
@@ -129,14 +129,14 @@
                  <div align="center" style="margin-top: 50px;">
                                <div class="table-responsive">
                              <table class="table table-bordered table-hover">
-                    <tr><th>Nombre</th> <th>Cargo</th> <th> ID</th></tr>  
+                    <tr><th>ID</th> <th>Nombre</th> <th>  Nivel de Privilegio</th></tr>  
                     
             <%
-            if( request.getAttribute("personas")!=null){
-          List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
-           for (Persona persona : personas) {
+            if( request.getAttribute("admins")!=null){
+          List<Administrativo> admins  = (List<Administrativo>)request.getAttribute("admins");
+           for (Administrativo admin : admins) {
          %>      
-          <tr><td><%=persona.getNombrepersona()%> </td> <td><%=persona.getCargopersona()%> </td> <td><%=persona.getIdpersona()%> </td></tr>
+          <tr><td><%=admin.getIdadministrativo()%> </td> <td><%=admin.getNombreadmin()%> </td> <td><%=admin.getTipopermiso()%> </td></tr>
          <%      
           }
        }
@@ -147,9 +147,10 @@
                                </div>
                      
                      
-        <form action="listaControlador">
+        <form action="listaControladorAdmin">
                           <button type="submit" class="btn btn-default" role="button" > Mostrar Lista</button>
-                          <a href="graficasPersona.jsp" class="btn btn-warning" role="button">Mostrar Gráfica</a>
+                          <a href="graficasAdmin.jsp" class="btn btn-warning" role="button">Mostrar Gráfica</a>
+                          
         </form>
                      
                

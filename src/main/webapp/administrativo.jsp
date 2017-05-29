@@ -139,6 +139,7 @@ and open the template in the editor.
                    <a href="administrativoRegistro.jsp" class="btn btn-warning btn-lg">Registro</a>
                        <a href="administrativoBorrado.jsp" class="btn btn-warning btn-lg">Eliminación</a>
                            <a href="administrativoActualizacion.jsp" class="btn btn-warning btn-lg">Actualizacion</a>
+                               <a href="listaAdministrativo.jsp" class="btn btn-warning btn-lg">Lista de Admins</a>
 
             </div>
             <!-- /.container-fluid -->
