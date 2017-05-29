@@ -33,7 +33,7 @@ public class mantenimientoControlador extends HttpServlet {
         String id = request.getParameter("idMantenimiento");
         String fabricante = request.getParameter("fabricanteMantenimiento");
         String enservicio= request.getParameter("enservicioMantenimiento");
-        String importancia= request.getParameter("nivelimportanciaMantenimiento");
+        String importancia= request.getParameter("nivelImportanciaMantenimiento");
         String tipo= request.getParameter("tipoMantenimiento");
         String entidad= request.getParameter("entidadMantenimiento");
         String tecnico= request.getParameter("tecnicoMantenimiento");
