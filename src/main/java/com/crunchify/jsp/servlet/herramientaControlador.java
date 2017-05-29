@@ -59,7 +59,7 @@ public class herramientaControlador extends HttpServlet {
             dao.create(herramienta);
             //Existe un problema con el DAO, probablemente es porque no se hace mencion de administrativo.
         } catch (Exception ex) {
-            Logger.getLogger(personaControlador.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(herramientaControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         //Listando la informacion  

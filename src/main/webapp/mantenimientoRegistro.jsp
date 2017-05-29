@@ -140,6 +140,14 @@
                                 <p class="help-block">Id del Mantenimiento que desea ingresar:</p>
                             </div>
                        
+                            
+                       <div class="form-group">
+                                <label><h3> ID de la herramienta </h3>
+                                </label>
+                                <input type="text" class="form-control" name="idHerramienta">
+                                <p class="help-block">Ej: 123123</p>
+                            </div>
+                       
                        
                             <div class="form-group">
                                 <label><h3> Referencia del fabricante: </h3>
@@ -151,7 +159,7 @@
                           <div class="form-group">
                                 <label><h3> Nivel de importancia de la reparación:</h3>
                                 </label>
-                                <input type="text" class="form-control" name="importanciaMantenimiento">
+                                <input type="text" class="form-control" name="nivelImportanciaMantenimiento">
                                 <p class="help-block">Ej: 1, 2, o 3</p>
                             </div>
                                

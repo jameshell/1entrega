@@ -86,6 +86,11 @@
         <servlet-class>com.crunchify.jsp.servlet.listaControladorAdmin</servlet-class>
     </servlet>
     
+    <servlet>
+        <servlet-name>mantenimientoRegistry</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.mantenimientoControlador</servlet-class>
+    </servlet>
+    
     
     
     
@@ -158,5 +163,10 @@
     <servlet-mapping>
         <servlet-name>adminList</servlet-name>
         <url-pattern>/listaControladorAdmin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>mantenimmientoRegistry</servlet-name>
+        <url-pattern>/mantenimientoControlador</url-pattern>
     </servlet-mapping>
 </web-app>
