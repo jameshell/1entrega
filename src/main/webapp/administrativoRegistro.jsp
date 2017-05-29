@@ -109,7 +109,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Persona
+                          Administrativo
                         </h1>
                         <ol class="breadcrumb">
                             <li>
@@ -126,7 +126,7 @@
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p style="color:red;">
-                    Introduzca los datos del nuevo admnistrador:
+                    Introduzca los datos del nuevo administrador:
                 </p>
 
                 <div class="page-header">
