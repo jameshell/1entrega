@@ -27,7 +27,7 @@ public class adminControlador extends HttpServlet {
         // reading the user input
         String id = request.getParameter("idAdmin");
         String nombre = request.getParameter("nombreAdmin");
-        String contrasena= request.getParameter("contrasenAdmin");
+        String contrasena= request.getParameter("contrasenaAdmin");
         String tipopermiso= request.getParameter("tipoPermiso");
       
         
