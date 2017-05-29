@@ -51,7 +51,7 @@ public class herramientaControlador extends HttpServlet {
         
         herramienta.setIdadministrativo(admin);
         herramienta.setNombreherramienta(nombreherramienta);
-        herramienta.setIdherramienta(idadministrativo);
+        herramienta.setIdherramienta(idherramienta);
         herramienta.setNoserial(noserial);
         herramienta.setDescripcionherramienta(descripcionherramienta);
         

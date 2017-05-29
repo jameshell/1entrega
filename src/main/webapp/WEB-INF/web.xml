@@ -91,7 +91,10 @@
         <servlet-class>com.crunchify.jsp.servlet.mantenimientoControlador</servlet-class>
     </servlet>
     
-    
+    <servlet>
+        <servlet-name>herramientaDeletion</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.herramientaEliminacion</servlet-class>
+    </servlet>
     
     
     
@@ -168,5 +171,10 @@
     <servlet-mapping>
         <servlet-name>mantRegistry</servlet-name>
         <url-pattern>/mantenimientoControlador</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>herramientaDeletion</servlet-name>
+        <url-pattern>/herramientaEliminacion</url-pattern>
     </servlet-mapping>
 </web-app>
