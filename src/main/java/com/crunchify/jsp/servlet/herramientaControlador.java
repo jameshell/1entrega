@@ -32,7 +32,7 @@ import javax.servlet.http.HttpServletResponse;
 public class herramientaControlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // reading the user input
-        int idadministrativo = Integer.parseInt(request.getParameter("idadministrativo"));
+        int idadministrativo = Integer.parseInt(request.getParameter("idAdministrativo"));
         int idherramienta = Integer.parseInt(request.getParameter("idHerramienta"));
         String nombreherramienta = request.getParameter("nombreHerramienta");
         String noserial= request.getParameter("noserialHerramienta");
