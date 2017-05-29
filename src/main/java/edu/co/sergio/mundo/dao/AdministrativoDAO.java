@@ -98,6 +98,12 @@ public class AdministrativoDAO implements Serializable {
     }
 
     public void edit(Administrativo administrativo) throws IllegalOrphanException, NonexistentEntityException, Exception {
+       if (administrativo.getPrestamoCollection() == null) {
+            administrativo.setPrestamoCollection(new ArrayList<Prestamo>());
+        }
+        if (administrativo.getHerramientaCollection() == null) {
+            administrativo.setHerramientaCollection(new ArrayList<Herramienta>());
+        }
         startOperation();
         try {
             em = getEntityManager();

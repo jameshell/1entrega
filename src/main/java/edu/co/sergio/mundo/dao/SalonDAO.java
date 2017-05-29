@@ -98,6 +98,12 @@ public class SalonDAO implements Serializable {
     }
 
     public void edit(Salon salon) throws IllegalOrphanException, NonexistentEntityException, Exception {
+        if (salon.getPrestamosalonCollection() == null) {
+            salon.setPrestamosalonCollection(new ArrayList<Prestamosalon>());
+        }
+        if (salon.getPrestamoCollection() == null) {
+            salon.setPrestamoCollection(new ArrayList<Prestamo>());
+        }
         startOperation();
         try {
             em = getEntityManager();

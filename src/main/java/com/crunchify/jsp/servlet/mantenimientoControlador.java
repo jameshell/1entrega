@@ -51,8 +51,8 @@ public class mantenimientoControlador extends HttpServlet {
           Herramienta herr= new Herramienta();
         try {  
             
-        Date date = new SimpleDateFormat().parse(final1);
-        Date date1 = new SimpleDateFormat().parse(final1);
+        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(inicio1);
+        Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(final1);
         herr.setIdherramienta(Integer.parseInt(idherramienta));
         mant.setIdmantenimiento(Integer.parseInt(id));
         mant.setReffabricante(fabricante);

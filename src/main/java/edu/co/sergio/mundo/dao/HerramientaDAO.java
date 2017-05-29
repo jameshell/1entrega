@@ -109,6 +109,12 @@ public class HerramientaDAO implements Serializable {
     }
 
     public void edit(Herramienta herramienta) throws IllegalOrphanException, NonexistentEntityException, Exception {
+        if (herramienta.getTransaccionCollection() == null) {
+            herramienta.setTransaccionCollection(new ArrayList<Transaccion>());
+        }
+        if (herramienta.getMantenimientoCollection() == null) {
+            herramienta.setMantenimientoCollection(new ArrayList<Mantenimiento>());
+        }
         startOperation();
         try {
             em = getEntityManager();

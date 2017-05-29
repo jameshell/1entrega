@@ -110,6 +110,9 @@ public class PrestamoDAO implements Serializable {
     }
 
     public void edit(Prestamo prestamo) throws IllegalOrphanException, NonexistentEntityException, Exception {
+        if (prestamo.getTransaccionCollection() == null) {
+            prestamo.setTransaccionCollection(new ArrayList<Transaccion>());
+        }
         startOperation();
         try {
             em = getEntityManager();
