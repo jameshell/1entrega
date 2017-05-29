@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package com.crunchify.jsp.servlet;
-
 import edu.co.sergio.mundo.dao.SalonDAO;
 import edu.co.sergio.mundo.dao.exceptions.IllegalOrphanException;
 import edu.co.sergio.mundo.dao.exceptions.NonexistentEntityException;
@@ -38,9 +37,9 @@ public class salonEliminacion extends HttpServlet {
         try {
             dao.destroy(Integer.parseInt(id));
         } catch (IllegalOrphanException ex) {
-            Logger.getLogger(personaEliminacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(salonEliminacion.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NonexistentEntityException ex) {
-            Logger.getLogger(personaEliminacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(salonEliminacion.class.getName()).log(Level.SEVERE, null, ex);
         }
         
       
