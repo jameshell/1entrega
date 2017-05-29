@@ -61,7 +61,15 @@
         <servlet-class>com.crunchify.jsp.servlet.salonEliminacion</servlet-class>
     </servlet>
     
+    <servlet>
+        <servlet-name>salonUpdate</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.salonActualizador</servlet-class>
+    </servlet>
     
+    <servlet>
+        <servlet-name>salonList</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.listaControladorSalon</servlet-class>
+    </servlet>
     
     
     
@@ -112,5 +120,15 @@
     <servlet-mapping>
         <servlet-name>salonDeletion</servlet-name>
         <url-pattern>/salonEliminacion</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>salonUpdate</servlet-name>
+        <url-pattern>/salonActualizador</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>salonList</servlet-name>
+        <url-pattern>/listaControladorSalon</url-pattern>
     </servlet-mapping>
 </web-app>

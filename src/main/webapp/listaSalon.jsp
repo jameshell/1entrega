@@ -106,14 +106,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Prestamos
+                          Salones
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Registro de Prestamos
+                                <i class="fa fa-desktop"></i> Lista de Salones
                             </li>
                         </ol>
                     </div>
@@ -126,22 +126,18 @@
                  <div align="center" style="margin-top: 50px;">
                                <div class="table-responsive">
                              <table class="table table-bordered table-hover">
-                    <tr><th>Cod Prestamo</th> 
-                        <th> ID Persona</th> 
-                        <th> ID Herramienta </th> 
-                        <th> Salida </th> 
-                        <th> Entrada </th></tr>  
+                    <tr><th>ID del Salon</th> 
+                        <th>Nombre Del salon</th> 
+                    </tr>  
                     
             <%
-            if( request.getAttribute("prestamos")!=null){
-          List<Prestamo> prestamos  = (List<Prestamo>)request.getAttribute("prestamos");
-           for (Prestamo prestamo : prestamos) {
+            if( request.getAttribute("salones")!=null){
+          List<Salon> salones  = (List<Salon>)request.getAttribute("salones");
+           for (Salon salon : salones) {
          %>      
-          <tr><td><%=prestamo.getCodPrestamo()%> </td> 
-              <td><%=prestamo.getIdPersona()%> </td> 
-              <td><%=prestamo.getIdHerramienta()%> </td>
-              <td><%=prestamo.getFechaSalida()%> </td>
-              <td><%=prestamo.getFechaEntrada()%> </td></tr>
+          <tr><td><%=salon.getIdsalon()%> </td> 
+              <td><%=salon.getNombresalon()%> </td> 
+      </tr>
          <%      
           }
        }
@@ -152,8 +148,8 @@
                                </div>
                      
                      
-        <form action="listaControladorPrestamo">
-                          <button type="submit" class="btn btn-default" role="button" > Mostrar Lista de Prestamos</button>
+        <form action="listaControladorSalon">
+                          <button type="submit" class="btn btn-default" role="button" > Mostrar Lista de Salones</button>
         </form>
                      
                
