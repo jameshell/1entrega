@@ -135,7 +135,7 @@
             
                                 
                             <div class="form-group">
-                                <label><h3>Cédula de la persona que desea eliminar:</h3>
+                                <label><h3>Cédula del Administrador que desea eliminar:</h3>
                                 </label>
                                 <input type="text" class="form-control" name="idAdmin">
                                 <p class="help-block">Ej: 1056373.</p>
