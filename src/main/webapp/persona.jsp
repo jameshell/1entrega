@@ -87,16 +87,16 @@ and open the template in the editor.
                                 <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
                              <li>
-                                <a href="listaPersona.jsp">Lista de Prestamos</a>
+                                <a href="listaPrestamo.jsp">Lista de Prestamos</a>
                             </li>
                              <li>
-                                <a href="">Lista de Herramientas</a>
+                                <a href="listaHeramienta.jsp">Lista de Herramientas</a>
                             </li>
                             <li>
-                                <a href="">Lista de Salones</a>
+                                <a href="listaSalon.jsp">Lista de Salones</a>
                             </li>
                             <li>
-                                <a href="">Lista de Mantenimientos</a>
+                                <a href="listaMantenimiento.jsp">Lista de Mantenimientos</a>
                             </li>
                         
                         
