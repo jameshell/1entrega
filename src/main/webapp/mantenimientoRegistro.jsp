@@ -191,6 +191,20 @@
                                 <p class="help-block">Ej: Juan David Gamboa</p>
                             </div>
                        
+                            <div class="form-group">
+                                <label><h3>Fecha de Inicio de Mantenimiento</h3>
+                                </label>
+                                <input type="date" class="form-control" name="fechaInicio">
+                                <p class="help-block"> Introduzca la fecha en la se inicia el mantenimiento</p>
+                            </div>
+                       
+                            <div class="form-group">
+                                <label><h3>Fecha de Finalizado</h3>
+                                </label>
+                                <input type="date" class="form-control" name="fechaFinal">
+                                <p class="help-block"> Introduzca la fecha en la se finaliza el mantenimiento</p>
+                            </div>
+                       
    
                             
                       <input type="submit" name="Registrar" value="submit" class="btn btn-primary btn-lg" role="button"  >

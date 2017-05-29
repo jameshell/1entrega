@@ -38,6 +38,10 @@ public class mantenimientoControlador extends HttpServlet {
         String entidad= request.getParameter("entidadMantenimiento");
         String tecnico= request.getParameter("tecnicoMantenimiento");
         String idherramienta= request.getParameter("idHerramienta");
+        String inicio1=request.getParameter("fechaInicio");
+        String final1=request.getParameter("fechaFinal");
+        
+        
         
         
         
