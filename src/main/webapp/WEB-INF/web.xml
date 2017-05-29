@@ -87,7 +87,7 @@
     </servlet>
     
     <servlet>
-        <servlet-name>mantenimientoRegistry</servlet-name>
+        <servlet-name>mantRegistry</servlet-name>
         <servlet-class>com.crunchify.jsp.servlet.mantenimientoControlador</servlet-class>
     </servlet>
     
@@ -166,7 +166,7 @@
     </servlet-mapping>
     
     <servlet-mapping>
-        <servlet-name>mantenimmientoRegistry</servlet-name>
+        <servlet-name>mantRegistry</servlet-name>
         <url-pattern>/mantenimientoControlador</url-pattern>
     </servlet-mapping>
 </web-app>
