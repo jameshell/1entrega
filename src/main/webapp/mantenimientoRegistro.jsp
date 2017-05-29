@@ -162,6 +162,13 @@
                                 <input type="text" class="form-control" name="nivelImportanciaMantenimiento">
                                 <p class="help-block">Ej: 1, 2, o 3</p>
                             </div>
+                       
+                       <div class="form-group">
+                                <label><h3> Se encuentra en servicio?</h3>
+                                </label>
+                                <input type="text" class="form-control" name="enservicioMantenimiento">
+                                <p class="help-block">Ej: Si o No</p>
+                            </div>
                                
                               <div class="form-group">
                                 <label><h3> Breve descripción sobre el tipo de mantenimiento a realizar:</h3>
