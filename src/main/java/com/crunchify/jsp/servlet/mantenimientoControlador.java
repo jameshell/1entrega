@@ -6,11 +6,11 @@
 package com.crunchify.jsp.servlet;
 
 import edu.co.sergio.mundo.dao.MantenimientoDAO;
-import edu.co.sergio.mundo.dao.PersonaDAO;
 import edu.co.sergio.mundo.vo.Herramienta;
 import edu.co.sergio.mundo.vo.Mantenimiento;
-import edu.co.sergio.mundo.vo.Persona;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -39,16 +39,22 @@ public class mantenimientoControlador extends HttpServlet {
         String tecnico= request.getParameter("tecnicoMantenimiento");
         String idherramienta= request.getParameter("idHerramienta");
         String inicio1=request.getParameter("fechaInicio");
-        String final1=request.getParameter("fechaFinal");
-        
-        
-        
+        String final1=request.getParameter("fechaFinal");       
         
         
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
-        MantenimientoDAO dao = new MantenimientoDAO();
-        Mantenimiento mant = new Mantenimiento();
-        Herramienta herr= new Herramienta();
+       
+        
+     
+          MantenimientoDAO dao = new MantenimientoDAO();
+          Mantenimiento mant = new Mantenimiento();
+          Herramienta herr= new Herramienta();
+        try {  
+            
+            Date date = new SimpleDateFormat("dd/MM/yyyy").parse(inicio1);
+            Date date1 = new SimpleDateFormat("dd/MM/yyyy").parse(final1);
+           
+       
         herr.setIdherramienta(Integer.parseInt(idherramienta));
         
         
@@ -60,10 +66,15 @@ public class mantenimientoControlador extends HttpServlet {
         mant.setEntidadcargo(entidad);
         mant.setMombretecnico(tecnico);
         mant.setIdherramienta(herr);
-        
-     
-        
-        try {
+        mant.setFechainicio(date);
+        mant.setFechafinal(date1);
+            
+            
+            
+            
+            
+            
+            
             dao.create(mant);
         } catch (Exception ex) {
             Logger.getLogger(mantenimientoControlador.class.getName()).log(Level.SEVERE, null, ex);
