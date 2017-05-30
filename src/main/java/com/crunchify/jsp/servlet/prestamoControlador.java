@@ -30,17 +30,17 @@ import javax.servlet.http.HttpServletResponse;
 public class prestamoControlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // reading the user input
-        String cod = request.getParameter("codPrestamo");
-        String idpersona = request.getParameter("idpersonaPrestamo");
-        String tipopractica = request.getParameter("tipopracticaPrestamo");
-        String idadmin = request.getParameter("idAdmin");
-        String fechasalida= request.getParameter("fechasalidaPrestamo");
-        String estado= request.getParameter("estadoPrestamo");
-        String justificacion= request.getParameter("justificacionPrestamo");
-        String observaciones= request.getParameter("observacionesPrestamo");
-        String tipo= request.getParameter("tipoPrestamo");
-        String fechaentrada= request.getParameter("fechaentradaPrestamo");
-        String idsalon= request.getParameter("idsalonPrestamo");
+        String cod = request.getParameter("codPrestamo");//
+        String idpersona = request.getParameter("idpersonaPrestamo");//
+        String tipopractica = request.getParameter("tipopracticaPrestamo");//
+        String idadmin = request.getParameter("idAdmin");//
+        String fechasalida= request.getParameter("fechasalidaPrestamo");//
+        String estado= request.getParameter("estadoPrestamo");//
+        String justificacion= request.getParameter("justificacionPrestamo");//
+        String observaciones= request.getParameter("observacionesPrestamo");//
+        String tipo= request.getParameter("tipoPrestamo");//
+        String fechaentrada= request.getParameter("fechaentradaPrestamo");//
+        String idsalon= request.getParameter("idsalonPrestamo");//
         
  
         

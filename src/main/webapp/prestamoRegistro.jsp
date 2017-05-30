@@ -133,7 +133,13 @@
                     
                    <form action="prestamoControlador"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
-                                
+                                  
+                            <div class="form-group">
+                                <label><h3>ID del Admin</h3>
+                                </label>
+                                <input type="text" class="form-control" name="idAdmin">
+                                <p class="help-block">Ej: 1056373.</p>
+                            </div>   
                             <div class="form-group">
                                 <label><h3>Cédula de la persona va a realizar el prestamo</h3>
                                 </label>
@@ -143,7 +149,7 @@
                                <div class="form-group">
                                 <label><h3>ID del Salon si es una practica guiada</h3>
                                 </label>
-                                <input type="text" class="form-control" name="idSalon">
+                                <input type="text" class="form-control" name="idsalonPrestamo">
                                 <p class="help-block">Ej: 64546</p>
                             </div>
                             <div class="form-group">
@@ -155,31 +161,31 @@
                               <div class="form-group">
                                 <label><h3> Tipo de práctica </h3>
                                 </label>
-                                <input type="text" class="form-control" name="tipoPractica">
+                                <input type="text" class="form-control" name="tipopracticaPrestamo">
                                 <p class="help-block">Ej: Guíada  o Libre</p>
                             </div>
                               <div class="form-group">
                                 <label><h3>Fecha de salida</h3>
                                 </label>
-                                <input type="date" class="form-control" name="fechaSalida">
+                                <input type="date" class="form-control" name="fechasalidaPrestamo">
                                 <p class="help-block"> Introduzca la fecha en la que se realiza el prestamo</p>
                             </div>  
                              <div class="form-group">
                                 <label><h3>Fecha de Entrada</h3>
                                 </label>
-                                <input type="date" class="form-control" name="fechaSalida">
+                                <input type="date" class="form-control" name="fechaentradaPrestamo">
                                 <p class="help-block"> Introduzca la fecha en la que se devuelve el objeto de prestamo</p>
                             </div>
                             <div class="form-group">
                                 <label><h3>Estado del objeto a prestar</h3>
                                 </label>
-                                <input type="text" class="form-control" name="estado">
+                                <input type="text" class="form-control" name="estadoPrestamo">
                                 <p class="help-block">Ej: Bueno </p>
                             </div>
                            <div class="form-group">
                                 <label><h3>Justificación</h3>
                                 </label>
-                                <input type="text" class="form-control" name="justificacion">
+                                <input type="text" class="form-control" name="justificacionPrestamo">
                                 <p class="help-block">Ej: Khé </p>
                             </div>
                          <div class="form-group">
@@ -188,16 +194,12 @@
                                 <input type="text" class="form-control" name="observaciones">
                                 <p class="help-block">Ej: Observaciones del prestamo </p>
                             </div>
-                       <div class="form-group">
+                               <div class="form-group">
                                 <label><h3>Tipo de Prestamo</h3>
                                 </label>
-                           <br>
-                                <input type="radio" name="tipoPrestamo"  value="externo" checked> Externo<br>
-                                <input type="radio" name="tipoPrestamo"  value="interno"> Interno 
-                            
-                                <p class="help-block">Ej: Elija si el prestamo es de caracter interno o externo </p>
+                                <input type="text" class="form-control" name="tipoPrestamo">
+                                <p class="help-block">Ej: Externo o Interno </p>
                             </div>
-                 
                        
    
                             
