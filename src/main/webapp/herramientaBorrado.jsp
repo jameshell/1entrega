@@ -109,7 +109,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Herramietnta
+                          Herramienta
                         </h1>
                         <ol class="breadcrumb">
                             <li>
@@ -130,7 +130,7 @@
 
                 <div class="page-header">
                  
-                   <form action="prestamoEliminacion"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
+                   <form action="herramientaEliminacion"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
                                 
                             <div class="form-group">
