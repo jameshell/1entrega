@@ -41,7 +41,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -54,7 +54,7 @@
             </div>
             
             <!-- /.navbar-collapse -->
-        </nav>
+  
 
         <div id="page-wrapper">
 
@@ -64,7 +64,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          
+                          Feria de Proyectos
                         </h1>
                         <ol class="breadcrumb">
                             <li>
