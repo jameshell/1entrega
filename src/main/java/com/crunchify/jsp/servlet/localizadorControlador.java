@@ -26,18 +26,25 @@ import javax.servlet.http.HttpServletResponse;
 public class localizadorControlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // reading the user input
-        String salon = request.getParameter("field");
+       
         //String ap2= request.getAttribute("");
        
         
         
         
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
-        localizador localizador= new localizador();
+        
+       
+  try { 
+       String salon = request.getParameter("field");
+       localizador localizador= new localizador();
         localizador.setNombresalon(salon);
         
         request.setAttribute("salon",localizador);
-  
+            
+        } catch (Exception ex) {
+            Logger.getLogger(localizadorControlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         /*
         try {
