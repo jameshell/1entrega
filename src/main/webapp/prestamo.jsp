@@ -142,7 +142,7 @@ and open the template in the editor.
 
             </div>
              <p>
-                    Decida que tipo de acción tomar respecto a los datos de los prestamos de dalones.
+                    Decida que tipo de acción tomar respecto a los datos de los prestamos de salones.
                 </p>
 
                 <div class="page-header">

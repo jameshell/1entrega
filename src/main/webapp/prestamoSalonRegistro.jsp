@@ -130,21 +130,43 @@
 
                 <div class="page-header">
                     
-                   <form action="salonControlador"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
+                   <form action="prestamoSalonControlador"> <!--ATENCION: la palabra action indica el tipo de acción que va a realizar el formulario-->
             
-                                
+                                <div class="form-group">
+                                <label><h3>ID del Prestamo de salon:</h3>
+                                </label>
+                                <input type="text" class="form-control" name="idPrestamoSalon">
+                                <p class="help-block">Ej: 8764</p>
+                            </div>
                             <div class="form-group">
-                                <label><h3>ID del Salon</h3>
+                                <label><h3>ID de la persona responsable:</h3>
+                                </label>
+                                <input type="text" class="form-control" name="idPersona">
+                                <p class="help-block">Id del salon que se va a entregar:</p>
+                            </div>
+                            <div class="form-group">
+                                <label><h3>ID del Salon:</h3>
                                 </label>
                                 <input type="text" class="form-control" name="idSalon">
-                                <p class="help-block">Id del salon que desea ingresar</p>
+                                <p class="help-block">Id del salon que se va a entregar</p>
                             </div>
                             <div class="form-group">
-                                <label><h3> Nombre del Salon que desea ingresar </h3>
+                                <label><h3>Hora de Inicio:</h3>
                                 </label>
-                                <input type="text" class="form-control" name="nombreSalon">
-                                <p class="help-block">Ej: 76842684</p>
+                                <input type="datetime-local" class="form-control" name="fechaentrada">
+                                <p class="help-block">Ej: Seleccione un dia y hora</p>
                             </div>
+                          <div class="form-group">
+                                <label><h3>Hora de Entrega:</h3>
+                                </label>
+                                <input type="datetime-local" class="form-control" name="fechasalida">
+                                <p class="help-block">Ej: Seleccione un dia y hora</p>
+                            </div>
+                           
+                       
+                       
+                        <div class="form-group">
+                              
                    
                          
                        
