@@ -144,8 +144,9 @@
          <%    
           if(persona.getCargopersona()=="Estudiante"){
                   contEstudiante=contEstudiante+1;
-                    }else if(persona.getCargopersona()=="Profesor"){
-                              contProfesor=contProfesor+1;
+                    } 
+          if(persona.getCargopersona()=="Profesor"){
+                   contProfesor=contProfesor+1;
                          }
           }
        }
