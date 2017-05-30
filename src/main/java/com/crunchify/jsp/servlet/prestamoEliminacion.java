@@ -6,9 +6,11 @@
 package com.crunchify.jsp.servlet;
 
 import edu.co.sergio.mundo.dao.PersonaDAO;
+import edu.co.sergio.mundo.dao.PrestamoDAO;
 import edu.co.sergio.mundo.dao.exceptions.IllegalOrphanException;
 import edu.co.sergio.mundo.dao.exceptions.NonexistentEntityException;
 import edu.co.sergio.mundo.vo.Persona;
+import edu.co.sergio.mundo.vo.Prestamo;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -25,27 +27,27 @@ import javax.servlet.RequestDispatcher;
  
 public class prestamoEliminacion extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // reading the user input
-        String id = request.getParameter("idPersona");
+        // reading the user input.
+        String id = request.getParameter("codPrestamo");
      
         
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
-        PersonaDAO dao = new PersonaDAO();
-        Persona persona = new Persona();
-        persona.setIdpersona(Integer.parseInt(id));
+        PrestamoDAO dao = new PrestamoDAO();
+        Prestamo prestamo = new Prestamo();
+        prestamo.setCodprestamo(id);
       
         try {
-            dao.destroy(Integer.parseInt(id));
+            dao.destroy(id);
         } catch (IllegalOrphanException ex) {
-            Logger.getLogger(salonEliminacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(prestamoEliminacion.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NonexistentEntityException ex) {
-            Logger.getLogger(salonEliminacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(prestamoEliminacion.class.getName()).log(Level.SEVERE, null, ex);
         }
         
       
        
         //Redireccionando la informacion
-        RequestDispatcher redireccion = request.getRequestDispatcher("persona.jsp");
+        RequestDispatcher redireccion = request.getRequestDispatcher("prestamo.jsp");
         redireccion.forward(request, response);
         
         

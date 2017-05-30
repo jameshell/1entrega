@@ -131,7 +131,7 @@ and open the template in the editor.
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Decida que tipo de acción tomar respecto a los datos de los prestamos.
+                    Decida que tipo de acción tomar respecto a los datos de los prestamos de herramientas.
                 </p>
 
                 <div class="page-header">
@@ -139,6 +139,17 @@ and open the template in the editor.
                    <a href="prestamoRegistro.jsp" class="btn btn-primary btn-lg">Registro</a>
                        <a href="prestamoBorrado.jsp" class="btn btn-primary btn-lg">Eliminación</a>
                            <a href="prestamoActualizacion.jsp" class="btn btn-primary btn-lg">Actualizacion</a>
+
+            </div>
+             <p>
+                    Decida que tipo de acción tomar respecto a los datos de los prestamos de dalones.
+                </p>
+
+                <div class="page-header">
+                    
+                   <a href="prestamoSalonRegistro.jsp" class="btn btn-info btn-lg">Registro</a>
+                       <a href="prestamoSalonBorrado.jsp" class="btn btn-info btn-lg">Eliminación</a>
+                           <a href="prestamoSalonActualizacion.jsp" class="btn btn-info btn-lg">Actualizacion</a>
 
             </div>
             <!-- /.container-fluid -->
