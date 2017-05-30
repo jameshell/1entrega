@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author james
+ * @author james Alonso
  */
 
 public class personaControlador extends HttpServlet {

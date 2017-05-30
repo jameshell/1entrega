@@ -137,7 +137,7 @@
                             <div class="form-group">
                                 <label><h3>Cédula de la persona va a realizar el prestamo</h3>
                                 </label>
-                                <input type="text" class="form-control" name="idPersona">
+                                <input type="text" class="form-control" name="idpersonaPrestamo">
                                 <p class="help-block">Ej: 1056373.</p>
                             </div>
                             <div class="form-group">
