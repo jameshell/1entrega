@@ -35,17 +35,19 @@ import javax.servlet.http.HttpServletResponse;
 public class prestamoControlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // reading the user input
-        String cod = request.getParameter("codPrestamo");//
-        String idpersona = request.getParameter("idpersonaPrestamo");//
-        String tipopractica = request.getParameter("tipopracticaPrestamo");//
         String idadmin = request.getParameter("idAdmin");//
+        String idpersona = request.getParameter("idpersonaPrestamo");//
+        String idsalon= request.getParameter("idsalonPrestamo");//
+        String cod = request.getParameter("codPrestamo");//
+        String tipopractica = request.getParameter("tipopracticaPrestamo");//
         String fechasalida= request.getParameter("fechasalidaPrestamo");//
+        String fechaentrada= request.getParameter("fechaentradaPrestamo");//
         String estado= request.getParameter("estadoPrestamo");//
         String justificacion= request.getParameter("justificacionPrestamo");//
         String observaciones= request.getParameter("observaciones");//
         String tipo= request.getParameter("tipoPrestamo");//
-        String fechaentrada= request.getParameter("fechaentradaPrestamo");//
-        String idsalon= request.getParameter("idsalonPrestamo");//
+        
+        
         
  
         
@@ -55,16 +57,15 @@ public class prestamoControlador extends HttpServlet {
         Persona persona = new Persona();
         Salon salon= new Salon();
         Administrativo admin= new Administrativo();
-        Date date1 = null,date2 = null;
-        try {
+        
+        try{     
+            Date date1 ,date2;
             date1 = new SimpleDateFormat("yyyy-MM-dd").parse(fechasalida);
             date2 = new SimpleDateFormat("yyyy-MM-dd").parse(fechaentrada);
-        } catch (ParseException ex) {
-            Logger.getLogger(prestamoControlador.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        persona.setIdpersona(Integer.parseInt(idpersona));
-        admin.setIdadministrativo(Integer.parseInt(idadmin));
-        salon.setIdsalon(Integer.parseInt(idsalon));   
+            admin.setIdadministrativo(Integer.parseInt(idadmin));
+            persona.setIdpersona(Integer.parseInt(idpersona));
+            salon.setIdsalon(Integer.parseInt(idsalon));  
+            
         prestamo.setCodprestamo(cod);
         prestamo.setIdpersona(persona);
         prestamo.setTipopractica(tipopractica);
@@ -76,7 +77,6 @@ public class prestamoControlador extends HttpServlet {
         prestamo.setTipoprestamo(tipo);
         prestamo.setFechaentrada(date2);
         prestamo.setIdsalon(salon); 
-        try{     
         dao.create(prestamo);
         } catch (Exception ex) {
             Logger.getLogger(prestamoControlador.class.getName()).log(Level.SEVERE, null, ex);
