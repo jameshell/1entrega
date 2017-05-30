@@ -13,7 +13,10 @@ import edu.co.sergio.mundo.vo.Prestamo;
 import edu.co.sergio.mundo.vo.Salon;
 import edu.co.sergio.mundo.vo.Transaccion;
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.AbstractCollection;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -52,15 +55,14 @@ public class prestamoControlador extends HttpServlet {
         Persona persona = new Persona();
         Salon salon= new Salon();
         Administrativo admin= new Administrativo();
-        
-        
-        
-        
-     
+        Date date1 = null,date2 = null;
         try {
-              Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(fechasalida);
-              Date date2 = new SimpleDateFormat("yyyy-MM-dd").parse(fechaentrada);
-            persona.setIdpersona(Integer.parseInt(idpersona));
+            date1 = new SimpleDateFormat("yyyy-MM-dd").parse(fechasalida);
+            date2 = new SimpleDateFormat("yyyy-MM-dd").parse(fechaentrada);
+        } catch (ParseException ex) {
+            Logger.getLogger(prestamoControlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        persona.setIdpersona(Integer.parseInt(idpersona));
         admin.setIdadministrativo(Integer.parseInt(idadmin));
         salon.setIdsalon(Integer.parseInt(idsalon));   
         prestamo.setCodprestamo(cod);
@@ -73,8 +75,9 @@ public class prestamoControlador extends HttpServlet {
         prestamo.setObservaciones(observaciones);
         prestamo.setTipoprestamo(tipo);
         prestamo.setFechaentrada(date2);
-        prestamo.setIdsalon(salon);  
-        prestamo.setTransaccionCollection(null);
+        prestamo.setIdsalon(salon); 
+        prestamo.setTransaccionCollection(new ArrayList<Transaccion>());
+        try{     
         dao.create(prestamo);
         } catch (Exception ex) {
             Logger.getLogger(prestamoControlador.class.getName()).log(Level.SEVERE, null, ex);
