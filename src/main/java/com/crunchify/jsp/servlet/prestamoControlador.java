@@ -5,13 +5,18 @@
  */
 package com.crunchify.jsp.servlet;
 
+import edu.co.sergio.mundo.dao.HerramientaDAO;
 import edu.co.sergio.mundo.dao.PrestamoDAO;
 import edu.co.sergio.mundo.vo.Administrativo;
 import edu.co.sergio.mundo.vo.Persona;
 import edu.co.sergio.mundo.vo.Prestamo;
 import edu.co.sergio.mundo.vo.Salon;
+import edu.co.sergio.mundo.vo.Transaccion;
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.AbstractCollection;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -30,17 +35,19 @@ import javax.servlet.http.HttpServletResponse;
 public class prestamoControlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // reading the user input
-        String cod = request.getParameter("codPrestamo");//
-        String idpersona = request.getParameter("idpersonaPrestamo");//
-        String tipopractica = request.getParameter("tipopracticaPrestamo");//
         String idadmin = request.getParameter("idAdmin");//
+        String idpersona = request.getParameter("idpersonaPrestamo");//
+        String idsalon= request.getParameter("idsalonPrestamo");//
+        String cod = request.getParameter("codPrestamo");//
+        String tipopractica = request.getParameter("tipopracticaPrestamo");//
         String fechasalida= request.getParameter("fechasalidaPrestamo");//
+        String fechaentrada= request.getParameter("fechaentradaPrestamo");//
         String estado= request.getParameter("estadoPrestamo");//
         String justificacion= request.getParameter("justificacionPrestamo");//
-        String observaciones= request.getParameter("observacionesPrestamo");//
+        String observaciones= request.getParameter("observaciones");//
         String tipo= request.getParameter("tipoPrestamo");//
-        String fechaentrada= request.getParameter("fechaentradaPrestamo");//
-        String idsalon= request.getParameter("idsalonPrestamo");//
+        
+        
         
  
         
@@ -51,16 +58,14 @@ public class prestamoControlador extends HttpServlet {
         Salon salon= new Salon();
         Administrativo admin= new Administrativo();
         
-        
-        
-        
-     
-        try {
-              Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(fechasalida);
-              Date date2 = new SimpleDateFormat("yyyy-MM-dd").parse(fechaentrada);
+        try{     
+            Date date1 ,date2;
+            date1 = new SimpleDateFormat("yyyy-MM-dd").parse(fechasalida);
+            date2 = new SimpleDateFormat("yyyy-MM-dd").parse(fechaentrada);
+            admin.setIdadministrativo(Integer.parseInt(idadmin));
             persona.setIdpersona(Integer.parseInt(idpersona));
-        admin.setIdadministrativo(Integer.parseInt(idadmin));
-        salon.setIdsalon(Integer.parseInt(idsalon));   
+            salon.setIdsalon(Integer.parseInt(idsalon));  
+            
         prestamo.setCodprestamo(cod);
         prestamo.setIdpersona(persona);
         prestamo.setTipopractica(tipopractica);
@@ -71,11 +76,8 @@ public class prestamoControlador extends HttpServlet {
         prestamo.setObservaciones(observaciones);
         prestamo.setTipoprestamo(tipo);
         prestamo.setFechaentrada(date2);
-        prestamo.setIdsalon(salon);
-            
-            
-            
-            dao.create(prestamo);
+        prestamo.setIdsalon(salon); 
+        dao.create(prestamo);
         } catch (Exception ex) {
             Logger.getLogger(prestamoControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
