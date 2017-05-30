@@ -118,7 +118,7 @@
     
     <servlet>
         <servlet-name>mantenimientoList</servlet-name>
-        <servlet-class>com.crunchify.jsp.servlet.listaControlMantenimiento</servlet-class>
+        <servlet-class>com.crunchify.jsp.servlet.listaControladorMantenimiento</servlet-class>
     </servlet>
     
     
