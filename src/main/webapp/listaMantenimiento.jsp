@@ -126,22 +126,22 @@
                  <div align="center" style="margin-top: 50px;">
                                <div class="table-responsive">
                              <table class="table table-bordered table-hover">
-                    <tr><th>Cod Prestamo</th> 
-                        <th> ID Persona</th> 
+                    <tr><th>ID Mantenimiento</th> 
+                        <th> Farbricante</th> 
                         <th> ID Herramienta </th> 
-                        <th> Salida </th> 
-                        <th> Entrada </th></tr>  
+                        <th> En servicio</th> 
+                        <th> Nivel Importancia </th></tr>  
                     
             <%
-            if( request.getAttribute("prestamos")!=null){
-          List<Prestamo> prestamos  = (List<Prestamo>)request.getAttribute("prestamos");
-           for (Prestamo prestamo : prestamos) {
+            if( request.getAttribute("mantenimientos")!=null){
+          List<Mantenimiento> mantenimientos  = (List<Mantenimiento>)request.getAttribute("mantenimientos");
+           for (Mantenimiento mantenimiento : mantenimientos) {
          %>      
-          <tr><td><%=prestamo.getCodPrestamo()%> </td> 
-              <td><%=prestamo.getIdPersona()%> </td> 
-              <td><%=prestamo.getIdHerramienta()%> </td>
-              <td><%=prestamo.getFechaSalida()%> </td>
-              <td><%=prestamo.getFechaEntrada()%> </td></tr>
+          <tr><td><%=mantenimiento.getIdmantenimiento()%> </td> 
+              <td><%=mantenimiento.getReffabricante()%> </td> 
+              <td><%=mantenimiento.getIdherramienta()%> </td>
+              <td><%=mantenimiento.getEnservicio()%> </td>
+              <td><%=mantenimiento.getNivelimportancia()%> </td></tr>
          <%      
           }
        }
