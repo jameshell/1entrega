@@ -111,6 +111,11 @@
         <servlet-class>com.crunchify.jsp.servlet.prestamoControlador</servlet-class>
     </servlet>
     
+    <servlet>
+        <servlet-name>mantenimientoDeletion</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.mantenimientoEliminacion</servlet-class>
+    </servlet>
+    
     
     
     
@@ -207,5 +212,10 @@
     <servlet-mapping>
         <servlet-name>prestamoRegistry</servlet-name>
         <url-pattern>/prestamoControlador</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>mantenimientoDeletion</servlet-name>
+        <url-pattern>/mantenimientoEliminacion</url-pattern>
     </servlet-mapping>
 </web-app>
