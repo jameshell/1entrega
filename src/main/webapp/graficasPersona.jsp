@@ -133,8 +133,8 @@
                     
                    
             <%
-              int contEstudiante=0;
-              int contProfesor=0;
+              int contEstudiante=1;
+              int contProfesor=1;
             if( request.getAttribute("personas")!=null){
             
           List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
