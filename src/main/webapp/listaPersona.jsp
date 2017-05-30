@@ -132,12 +132,14 @@
                     <tr><th>Nombre</th> <th>Cargo</th> <th> ID</th></tr>  
                     
             <%
+              
             if( request.getAttribute("personas")!=null){
           List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
            for (Persona persona : personas) {
          %>      
           <tr><td><%=persona.getNombrepersona()%> </td> <td><%=persona.getCargopersona()%> </td> <td><%=persona.getIdpersona()%> </td></tr>
-         <%      
+         <%    
+          
           }
        }
     %>

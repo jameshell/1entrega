@@ -131,17 +131,27 @@
                              <table class="table table-bordered table-hover">
                     <tr><th>Nombre</th> <th>Cargo</th> <th> ID</th></tr>  
                     
+                   
             <%
+              int contEstudiante=0;
+              int contProfesor=0;
             if( request.getAttribute("personas")!=null){
+            
           List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
            for (Persona persona : personas) {
          %>      
           <tr><td><%=persona.getNombrepersona()%> </td> <td><%=persona.getCargopersona()%> </td> <td><%=persona.getIdpersona()%> </td></tr>
-         <%      
+         <%    
+          if(persona.getCargopersona()=="Estudiante"){
+                  contEstudiante=contEstudiante+1;
+                    }else if(persona.getCargopersona()=="Profesor"){
+                              contProfesor=contProfesor+1;
+                         }
           }
        }
     %>
                         
+                      
     
                   </table>
                                </div>
@@ -179,15 +189,17 @@
       google.charts.setOnLoadCallback(drawChart);
     
       function drawChart() {
+          var estudiante = '${contEstudiante}';
+           var profesor = '${contProfesor}';
           
         var data = google.visualization.arrayToDataTable([
              
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
+          ['Cargo', 'Cantidad'],
+          ['Estudiantes', estudiante],
+          ['Profesores', profesor],
+          ['Admins',  2],
+          ['Funcionarios', 2],
+          ['Normies',    7]
           
         ]);
         
