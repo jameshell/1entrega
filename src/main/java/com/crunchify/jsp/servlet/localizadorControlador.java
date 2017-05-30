@@ -36,11 +36,13 @@ public class localizadorControlador extends HttpServlet {
         
        
   try { 
-       String salon = request.getParameter("field");
+       String salon = request.getParameter("salon");
        localizador localizador= new localizador();
+      
         localizador.setNombresalon(salon);
         
         request.setAttribute("salon",localizador);
+        //request.getAttribute("salon");
             
         } catch (Exception ex) {
             Logger.getLogger(localizadorControlador.class.getName()).log(Level.SEVERE, null, ex);
