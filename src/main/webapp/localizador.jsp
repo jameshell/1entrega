@@ -1,30 +1,22 @@
 <%-- 
-    Document   : home
-    Created on : Feb 10, 2017, 10:30:11 AM
+    Document   : estudianteRegistro
+    Created on : Mar 13, 2017, 2:54:25 AM
     Author     : james
 --%>
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="edu.co.sergio.mundo.vo.*"%>
+<%@ page import="java.util.List" %>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+    "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
 <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Sistema de GestiÃ³n</title>
+    <title>Sistema de Gestión</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -64,11 +56,11 @@ and open the template in the editor.
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li>
-                         <a href="persona.jsp"><i class="fa fa-fw fa-user"></i> Persona </a>
+                    <li class="active">
+                         <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Personas </a>
                     </li>
                      <li>
-                        <a href="prestamo.jsp"><i class="fa fa-fw fa-table"></i> Prestamo </a>
+                        <a href="formularios.jsp"><i class="fa fa-fw fa-table"></i> Prestamo </a>
                     </li>
                      <li>
                         <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
@@ -86,16 +78,18 @@ and open the template in the editor.
                             <li>
                                 <a href="listaPersona.jsp">Listas de Personas</a>
                             </li>
+                            
                              <li>
-                                <a href="listaPrestamo.jsp">Lista de Prestamos</a>
+                                <a href="listaPrestamo.jsp">Lista de Prestamo</a>
+                            </li>
+                             <li>
+                                <a href="listaSalon.jsp">Lista de Salones</a>
                             </li>
                         
                              <li>
                                 <a href="listaHerramienta.jsp">Lista de Herramientas</a>
                             </li>
-                            <li>
-                                <a href="listaSalon.jsp">Lista de Salones</a>
-                            </li>
+                            
                             <li>
                                 <a href="listaMantenimiento.jsp">Lista de Mantenimientos</a>
                             </li>
@@ -115,41 +109,52 @@ and open the template in the editor.
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Interfaz Principal
+                          Persona
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Modo Privilegiado
+                                <i class="fa fa-desktop"></i> Registro de Persona
                             </li>
                         </ol>
                     </div>
                 </div>
                 <!-- /.row -->
-
-                <!-- Main jumbotron for a primary marketing message or call to action -->
-                <div class="jumbotron">
-                   <img class="img-responsive" src="usergioarboleda.png">
-                    <p>Sistema de registro para el laboratorio de ElectrÃ³nica</p>
-                    <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a>
-                    </p>
-                </div>
-
                 <div class="page-header">
                     <h1>Sistema de Inventario </h1>
                 </div>
-             
-                <p>
-                    Prototipo para sistema de registro usando arboles para bases de datos.
-                </p>
-                
-                <a href='prestamoSalon.jsp'> Lista Prestamo Salon <a/>
-
-                <div class="page-header">
-                   
-
+           
+                 <div align="center" style="margin-top: 50px;">
+                               <div class="table-responsive">
+                             <table class="table table-bordered table-hover">
+                    <tr><th>Nombre del Salon</th> </tr>  
+                    
+            <%
+            if( request.getAttribute("salon")!=null){
+            Localizador localizador=request.getAttribute("Salon");
+         %>      
+          <tr><td><%=localizador.getNombresalon()%> </td> </tr>
+         <%      
+          }
+       }
+    %>
+                        
+    
+                  </table>
+                               </div>
+                     
+                     
+        <form action="localizadorControlador">
+                          <button type="submit" class="btn btn-default" role="button" > Extraer Variables</button>
+                          <a href="graficasPersona.jsp" class="btn btn-warning" role="button">Mostrar Gráfica</a>
+        </form>
+                     
+               
+                     
+     </div>
+          
             </div>
             <!-- /.container-fluid -->
 
@@ -160,34 +165,10 @@ and open the template in the editor.
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-      <% /*HttpSession session = request.getSession();
-        Administrativo admin= (Administrativo) session.getAttribute("administrativo");
-        
-        if(admin==null){
-            request.getRequestDispatcher("login.jsp").forward(request, response);
-        }*/
-        %>
-    
-    
-     <%
-             session.setMaxInactiveInterval(2);
-          %>
-
-                      <script type="text/javascript">
-                      var Msg ='<%=session.getAttribute("administrador")%>';
-                      if (Msg != "null") {
-                      function alertName(){
-                      alert("Bienvenido! Sesion HTTP iniciada! ");
-                             } 
-                             }
- </script> 
-    
-    
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-        <script type="text/javascript"> window.onload = alertName; </script>
 
 </body>
 

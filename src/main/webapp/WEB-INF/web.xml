@@ -101,6 +101,11 @@
         <servlet-class>com.crunchify.jsp.servlet.listaControladorHerramienta</servlet-class>
     </servlet>
     
+    <servlet>
+        <servlet-name>localizadorLOL</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.localizadorControlador</servlet-class>
+    </servlet>
+    
     
     
     
@@ -187,5 +192,10 @@
     <servlet-mapping>
         <servlet-name>herramientaList</servlet-name>
         <url-pattern>/listaControladorHerramienta</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>localizadorLOL</servlet-name>
+        <url-pattern>/localizadorControlador</url-pattern>
     </servlet-mapping>
 </web-app>
