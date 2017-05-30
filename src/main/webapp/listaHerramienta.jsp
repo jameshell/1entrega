@@ -106,7 +106,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Prestamos
+                          Herramientas
                         </h1>
                         <ol class="breadcrumb">
                             <li>
@@ -152,7 +152,7 @@
                                </div>
                      
                      
-        <form action="listaHerramientas">
+        <form action="listaControladorHerramienta">
                           <button type="submit" class="btn btn-default" role="button" > Mostrar Lista de Herramientas</button>
         </form>
                      

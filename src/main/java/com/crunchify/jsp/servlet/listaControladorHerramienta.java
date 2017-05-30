@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.crunchify.jsp.servlet;
  
 
@@ -23,7 +18,7 @@ import javax.servlet.RequestDispatcher;
  * @author Crunchify.com
  */
  
-public class listaHerramienta extends HttpServlet {
+public class listaControladorHerramienta extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.

@@ -96,6 +96,12 @@
         <servlet-class>com.crunchify.jsp.servlet.herramientaEliminacion</servlet-class>
     </servlet>
     
+    <servlet>
+        <servlet-name>herramientaList</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.listaControladorHerramienta</servlet-class>
+    </servlet>
+    
+    
     
     
     <servlet-mapping>
@@ -176,5 +182,10 @@
     <servlet-mapping>
         <servlet-name>herramientaDeletion</servlet-name>
         <url-pattern>/herramientaEliminacion</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>herramientaList</servlet-name>
+        <url-pattern>/listaControladorHerramienta</url-pattern>
     </servlet-mapping>
 </web-app>
