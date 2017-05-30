@@ -26,7 +26,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author james
+ * @author James Alonso
  */
 
 public class herramientaControlador extends HttpServlet {
