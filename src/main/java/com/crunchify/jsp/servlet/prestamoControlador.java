@@ -5,11 +5,13 @@
  */
 package com.crunchify.jsp.servlet;
 
+import edu.co.sergio.mundo.dao.HerramientaDAO;
 import edu.co.sergio.mundo.dao.PrestamoDAO;
 import edu.co.sergio.mundo.vo.Administrativo;
 import edu.co.sergio.mundo.vo.Persona;
 import edu.co.sergio.mundo.vo.Prestamo;
 import edu.co.sergio.mundo.vo.Salon;
+import edu.co.sergio.mundo.vo.Transaccion;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -71,11 +73,9 @@ public class prestamoControlador extends HttpServlet {
         prestamo.setObservaciones(observaciones);
         prestamo.setTipoprestamo(tipo);
         prestamo.setFechaentrada(date2);
-        prestamo.setIdsalon(salon);
-            
-            
-            
-            dao.create(prestamo);
+        prestamo.setIdsalon(salon);  
+        prestamo.setTransaccionCollection(null);
+        dao.create(prestamo);
         } catch (Exception ex) {
             Logger.getLogger(prestamoControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
