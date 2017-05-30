@@ -106,14 +106,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Prestamos
+                          Mantenimientos
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Registro de Prestamos
+                                <i class="fa fa-desktop"></i> Registro de Mantenimientos
                             </li>
                         </ol>
                     </div>
@@ -153,7 +153,7 @@
                      
                      
         <form action="listaControladorMantenimiento">
-                          <button type="submit" class="btn btn-default" role="button" > Mostrar Lista de Prestamos</button>
+                          <button type="submit" class="btn btn-default" role="button" > Mostrar Lista de Mantenimientos</button>
         </form>
                      
                
