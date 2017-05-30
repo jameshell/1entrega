@@ -109,21 +109,21 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                          Persona
+                          
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="home.jsp">Dashboard</a>
                             </li>
                             <li class="active">
-                                <i class="fa fa-desktop"></i> Registro de Persona
+                                <i class="fa fa-desktop"></i> Localizador en aulas de clase utilizando tecnologías WiFi y la Nube.
                             </li>
                         </ol>
                     </div>
                 </div>
                 <!-- /.row -->
                 <div class="page-header">
-                    <h1>Sistema de Inventario </h1>
+                    <h1>Localizador IPS </h1>
                 </div>
            
                  <div align="center" style="margin-top: 50px;">
