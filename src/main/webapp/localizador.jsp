@@ -50,54 +50,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="home.jsp">Home</a>
+                <a class="navbar-brand" href="home.jsp">Universidad Sergio Arboleda</a>
             </div>
             
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                         <a href="persona.jsp"><i class="fa fa-fw fa-user" ></i> Personas </a>
-                    </li>
-                     <li>
-                        <a href="formularios.jsp"><i class="fa fa-fw fa-table"></i> Prestamo </a>
-                    </li>
-                     <li>
-                        <a href="herramienta.jsp"><i class="fa fa-fw fa-edit"></i> Herramienta</a>
-                    </li>
-                           <li>
-                        <a href="salon.jsp"><i class="fa fa-fw fa-file"></i> Salon</a>
-                    </li>
-                           <li>
-                        <a href="mantenimiento.jsp"><i class="fa fa-fw fa-dashboard"></i> Mantenimiento</a>
-                    </li>
-                  
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Listas <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="listaPersona.jsp">Listas de Personas</a>
-                            </li>
-                            
-                             <li>
-                                <a href="listaPrestamo.jsp">Lista de Prestamo</a>
-                            </li>
-                             <li>
-                                <a href="listaSalon.jsp">Lista de Salones</a>
-                            </li>
-                        
-                             <li>
-                                <a href="listaHerramienta.jsp">Lista de Herramientas</a>
-                            </li>
-                            
-                            <li>
-                                <a href="listaMantenimiento.jsp">Lista de Mantenimientos</a>
-                            </li>
-                        
-                        
-                    </li>
-                </ul>
-            </div>
             <!-- /.navbar-collapse -->
         </nav>
 
