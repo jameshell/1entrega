@@ -150,6 +150,9 @@
           }
        }
     %>
+    
+    <p><%=contEstudiante%></p>
+    <p><%=contProfesor%></p>
                         
                       
     
