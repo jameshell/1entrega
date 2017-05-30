@@ -38,7 +38,7 @@
 
 <body>
 
-    <div id="wrapper">
+    <div>
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
