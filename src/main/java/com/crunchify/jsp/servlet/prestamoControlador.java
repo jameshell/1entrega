@@ -42,7 +42,7 @@ public class prestamoControlador extends HttpServlet {
         String fechasalida= request.getParameter("fechasalidaPrestamo");//
         String estado= request.getParameter("estadoPrestamo");//
         String justificacion= request.getParameter("justificacionPrestamo");//
-        String observaciones= request.getParameter("observacionesPrestamo");//
+        String observaciones= request.getParameter("observaciones");//
         String tipo= request.getParameter("tipoPrestamo");//
         String fechaentrada= request.getParameter("fechaentradaPrestamo");//
         String idsalon= request.getParameter("idsalonPrestamo");//
@@ -76,7 +76,6 @@ public class prestamoControlador extends HttpServlet {
         prestamo.setTipoprestamo(tipo);
         prestamo.setFechaentrada(date2);
         prestamo.setIdsalon(salon); 
-        prestamo.setTransaccionCollection(new ArrayList<Transaccion>());
         try{     
         dao.create(prestamo);
         } catch (Exception ex) {
