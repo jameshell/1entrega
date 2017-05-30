@@ -68,7 +68,7 @@ public class prestamoSalonControlador extends HttpServlet {
             
             dao.create(prestamo);
         } catch (Exception ex) {
-            Logger.getLogger(personaControlador.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(prestamoSalonControlador.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         //Listando la informacion  

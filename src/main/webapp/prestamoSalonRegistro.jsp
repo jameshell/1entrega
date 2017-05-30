@@ -153,13 +153,13 @@
                             <div class="form-group">
                                 <label><h3>Hora de Inicio:</h3>
                                 </label>
-                                <input type="datetime-local" class="form-control" name="fechaentrada">
+                                <input type="date" class="form-control" name="fechaentrada">
                                 <p class="help-block">Ej: Seleccione un dia y hora</p>
                             </div>
                           <div class="form-group">
                                 <label><h3>Hora de Entrega:</h3>
                                 </label>
-                                <input type="datetime-local" class="form-control" name="fechasalida">
+                                <input type="date" class="form-control" name="fechasalida">
                                 <p class="help-block">Ej: Seleccione un dia y hora</p>
                             </div>
                            
