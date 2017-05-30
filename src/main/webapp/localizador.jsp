@@ -145,7 +145,7 @@ and open the template in the editor.
                     Prototipo para sistema de registro usando arboles para bases de datos.
                 </p>
                 
-                <a href="localizador.jsp" class="btn btn-primary btn-lg" role="button">Proyecto Localizador &raquo;</a>
+                <a href='prestamoSalon.jsp'> Lista Prestamo Salon <a/>
 
                 <div class="page-header">
                    

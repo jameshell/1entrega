@@ -140,12 +140,6 @@
                                 <input type="text" class="form-control" name="idpersonaPrestamo">
                                 <p class="help-block">Ej: 1056373.</p>
                             </div>
-                            <div class="form-group">
-                                <label><h3> ID de la herramienta que se va a entregar</h3>
-                                </label>
-                                <input type="text" class="form-control" name="idHerramienta">
-                                <p class="help-block">Ej: 76842684</p>
-                            </div>
                                <div class="form-group">
                                 <label><h3>ID del Salon si es una practica guiada</h3>
                                 </label>
