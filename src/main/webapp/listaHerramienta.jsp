@@ -137,10 +137,10 @@
           List<Herramienta> herramientas  = (List<Herramienta>)request.getAttribute("herramientas");
            for (Herramienta herramienta : herramientas) {
          %>      
-          <tr><td><%=herramienta.getIdAdministrativo()%> </td> 
-              <td><%=herramienta.getIdHerramienta()%> </td> 
-              <td><%=herramienta.getNombreHerramienta()%> </td>
-              <td><%=herramienta.getDescripcionHerramienta()%> </td>
+          <tr><td><%=herramienta.getIdadministrativo()%> </td> 
+              <td><%=herramienta.getIdherramienta()%> </td> 
+              <td><%=herramienta.getNombreherramienta()%> </td>
+              <td><%=herramienta.getDescripcionherramienta()%> </td>
               </tr>
          <%      
           }

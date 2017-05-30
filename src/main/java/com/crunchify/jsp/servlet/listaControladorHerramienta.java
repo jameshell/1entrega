@@ -2,9 +2,8 @@ package com.crunchify.jsp.servlet;
  
 
 import edu.co.sergio.mundo.dao.HerramientaDAO;
-import edu.co.sergio.mundo.dao.PersonaDAO;
 import edu.co.sergio.mundo.vo.Herramienta;
-import edu.co.sergio.mundo.vo.Persona;
+
 
 import java.io.IOException;
 import javax.servlet.ServletException;
