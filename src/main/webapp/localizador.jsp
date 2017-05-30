@@ -127,26 +127,13 @@
                 </div>
            
                  <div align="center" style="margin-top: 50px;">
-                               <div class="table-responsive">
-                             <table class="table table-bordered table-hover">
-                    <tr><th>Nombre del Salon</th> </tr>  
-                    
-            <%
-            if( request.getAttribute("salon")!=null){
-            Localizador localizador=request.getAttribute("Salon");
-         %>      
-          <tr><td><%=localizador.getNombresalon()%> </td> </tr>
-         <%      
-          }
-       }
-    %>
-                        
-    
-                  </table>
-                               </div>
+                  
+                     <iframe width="430" height="280" frameborder="0" src="https://app.ubidots.com/ubi/getchart/fZ2sH0_6m9YSs5pxnqYSJPXDlGc"></iframe>
+                     <iframe width="430" height="280" frameborder="0" src="https://app.ubidots.com/ubi/getchart/MsXiSYfp7WWDqFYT9eT3X6ZTNRA"></iframe>
+                     <iframe width="430" height="280" frameborder="0" src="https://app.ubidots.com/ubi/getchart/Tw9LjVqmlrKyoHkTIHlAP8gIuSQ"></iframe>
+                     <iframe width="430" height="280" frameborder="0" src="https://app.ubidots.com/ubi/getchart/_teC3JXAUQI76lj9a_lnTzfrvHM"></iframe>
                      
-                     
-        <form action="localizadorControlador">
+        <form action="">
                           <button type="submit" class="btn btn-default" role="button" > Extraer Variables</button>
                           <a href="graficasPersona.jsp" class="btn btn-warning" role="button">Mostrar Gráfica</a>
         </form>
