@@ -133,21 +133,22 @@
                     
                    
             <%
-              int contEstudiante=1;
-              int contProfesor=1;
+              int contEstudiante=0;
+              int contProfesor=0;
             if( request.getAttribute("personas")!=null){
             
           List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
            for (Persona persona : personas) {
-         %>      
-          <tr><td><%=persona.getNombrepersona()%> </td> <td><%=persona.getCargopersona()%> </td> <td><%=persona.getIdpersona()%> </td></tr>
-         <%    
           if(persona.getCargopersona()=="Estudiante"){
                   contEstudiante=contEstudiante+1;
                     } 
           if(persona.getCargopersona()=="Profesor"){
                    contProfesor=contProfesor+1;
                          }
+         %>      
+          <tr><td><%=persona.getNombrepersona()%> </td> <td><%=persona.getCargopersona()%> </td> <td><%=persona.getIdpersona()%> </td></tr>
+         <%    
+         
           }
        }
     %>
