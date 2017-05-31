@@ -121,6 +121,13 @@
         <servlet-class>com.crunchify.jsp.servlet.listaControladorMantenimiento</servlet-class>
     </servlet>
     
+    <servlet>
+        <servlet-name>graphPersona</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.graficaPersonasControlador</servlet-class>
+    </servlet>
+    
+    
+    
     
     
     
@@ -228,4 +235,9 @@
         <servlet-name>mantenimientoList</servlet-name>
         <url-pattern>/listaControladorMantenimiento</url-pattern>
     </servlet-mapping>
+     
+    <servlet-mapping>
+        <servlet-name>graphPersona</servlet-name>
+        <url-pattern>/graficaPersonasControlador</url-pattern>
+    </servlet-mapping> 
 </web-app>

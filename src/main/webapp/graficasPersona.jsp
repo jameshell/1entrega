@@ -162,7 +162,7 @@
                                </div>
                      
                      
-        <form action="listaControlador">
+        <form action="graficaPersonasControlador">
                           <button type="submit" class="btn btn-default" role="button" > Mostrar Lista</button>
         </form>
              
