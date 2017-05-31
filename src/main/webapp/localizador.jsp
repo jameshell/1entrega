@@ -77,7 +77,10 @@
                 </div>
            
                  <div align="center" style="margin-top: 50px;">
-                  <iframe width="100%" height="100%" frameborder="0" src="https://app.ubidots.com/ubi/public/getdashboard/JqIrxiufB8huxlg9b-uD70jAWKk"></iframe>
+                     <iframe width="430" height="280" frameborder="0" src="https://app.ubidots.com/ubi/getchart/ZW6MF7nt-u2J6aUxBPH92UNvB_8"></iframe>
+                     <iframe width="430" height="280" frameborder="0" src="https://app.ubidots.com/ubi/getchart/-NsEreAC2kPNDvyeylwKmdDxq0A"></iframe>
+                  <iframe width="430" height="280" frameborder="0" src="https://app.ubidots.com/ubi/getchart/KoIx_08cQKqeaijVdGxDJs2VsrE"></iframe>
+                  <iframe width="430" height="280" frameborder="0" src="https://app.ubidots.com/ubi/getchart/KoIx_08cQKqeaijVdGxDJs2VsrE"></iframe
                      
         <form action="">
                           <button type="submit" class="btn btn-default" role="button" > Extraer Variables</button>
