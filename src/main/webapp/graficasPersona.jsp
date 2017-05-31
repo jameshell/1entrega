@@ -157,8 +157,9 @@
     <p><%=contProfesor%></p>
                         
                       
-    
+     <div id="piechart" style="width: 900px; height: 500px;"></div>
                   </table>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
                                </div>
                      
                      
@@ -168,7 +169,7 @@
              
       
     
-               <div id="piechart" style="width: 900px; height: 500px;"></div>
+               
                      
      </div>
           
