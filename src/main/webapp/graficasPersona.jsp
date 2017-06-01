@@ -129,7 +129,7 @@
                  <div align="center" style="margin-top: 50px;">
                       
                      <p>Graficas de Personas en la base de datos</p>
-                      <img src="personaChart" /><br/>
+                      <img  class="img-responsive" src="personaChart" /><br/>
         
              
       
