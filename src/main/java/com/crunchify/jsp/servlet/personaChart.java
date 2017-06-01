@@ -5,10 +5,15 @@
  */
 package com.crunchify.jsp.servlet;
 
+import edu.co.sergio.mundo.dao.PersonaDAO;
+import edu.co.sergio.mundo.vo.Persona;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.List;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,7 +43,7 @@ public class personaChart extends HttpServlet{
     
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException {
         	response.setContentType("image/png");
 		OutputStream outputStream = response.getOutputStream();
 		JFreeChart chart = getChart();
@@ -53,14 +58,33 @@ public class personaChart extends HttpServlet{
 	}
 
 	public JFreeChart getChart() {
-		
+            
+          
+       //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
+        PersonaDAO dao = new PersonaDAO();
+        
+        //Listando la informacion  
+        List<Persona> personas =  dao.findPersonaEntities();
+
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-        dataset.addValue(25.0, "Series 1", "Category 1");   
-        dataset.addValue(34.0, "Series 1", "Category 2");   
-        dataset.addValue(19.0, "Series 2", "Category 1");   
-        dataset.addValue(29.0, "Series 2", "Category 2");   
-        dataset.addValue(41.0, "Series 3", "Category 1");   
-        dataset.addValue(33.0, "Series 3", "Category 2");   
+        int contadorEstudiantes=0;
+        int contadorProfesores=0;
+         for (Persona persona : personas) {
+            if(persona.getCargopersona().equalsIgnoreCase("Profesor")){
+                contadorProfesores++;
+            } else if(persona.getCargopersona().equalsIgnoreCase("Estudiante")){
+                contadorEstudiantes++;
+            }
+         }
+         
+        double var=contadorProfesores;
+        double var2=contadorEstudiantes;
+         
+         
+        dataset.addValue(var2, "Estudiantes", "Category 1");   
+        dataset.addValue(var, "Profesores", "Category 2");   
+
+        
 
 		
         JFreeChart chart = ChartFactory.createBarChart3D(
