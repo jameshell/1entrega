@@ -131,6 +131,11 @@
         <servlet-class>com.crunchify.jsp.servlet.personaChart</servlet-class>
     </servlet>
     
+    <servlet>
+        <servlet-name>excelPersonas</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.excelPersonas</servlet-class>
+    </servlet>
+    
     
     
     
@@ -250,4 +255,9 @@
         <servlet-name>personaChart</servlet-name>
         <url-pattern>/personaChart</url-pattern>
     </servlet-mapping> 
+    
+    <servlet-mapping>
+        <servlet-name>excelPersonas</servlet-name>
+        <url-pattern>/excelPersonas</url-pattern>
+    </servlet-mapping>
 </web-app>
