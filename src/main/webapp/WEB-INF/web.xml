@@ -126,6 +126,11 @@
         <servlet-class>com.crunchify.jsp.servlet.graficaPersonasControlador</servlet-class>
     </servlet>
     
+    <servlet>
+        <servlet-name>personaChart</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.personaChart</servlet-class>
+    </servlet>
+    
     
     
     
@@ -239,5 +244,10 @@
     <servlet-mapping>
         <servlet-name>graphPersona</servlet-name>
         <url-pattern>/graficaPersonasControlador</url-pattern>
+    </servlet-mapping> 
+    
+    <servlet-mapping>
+        <servlet-name>personaChart</servlet-name>
+        <url-pattern>/personaChart</url-pattern>
     </servlet-mapping> 
 </web-app>

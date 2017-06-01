@@ -127,45 +127,10 @@
                 </div>
            
                  <div align="center" style="margin-top: 50px;">
-                               <div class="table-responsive">
-                             <table class="table table-bordered table-hover">
-                    <tr><th>Nombre</th> <th>Cargo</th> <th> ID</th></tr>  
-                    
-                   
-            <%
-              int contEstudiante=0;
-              int contProfesor=0;
-            if( request.getAttribute("personas")!=null){
-            
-          List<Persona> personas  = (List<Persona>)request.getAttribute("personas");
-           for (Persona persona : personas) {
-          if(persona.getCargopersona()=="Estudiante"){
-                  contEstudiante=contEstudiante+1;
-                    } 
-          if(persona.getCargopersona()=="Profesor"){
-                   contProfesor=contProfesor+1;
-                         }
-         %>      
-          <tr><td><%=persona.getNombrepersona()%> </td> <td><%=persona.getCargopersona()%> </td> <td><%=persona.getIdpersona()%> </td></tr>
-         <%    
-         
-          }
-       }
-    %>
-    
-    <p><%=contEstudiante%></p>
-    <p><%=contProfesor%></p>
-                        
                       
-     <div id="piechart" style="width: 900px; height: 500px;"></div>
-                  </table>
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
-                               </div>
-                     
-                     
-        <form action="graficaPersonasControlador">
-                          <button type="submit" class="btn btn-default" role="button" > Mostrar Lista</button>
-        </form>
+                     <p>Graficas de Personas en la base de datos</p>
+                      <img src="personaChart" /><br/>
+        
              
       
     
@@ -187,38 +152,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Graph source for Dev charts in JavaScript from Google-->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    
-     <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-    
-      function drawChart() {
-          var estudiante = '${contEstudiante}';
-           var profesor = '${contProfesor}';
-          
-        var data = google.visualization.arrayToDataTable([
-             
-          ['Cargo', 'Cantidad'],
-          ['Estudiantes', estudiante],
-          ['Profesores', profesor],
-          ['Admins',  2],
-          ['Funcionarios', 2],
-          ['Normies',    7]
-          
-        ]);
-        
-        var options = {
-          title: 'Porcentajes de cada Cargo'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-      }
-    </script>
-
 </body>
 
 </html>
