@@ -130,6 +130,7 @@
                       
                      <p>Graficas de Personas en la base de datos</p>
                       <img  class="img-responsive" src="personaChart" /><br/>
+                      Descargar Excel <a href="excelPersonas">Descargar</a> 
         
              
       
