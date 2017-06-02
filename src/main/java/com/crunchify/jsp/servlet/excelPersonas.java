@@ -44,7 +44,7 @@ public class excelPersonas extends HttpServlet {
               for (Persona persona : personas){
                   
                   
-                  data.put(String.valueOf(count),new Object[] {persona.getNombrepersona(),persona.getIdpersona(),persona.getCargopersona()});
+                  data.put(String.valueOf(count),new Object[] {persona.getNombrepersona(),String.valueOf(persona.getIdpersona()),persona.getCargopersona()});
                   count++;
               }
         
