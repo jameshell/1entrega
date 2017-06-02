@@ -1,8 +1,11 @@
 package com.crunchify.jsp.servlet;
 
+import edu.co.sergio.mundo.dao.PersonaDAO;
+import edu.co.sergio.mundo.vo.Persona;
 import java.io.*;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import javax.servlet.*;
@@ -30,16 +33,23 @@ public class excelPersonas extends HttpServlet {
         response.setContentType("application/vnd.ms-excel");
         HSSFWorkbook wb = new HSSFWorkbook();
         HSSFSheet sheet = wb.createSheet("new sheet");
-
+ 
+        PersonaDAO dao= new PersonaDAO();
+         List<Persona> personas = dao.findPersonaEntities();
        
         Map<String, Object[]> data = new HashMap<String, Object[]>();
+        int count=1;
+        int count2=0;
+        data.put("1", new Object[] {"Nombre", "ID", "Cargo"});
+              for (Persona persona : personas){
+                  
+                  
+                  data.put(String.valueOf(count),new Object[] {persona.getNombrepersona(),persona.getIdpersona(),persona.getCargopersona()});
+                  count++;
+              }
         
-        
-        
-		data.put("1", new Object[] {"Emp No.", "Name", "Salary"});
-		data.put("2", new Object[] {1d, "John", 1500000d});
-		data.put("3", new Object[] {2d, "Sam", 800000d});
-		data.put("4", new Object[] {3d, "Dean", 700000d});
+		
+		
 		
 		Set<String> keyset = data.keySet();
 		int rownum = 0;
