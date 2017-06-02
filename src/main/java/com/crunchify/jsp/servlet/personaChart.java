@@ -81,8 +81,8 @@ public class personaChart extends HttpServlet{
         double var2=contadorEstudiantes;
          
          
-        dataset.addValue(var2, "Estudiantes", "Category 1");   
-        dataset.addValue(var, "Profesores", "Category 2");   
+        dataset.addValue(var2, "Estudiantes", "Estudiantes");   
+        dataset.addValue(var, "Profesores", "Profesores");   
 
         
 

@@ -40,11 +40,11 @@ public class excelPersonas extends HttpServlet {
         Map<String, Object[]> data = new HashMap<String, Object[]>();
         int count=1;
         int count2=0;
-        data.put("1", new Object[] {"Nombre", "ID", "Cargo"});
+        data.put("1", new Object[] {"Nombre", "ID", "Cargo","Carrera"});
               for (Persona persona : personas){
                   
                   
-                  data.put(String.valueOf(count),new Object[] {persona.getNombrepersona(),String.valueOf(persona.getIdpersona()),persona.getCargopersona()});
+                  data.put(String.valueOf(count),new Object[] {persona.getNombrepersona(),String.valueOf(persona.getIdpersona()),persona.getCargopersona(),persona.getCarrerapersona()});
                   count++;
               }
         
