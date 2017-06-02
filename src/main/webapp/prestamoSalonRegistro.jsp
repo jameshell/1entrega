@@ -125,7 +125,7 @@
                     <h1>Sistema de Inventario </h1>
                 </div>
                 <p>
-                    Introduzca los datos del Salon que desea registrar.
+                    Introduzca los datos del Salon que se va a entregar.
                 </p>
 
                 <div class="page-header">

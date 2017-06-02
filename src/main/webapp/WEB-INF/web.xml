@@ -133,7 +133,10 @@
         <servlet-class>com.crunchify.jsp.servlet.excelPersonas</servlet-class>
     </servlet>
     
-    
+    <servlet>
+        <servlet-name>prestamoList</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.listaControladorPrestamo</servlet-class>
+    </servlet>
     
     
     
@@ -256,5 +259,9 @@
     <servlet-mapping>
         <servlet-name>excelPersonas</servlet-name>
         <url-pattern>/excelPersonas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>prestamoList</servlet-name>
+        <url-pattern>/listaControladorPrestamo</url-pattern>
     </servlet-mapping>
 </web-app>
