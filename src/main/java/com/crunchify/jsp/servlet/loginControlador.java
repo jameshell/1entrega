@@ -10,9 +10,12 @@ package com.crunchify.jsp.servlet;
  * and open the template in the editor.
  */
 
+import edu.co.sergio.mundo.dao.AdministrativoDAO;
 import edu.co.sergio.mundo.vo.Administrativo;
+import edu.co.sergio.mundo.vo.Persona;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -47,18 +50,22 @@ public class loginControlador extends HttpServlet {
       String idAdmin, contrasena;
       idAdmin=request.getParameter("idAdmin");
       contrasena=request.getParameter("contrasena");
-      if(idAdmin.equalsIgnoreCase("12345")){
-          if(contrasena.equalsIgnoreCase("12345")){
-                Administrativo admin= new Administrativo();
-                admin.setIdadministrativo(Integer.parseInt(idAdmin));
+      
+      AdministrativoDAO dao= new AdministrativoDAO();
+        List<Administrativo> administrativos = dao.findAdministrativoEntities();
+       
+      
+      for (Administrativo administrativo : administrativos){
+      
+      if(idAdmin.equalsIgnoreCase(String.valueOf(administrativo.getIdadministrativo()))){
+          if(contrasena.equalsIgnoreCase(administrativo.getContrasena())){
+                
+                administrativo.setIdadministrativo(Integer.parseInt(idAdmin));
                 HttpSession session = request.getSession();
-                session.setAttribute("administrador", admin);
+                session.setAttribute("administrador", administrativo);
                 session.setAttribute("loginResult", false);
                 request.getRequestDispatcher("home.jsp").forward(request, response);
-                
-                
-                
-                
+         
               //Usuario correcto!
           }else{
               //Contrasena incorrecta!
@@ -73,7 +80,7 @@ public class loginControlador extends HttpServlet {
           
       }
      
-      
+      }
       
       
        
