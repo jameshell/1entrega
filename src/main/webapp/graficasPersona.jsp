@@ -128,7 +128,7 @@
            
                  <div align="center" style="margin-top: 50px;">
                       
-                     <p>Graficas de Personas en la base de datos</p>
+                     <p>Graficas de Personas dentro de la base de datos</p>
                       <img  class="img-responsive" src="personaChart" /><br/>
                       Descargar Excel <a href="excelPersonas">Descargar</a> 
         
